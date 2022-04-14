@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Eleve | {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">    
+    <h1 class="h3 mb-2 text-gray-800">Classe {{classe.NomClasse}}</h1>
+    <p class="mb-4">Liste des élèves </p>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">
+                <a class="btn btn-success" href="{{ path('app_eleve_new') }}">Ajout <i class="fas fa-fw fa-plus"></i></a>
+            </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hovered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">Nom Complet</th>
+                            <th class="text-center">Date et Lieu de Naissance</th>
+                        </tr>
+                    </thead>
+                    <tbody>     
+                            {% for eleve in ecole.eleves %}        
+                                {% if eleve.classe.id == classe.id %}
+                                    <tr>
+                                        <td class="text-center">{{ eleve.id }}</td>
+                                        <td class="text-center">{{ eleve.personne.prenom }} {{eleve.personne.nom}}</td>
+                                        <td class="text-center">{{ eleve.personne.DateNaissance|date('d-m-Y') }} à {{eleve.personne.LieuNaissance}}</td>
+                                    </tr>                                   
+                                {% endif %} 
+                            {% else %}
+                                <tr>
+                                    <td class="text-center" colspan="4">no records found</td>
+                                </tr>
+                            {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

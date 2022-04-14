@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cellule | {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-8 col-xs-12 mx-auto">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <img class="col-md-4 mx-auto" src="{{ asset('assets/images/logo.png') }}" alt="logo image">
+                            </div>
+                            {{form_start(form, {'attr':{'class':'form'}})}}
+                                <div class="form-floating mb-3">
+                                    {{form_row(form.nom_cellule, {'attr':{'class':"form-control", 'placeholder':"Cellule", 'required':"required", 'autofocus':"autofocus"}})}}
+                                </div>
+                                <div class="form-floating mb-3">
+                                    {{form_row(form.quartier, {'attr':{'class':"form-control js-example-basic-single", 'required':"required"}})}}
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-warning">Modifier <i class="fas fa-edit"></i> </button>
+                                    <a href="{{ path('app_cellule_show', {'id':cellule.id}) }}" class="btn btn-primary">Accueil <i class="fas fa-home"></i> </a>
+                                </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

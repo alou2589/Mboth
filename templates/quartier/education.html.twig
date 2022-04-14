@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quartier | {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">    
+    <h1 class="h3 mb-2 text-gray-800">Secteur</h1>
+    <p class="mb-4">{{quartier.NomQuartier}} / <strong class="text-primary">Education</strong>  </p>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">
+                <a class="btn btn-success" href="#">Ajout <i class="fas fa-fw fa-plus"></i></a>
+            </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hovered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">Nom Complet</th>
+                            <th class="text-center">Adresse</th>
+                            <th class="text-center">Ecole</th>
+                            <th class="text-center">Classe</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for cellule in quartier.cellules %}
+                        {% for secteur in cellule.secteurs %}
+                            {% for maison in secteur.maisons %}
+                                {% for personne in maison.personnes %}
+                                    {% for eleve in personne.eleves %}
+                                        <tr>
+                                            <td class="text-center">{{ eleve.id }}</td>
+                                            <td class="text-center">{{ eleve.personne.prenom }} {{ eleve.personne.nom }}</td>
+                                            <td class="text-center">{{ eleve.personne.maison.secteur.NomSecteur }}/{{eleve.personne.maison.secteur.cellule.NomCellule}}</td>
+                                            <td class="text-center">{{eleve.ecole.NomEcole}}</td>
+                                            <td class="text-center">{{eleve.classe.NomClasse}}</td>
+                                            <td class="text-center">
+                                                <a href="{{ path('app_eleve_show', {'id':eleve.id}) }}"><i class="fas fa-eye text-info"></i></a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}                            
+                                {% endfor %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

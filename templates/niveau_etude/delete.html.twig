@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Niveau Etude | {{ parent() }}{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-8 col-xs-12 mx-auto">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <img class="col-md-4 mx-auto" src="{{ asset('assets/images/logo.png') }}" alt="logo image">
+                            </div>
+                            <p>Supprimer  <strong> {{quartier.NomNiveauEtude}} </strong></p>
+                            <form method="post" action="{{ path('app_niveau_etude_delete', {'id': niveau_etude.id}) }}" onsubmit="return confirm(Êtes-vous sûr de vouloir effectuer cette action ?');">
+                                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ niveau_etude.id) }}">
+                                <button class="btn btn-danger">Delete <i class="fas fa-trash-alt"></i></button>
+                                <a href="{{ path('app_niveau_etude_show', {'id':niveau_etude.id}) }}" class="btn btn-primary">Accueil <i class="fas fa-home"></i></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

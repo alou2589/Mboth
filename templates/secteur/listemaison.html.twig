@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Maison | {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">    
+    <h1 class="h3 mb-2 text-gray-800">Maison</h1>
+    <p class="mb-4">Les maisons se situant à Mboth dans le secteur {{secteur.NomSecteur}}.{{secteur.cellule.NomCellule}} </p>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <a class="float-right" href="{{ path('app_secteur_new_maison', {'id':secteur.id}) }}"> <i class="fas fa-fw fa-plus-circle text-primary"></i></a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hovered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">Maison</th>
+                            <th class="text-center">Code maison</th>
+                            <th class="text-center">Secteur</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for maison in maisons %}
+                        <tr>
+                            <td class="text-center">{{ maison.id }}</td>
+                            <td class="text-center">{{ maison.nomMaison }}</td>
+                            <td class="text-center">{{ maison.codeMaison }}</td>
+                            <td class="text-center">{{ maison.secteur.NomSecteur }}</td>
+                            <td class="text-center">
+                                <a href="{{ path('app_maison_show', {'id': maison.id}) }}"><i class="fas fa-eye text-info"></i></a>
+                            </td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="6">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

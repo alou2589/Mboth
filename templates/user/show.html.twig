@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur | {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-md-8 col-xs-12 mx-auto">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-12 mx-auto">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h6 class="h6 text-gray-900 mb-4">Andeu Defar <strong>Mboth</strong></h6>
+                            </div>
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <p><strong>Id</strong>: {{ user.id }}</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p><strong>Email</strong>: {{ user.email }}</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p><strong>Roles</strong>:  
+                                            {% for role in user.roles %}
+                                                {% if role== "ROLE_SUPER_ADMIN" %}
+                                                    Super Administrateur 
+                                                {% elseif role=="ROLE_POINT_FOCAL" %}
+                                                    Point Focal
+                                                {% elseif role== "ROLE_ADMIN" %}
+                                                    Administrateur
+                                                {% endif %}                                            
+                                            {% endfor %}  
+                                        </p>                                     
+                                    </li>
+                                    <li class="list-group-item">
+                                        <p> <strong>Nom d'Utilisteur</strong> : {{ user.username }}</p>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <div class="form-check form-switch">                                            
+                                            {% if user.active == false %}
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                <label class="form-check-label" for="flexSwitchCheckDefault">Statut:</label>
+                                            {% else %}                               
+                                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                <label class="form-check-label" for="flexSwitchCheckChecked">Statut</label>
+                                            {% endif %}
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item">  
+                                        <a href="{{ path('app_user_index') }}" class="text-decoration-none" title="Accueil"><i class="fas fa-home text-primary"></i></a>
+                                        <a href="{{ path('app_user_edit', {'id': user.id}) }}"  class="text-decoration-none" title="Modifier"> <i class="fas fa-edit text-warning"></i> </a>
+                                        <a href="{{ path('app_user_delete', {'id': user.id}) }}" class="text-decoration-none" title="Supprimer"> <i class="fas fa-trash-alt text-danger"></i> </a>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

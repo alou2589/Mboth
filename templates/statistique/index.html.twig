@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Statistiques|{{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">
+    <!-- Donut Chart -->
+    <div class="col-lg-4 col-md-6 col-xs-12">
+      <div class="card shadow-lg">
+        <div class="card-header">      
+          <h4>Cellules/Quartier</h4>
+        </div>
+        <div class="card-body">
+          <canvas id="CellulesChart" width="10" height="10"></canvas> 
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
+{% block javascripts %}
+    <script>
+        graph('pie',"CellulesChart", {{quartier_name|raw}}, {{cellule_count|raw}}, {{nb_quartier|raw}}); 
+    </script>
+{% endblock %}

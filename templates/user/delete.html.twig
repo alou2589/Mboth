@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur | {{ parent() }}{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="col-md-8 col-xs-12 mx-auto">
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Andeu Defar <strong>Mboth</strong></h1>
+                            </div>
+                            Supprimer l'utilisateur <strong> {{user.Username}} </strong>
+                            <form method="post" action="{{ path('app_user_delete', {'id': user.id}) }}" onsubmit="return confirm(Êtes-vous sûr de vouloir supprimer cet utilisateur ?');">
+                                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ user.id) }}">
+                                <button class="btn btn-danger">Delete <i class="fas fa-trash-alt"></i></button>
+                                <a href="{{ path('app_user_show', {'id':user.id}) }}" class="btn btn-primary">Annuler <i class="fas fa-home"></i></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

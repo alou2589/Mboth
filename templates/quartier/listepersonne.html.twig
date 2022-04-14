@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Quartier | {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">    
+    <h1 class="h3 mb-2 text-gray-800">Maison</h1>
+    <p class="mb-4">Population: <strong class="text-primary">{{quartier.NomQuartier}}</strong> </p>
+    <div class="card shadow mb-4">
+        <div class="card-header">
+            <a class="float-right" href="#"> <i class="fas fa-fw fa-plus-circle text-success"></i></a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hovered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">Prenom</th>
+                            <th class="text-center">Nom</th>
+                            <th class="text-center">Date et Lieu de Naissance</th>
+                            <th class="text-center">Sexe</th>
+                            <th class="text-center">Maison</th>
+                            <th class="text-center">Situation matrimoniale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for cellule in quartier.cellules %}
+                        {% for secteur in cellule.secteurs %}
+                            {% for maison in secteur.maisons %}
+                                {% for personne in maison.personnes %}
+                                    <tr>
+                                        <td class="text-center">{{ personne.id }}</td>
+                                        <td class="text-center">{{ personne.prenom }}</td>
+                                        <td class="text-center">{{ personne.nom }}</td>
+                                        <td class="text-center">{{ personne.dateNaissance ? personne.dateNaissance|date('Y-m-d') : '' }} à {{ personne.lieuNaissance }}</td>
+                                        <td class="text-center">{{ personne.sexe }}</td>
+                                        <td class="text-center">{{ personne.maison.NomMaison }}</td>
+                                        <td class="text-center">{{ personne.situationMatrimoniale }}</td>
+                                    </tr>                                    
+                                {% endfor %}
+                                
+                            {% endfor %}                            
+                        {% endfor %}
+                        {% else %}
+                        <tr>
+                            <td colspan="10">no records found</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

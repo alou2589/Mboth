@@ -1,0 +1,74 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Utilisateur| {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">    
+    <h1 class="h3 mb-2 text-gray-800">Utilisateurs</h1>
+    <p class="mb-4">Les utilisateurs de l'application</p>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">
+                <a class="btn btn-success" href="{{ path('app_user_new') }}">Ajout <i class="fas fa-fw fa-plus"></i></a>
+            </h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-hovered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Id</th>
+                            <th class="text-center">Email</th>
+                            <th class="text-center">Roles</th>
+                            <th class="text-center">Pseudo</th>
+                            <th class="text-center">Utilisateur</th>
+                            <th class="text-center">Active</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for user in users %}
+                        {% if users %}                        
+                            <tr>
+                                <td class="text-center">{{ user.id }}</td>
+                                <td class="text-center">{{ user.email }}</td>
+                                <td class="text-center">
+                                {% for role in user.roles %}
+                                    {% if role == 'ROLE_ADMIN' %}
+                                        Administrateur
+                                    {% elseif role == 'ROLE_POINT_FOCAL' %}
+                                        Point Focal
+                                    {% elseif role == 'ROLE_SUPER_ADMIN' %}
+                                        Super Administrateur
+                                    {% endif %}                                    
+                                {% endfor %}
+                                </td>
+                                <td class="text-center">{{ user.username }}</td>
+                                <td class="text-center">{{user.personne.Prenom}} {{user.personne.Nom}}</td>
+                                <td class="form-check form-switch text-center">
+                                    {% if user.active == true %}
+                                        <input class="form-check-input text-success" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                    {% else %}
+                                        <input class="form-check-input text-danger" type="checkbox" id="flexSwitchCheckDefault">
+                                    {% endif %}
+                                </td>
+                                <td class="text-center">
+                                    <a href="{{ path('app_user_show', {'id': user.id}) }}"><i class="fas fa-fw fa-eye text-info"></i></a>
+                                    {#<a href="{{ path('app_user_edit', {'id': user.id}) }}"><i class="fas fa-fw fa-edit text-warning"></i></a>
+                                    <a href="{{ path('app_user_delete', {'id': user.id}) }}"><i class="fas fa-fw fa-trash-alt text-danger"></i></a>#}
+                                </td>
+                            </tr>
+                        {% else %}
+                        <tr>
+                            <td colspan="7">no records found</td>
+                        </tr>
+                    {% endif %}
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
