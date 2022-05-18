@@ -202,6 +202,6 @@ class __TwigTemplate_126070728d16bcbe68061786b510c43c0cfe5d9252f88c65bc824e2c07c
   </div>
 </div>
 {% endblock %}
-", "dashboard/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\dashboard\\index.html.twig");
+", "dashboard/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\dashboard\\index.html.twig");
     }
 }

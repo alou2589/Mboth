@@ -222,6 +222,6 @@ class __TwigTemplate_26ce9eb7fc39dc97969c5af1b0c3b670fad3af951a65361800341708209
         {% block body '' %}
     </body>
 </html>
-", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
+", "@WebProfiler/Profiler/base.html.twig", "C:\\Users\\Alou\\Mboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\base.html.twig");
     }
 }

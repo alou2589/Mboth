@@ -100,8 +100,14 @@ class __TwigTemplate_aac6558d41c84042b977ce2dedb4f64447e4dc237278b70d5290a17866f
                   </li>
                   <li><a><i class=\"fa fa-users\"></i> Population <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"general_elements.html\">Maison</a></li>
-                      <li><a href=\"media_gallery.html\">Population</a></li>
+                      <li><a href=\"";
+        // line 43
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_index");
+        echo "\">Maison</a></li>
+                      <li><a href=\"";
+        // line 44
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
+        echo "\">Population</a></li>
                     </ul>
                   </li>
                   <li><a><i class=\"fas fa-user-graduate\"></i> Education <span class=\"fa fa-chevron-down\"></span></a>
@@ -225,7 +231,7 @@ class __TwigTemplate_aac6558d41c84042b977ce2dedb4f64447e4dc237278b70d5290a17866f
 
     public function getDebugInfo()
     {
-        return array (  123 => 52,  119 => 51,  115 => 50,  111 => 49,  97 => 38,  93 => 37,  89 => 36,  80 => 30,  58 => 11,  47 => 3,  43 => 1,);
+        return array (  129 => 52,  125 => 51,  121 => 50,  117 => 49,  109 => 44,  105 => 43,  97 => 38,  93 => 37,  89 => 36,  80 => 30,  58 => 11,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -272,8 +278,8 @@ class __TwigTemplate_aac6558d41c84042b977ce2dedb4f64447e4dc237278b70d5290a17866f
                   </li>
                   <li><a><i class=\"fa fa-users\"></i> Population <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"general_elements.html\">Maison</a></li>
-                      <li><a href=\"media_gallery.html\">Population</a></li>
+                      <li><a href=\"{{path('app_maison_index')}}\">Maison</a></li>
+                      <li><a href=\"{{(path('app_personne_index'))}}\">Population</a></li>
                     </ul>
                   </li>
                   <li><a><i class=\"fas fa-user-graduate\"></i> Education <span class=\"fa fa-chevron-down\"></span></a>
@@ -364,6 +370,6 @@ class __TwigTemplate_aac6558d41c84042b977ce2dedb4f64447e4dc237278b70d5290a17866f
               </a>
             </div>
             <!-- /menu footer buttons -->
-          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\partials\\_sidebar.html.twig");
+          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\partials\\_sidebar.html.twig");
     }
 }

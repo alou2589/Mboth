@@ -86,62 +86,74 @@ class __TwigTemplate_e16fb5c3e09db1e133816a51e0366954bd144b3ac8ff4c6352f49d470a2
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Secteur</h1>
-    <p class=\"mb-4\">Les secteurs se situant à Mboth </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <a class=\"float-right\" href=\"";
-        // line 11
+        echo "
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Secteur</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_new");
-        echo "\"><i class=\"fas fa-fw fa-plus-circle text-success\"></i></a>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+        echo "\" title=\"Ajout Secteur\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des secteurs existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Secteur</th>
                             <th class=\"text-center\">Cellule</th>
-                            <th class=\"text-center\">UpdatedAt</th>
-                            <th class=\"text-center\">CreatedAt</th>
+                            <th class=\"text-center\">Quartier</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 27
+        // line 43
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["secteurs"]) || array_key_exists("secteurs", $context) ? $context["secteurs"] : (function () { throw new RuntimeError('Variable "secteurs" does not exist.', 27, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["secteurs"]) || array_key_exists("secteurs", $context) ? $context["secteurs"] : (function () { throw new RuntimeError('Variable "secteurs" does not exist.', 43, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["secteur"]) {
-            // line 28
+            // line 44
             echo "                        <tr>
                             <td class=\"text-center\">";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["secteur"], "id", [], "any", false, false, false, 29), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["secteur"], "id", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["secteur"], "NomSecteur", [], "any", false, false, false, 30), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["secteur"], "NomSecteur", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["secteur"], "cellule", [], "any", false, false, false, 31), "NomCellule", [], "any", false, false, false, 31), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["secteur"], "cellule", [], "any", false, false, false, 47), "NomCellule", [], "any", false, false, false, 47), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 32
-            ((twig_get_attribute($this->env, $this->source, $context["secteur"], "updatedAt", [], "any", false, false, false, 32)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["secteur"], "updatedAt", [], "any", false, false, false, 32), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 33
-            ((twig_get_attribute($this->env, $this->source, $context["secteur"], "createdAt", [], "any", false, false, false, 33)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["secteur"], "createdAt", [], "any", false, false, false, 33), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["secteur"], "cellule", [], "any", false, false, false, 48), "quartier", [], "any", false, false, false, 48), "NomQuartier", [], "any", false, false, false, 48), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">
                                 <a href=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_show", ["id" => twig_get_attribute($this->env, $this->source, $context["secteur"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_show", ["id" => twig_get_attribute($this->env, $this->source, $context["secteur"], "id", [], "any", false, false, false, 50)]), "html", null, true);
             echo "\"><i class=\"fas fa-eye text-info\" title=\"Détails\"></i></a>
                             </td>
                         </tr>
@@ -149,7 +161,7 @@ class __TwigTemplate_e16fb5c3e09db1e133816a51e0366954bd144b3ac8ff4c6352f49d470a2
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 39
+            // line 54
             echo "                        <tr>
                             <td class=\"text-center\" colspan=\"5\">no records found</td>
                         </tr>
@@ -158,13 +170,16 @@ class __TwigTemplate_e16fb5c3e09db1e133816a51e0366954bd144b3ac8ff4c6352f49d470a2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['secteur'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 43
+        // line 58
         echo "                    </tbody>
-                </table>
+                  </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -186,7 +201,7 @@ class __TwigTemplate_e16fb5c3e09db1e133816a51e0366954bd144b3ac8ff4c6352f49d470a2
 
     public function getDebugInfo()
     {
-        return array (  162 => 43,  153 => 39,  144 => 35,  139 => 33,  135 => 32,  131 => 31,  127 => 30,  123 => 29,  120 => 28,  115 => 27,  96 => 11,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  174 => 58,  165 => 54,  156 => 50,  151 => 48,  147 => 47,  143 => 46,  139 => 45,  136 => 44,  131 => 43,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -196,23 +211,39 @@ class __TwigTemplate_e16fb5c3e09db1e133816a51e0366954bd144b3ac8ff4c6352f49d470a2
 {% block title %}Secteur | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Secteur</h1>
-    <p class=\"mb-4\">Les secteurs se situant à Mboth </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <a class=\"float-right\" href=\"{{ path('app_secteur_new') }}\"><i class=\"fas fa-fw fa-plus-circle text-success\"></i></a>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Secteur</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_secteur_new') }}\" title=\"Ajout Secteur\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des secteurs existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Secteur</th>
                             <th class=\"text-center\">Cellule</th>
-                            <th class=\"text-center\">UpdatedAt</th>
-                            <th class=\"text-center\">CreatedAt</th>
+                            <th class=\"text-center\">Quartier</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
@@ -222,8 +253,7 @@ class __TwigTemplate_e16fb5c3e09db1e133816a51e0366954bd144b3ac8ff4c6352f49d470a2
                             <td class=\"text-center\">{{ secteur.id }}</td>
                             <td class=\"text-center\">{{ secteur.NomSecteur }}</td>
                             <td class=\"text-center\">{{ secteur.cellule.NomCellule }}</td>
-                            <td class=\"text-center\">{{ secteur.updatedAt ? secteur.updatedAt|date('Y-m-d à H:i:s') : '' }}</td>
-                            <td class=\"text-center\">{{ secteur.createdAt ? secteur.createdAt|date('Y-m-d à H:i:s') : '' }}</td>
+                            <td class=\"text-center\">{{ secteur.cellule.quartier.NomQuartier }}</td>
                             <td class=\"text-center\">
                                 <a href=\"{{ path('app_secteur_show', {'id': secteur.id}) }}\"><i class=\"fas fa-eye text-info\" title=\"Détails\"></i></a>
                             </td>
@@ -234,12 +264,15 @@ class __TwigTemplate_e16fb5c3e09db1e133816a51e0366954bd144b3ac8ff4c6352f49d470a2
                         </tr>
                     {% endfor %}
                     </tbody>
-                </table>
+                  </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 {% endblock %}
-", "secteur/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\secteur\\index.html.twig");
+", "secteur/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\secteur\\index.html.twig");
     }
 }

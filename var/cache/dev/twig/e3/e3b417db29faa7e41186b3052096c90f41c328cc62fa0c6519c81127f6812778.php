@@ -86,87 +86,99 @@ class __TwigTemplate_c125d7a0b9c301efdfd7280fe6d1feb4efb10c0b11ba3bdeb8f716552be
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">
-    <div class=\"col-12 m-1\">
-        <div class=\"card\">
-            <div class=\"card-header\"> 
-                <a href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_liste_cellule", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 10, $this->source); })()), "id", [], "any", false, false, false, 10)]), "html", null, true);
-        echo "\" class=\"text-decoration-none flaot-right\" title=\"Liste Cellule\"><i class=\"fas fa-list text-info\"></i> </a> 
-                <a href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 11, $this->source); })()), "id", [], "any", false, false, false, 11)]), "html", null, true);
-        echo "\" class=\"text-decoration-none float-right\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
-                <a href=\"";
-        // line 12
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12)]), "html", null, true);
-        echo "\"  class=\"text-decoration-none float-right\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
-                <a href=\"";
-        // line 13
+        echo "
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+                <li>
+                    <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_liste_cellule", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 17, $this->source); })()), "id", [], "any", false, false, false, 17)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Liste Cellule\"><i class=\"fas fa-list text-info\"></i> </a> 
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 23, $this->source); })()), "id", [], "any", false, false, false, 23)]), "html", null, true);
+        echo "\"  class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 26
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
-        echo "\" class=\"text-decoration-none float-right\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>                
-            </div>
-            <div class=\"card-body\">
-                <div class=\"row\">
-                    <div class=\"col-md-5 col-xs-12 mr-2\">
-                        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-                            <div class=\"card-body p-1\">
-                                <div class=\"row\">
-                                    <div class=\"col-lg-10 mx-auto\">
-                                        <div class=\"p-5\">
-                                            <div class=\"text-center\">
-                                                <img class=\"col-md-4 mx-auto\" src=\"";
-        // line 24
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/logo.png"), "html", null, true);
-        echo "\" alt=\"logo image\">
-                                            </div>
-                                            <ul class=\"list-group\">
-                                                <li class=\"list-group-item\">
-                                                    <p><strong>Id</strong>: ";
-        // line 28
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 28, $this->source); })()), "id", [], "any", false, false, false, 28), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+                </li>
+                <li>
+                    <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Quartier ";
+        // line 39
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 39, $this->source); })()), "NomQuartier", [], "any", false, false, false, 39), "html", null, true);
+        echo ".
+                  </p>
+                    <div class=\"card\">
+                        <div class=\"card-body\">
+                            <div class=\"row\">
+                                <div class=\"col-md-5 col-xs-12 mr-2\">
+                                    <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                        <div class=\"card-body p-1\">
+                                            <div class=\"row\">
+                                                <div class=\"col-lg-10 mx-auto\">
+                                                    <div class=\"p-5\">
+                                                        <ul class=\"list-group\">
+                                                            <li class=\"list-group-item\">
+                                                                <p><strong>Id</strong>: ";
+        // line 52
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 52, $this->source); })()), "id", [], "any", false, false, false, 52), "html", null, true);
         echo "</p>
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p><strong>Quartier</strong>: ";
-        // line 31
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 31, $this->source); })()), "NomQuartier", [], "any", false, false, false, 31), "html", null, true);
+                                                            </li>
+                                                            <li class=\"list-group-item\">
+                                                                <p><strong>Quartier</strong>: ";
+        // line 55
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 55, $this->source); })()), "NomQuartier", [], "any", false, false, false, 55), "html", null, true);
         echo "</p>
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p> <strong>Dernière modification</strong> : ";
-        // line 34
-        ((twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 34, $this->source); })()), "updatedAt", [], "any", false, false, false, 34)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 34, $this->source); })()), "updatedAt", [], "any", false, false, false, 34), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
-        echo "</p>
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p> <strong>Création</strong> : ";
-        // line 37
-        ((twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 37, $this->source); })()), "createdAt", [], "any", false, false, false, 37)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 37, $this->source); })()), "createdAt", [], "any", false, false, false, 37), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
-        echo "</p>
-                                                </li>
-                                                <li class=\"list-group-item\">  
-                                                    
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p>
-                                                        <strong>Fiche Information:</strong> :                                                                                            
-                                                        
-                                                        <a href=\"";
-        // line 46
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 46, $this->source); })()), "id", [], "any", false, false, false, 46)]), "html", null, true);
+                                                            </li>
+                                                            <li class=\"list-group-item\">
+                                                                <p>
+                                                                    <strong>Fiche Information:</strong> :                                                                                            
+
+                                                                    <a href=\"";
+        // line 61
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 61, $this->source); })()), "id", [], "any", false, false, false, 61)]), "html", null, true);
         echo "\" class=\"text-decoration-none\" title=\"Population\"><i class=\"fas fa-users text-info\"></i> </a>
-                                                        <a href=\"";
-        // line 47
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_education", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 47, $this->source); })()), "id", [], "any", false, false, false, 47)]), "html", null, true);
+                                                                    <a href=\"";
+        // line 62
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_education", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 62, $this->source); })()), "id", [], "any", false, false, false, 62)]), "html", null, true);
         echo "\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
-                                                        <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
-                                                        <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
-                                                        <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
-                                                    </p>
-                                                </li>
-                                            </ul>                            
+                                                                    <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
+                                                                    <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
+                                                                    <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>                            
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -174,10 +186,12 @@ class __TwigTemplate_c125d7a0b9c301efdfd7280fe6d1feb4efb10c0b11ba3bdeb8f716552be
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 ";
         
@@ -200,7 +214,7 @@ class __TwigTemplate_c125d7a0b9c301efdfd7280fe6d1feb4efb10c0b11ba3bdeb8f716552be
 
     public function getDebugInfo()
     {
-        return array (  162 => 47,  158 => 46,  146 => 37,  140 => 34,  134 => 31,  128 => 28,  121 => 24,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  171 => 62,  167 => 61,  158 => 55,  152 => 52,  136 => 39,  120 => 26,  114 => 23,  108 => 20,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -210,54 +224,72 @@ class __TwigTemplate_c125d7a0b9c301efdfd7280fe6d1feb4efb10c0b11ba3bdeb8f716552be
 {% block title %}Quartier | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">
-    <div class=\"col-12 m-1\">
-        <div class=\"card\">
-            <div class=\"card-header\"> 
-                <a href=\"{{ path('app_quartier_liste_cellule', {'id':quartier.id}) }}\" class=\"text-decoration-none flaot-right\" title=\"Liste Cellule\"><i class=\"fas fa-list text-info\"></i> </a> 
-                <a href=\"{{ path('app_quartier_delete', {'id': quartier.id}) }}\" class=\"text-decoration-none float-right\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
-                <a href=\"{{ path('app_quartier_edit', {'id': quartier.id}) }}\"  class=\"text-decoration-none float-right\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
-                <a href=\"{{ path('app_quartier_index') }}\" class=\"text-decoration-none float-right\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>                
-            </div>
-            <div class=\"card-body\">
-                <div class=\"row\">
-                    <div class=\"col-md-5 col-xs-12 mr-2\">
-                        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-                            <div class=\"card-body p-1\">
-                                <div class=\"row\">
-                                    <div class=\"col-lg-10 mx-auto\">
-                                        <div class=\"p-5\">
-                                            <div class=\"text-center\">
-                                                <img class=\"col-md-4 mx-auto\" src=\"{{ asset('assets/images/logo.png') }}\" alt=\"logo image\">
+
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+                <li>
+                    <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_quartier_liste_cellule', {'id':quartier.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Liste Cellule\"><i class=\"fas fa-list text-info\"></i> </a> 
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_quartier_delete', {'id': quartier.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_quartier_edit', {'id': quartier.id}) }}\"  class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_quartier_index') }}\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+                </li>
+                <li>
+                    <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Quartier {{ quartier.NomQuartier}}.
+                  </p>
+                    <div class=\"card\">
+                        <div class=\"card-body\">
+                            <div class=\"row\">
+                                <div class=\"col-md-5 col-xs-12 mr-2\">
+                                    <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                        <div class=\"card-body p-1\">
+                                            <div class=\"row\">
+                                                <div class=\"col-lg-10 mx-auto\">
+                                                    <div class=\"p-5\">
+                                                        <ul class=\"list-group\">
+                                                            <li class=\"list-group-item\">
+                                                                <p><strong>Id</strong>: {{ quartier.id }}</p>
+                                                            </li>
+                                                            <li class=\"list-group-item\">
+                                                                <p><strong>Quartier</strong>: {{ quartier.NomQuartier }}</p>
+                                                            </li>
+                                                            <li class=\"list-group-item\">
+                                                                <p>
+                                                                    <strong>Fiche Information:</strong> :                                                                                            
+
+                                                                    <a href=\"{{ path('app_quartier_personne', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Population\"><i class=\"fas fa-users text-info\"></i> </a>
+                                                                    <a href=\"{{ path('app_quartier_education', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
+                                                                    <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
+                                                                    <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
+                                                                    <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
+                                                                </p>
+                                                            </li>
+                                                        </ul>                            
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <ul class=\"list-group\">
-                                                <li class=\"list-group-item\">
-                                                    <p><strong>Id</strong>: {{ quartier.id }}</p>
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p><strong>Quartier</strong>: {{ quartier.NomQuartier }}</p>
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p> <strong>Dernière modification</strong> : {{ quartier.updatedAt ? quartier.updatedAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p> <strong>Création</strong> : {{ quartier.createdAt ? quartier.createdAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                                </li>
-                                                <li class=\"list-group-item\">  
-                                                    
-                                                </li>
-                                                <li class=\"list-group-item\">
-                                                    <p>
-                                                        <strong>Fiche Information:</strong> :                                                                                            
-                                                        
-                                                        <a href=\"{{ path('app_quartier_personne', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Population\"><i class=\"fas fa-users text-info\"></i> </a>
-                                                        <a href=\"{{ path('app_quartier_education', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
-                                                        <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
-                                                        <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
-                                                        <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
-                                                    </p>
-                                                </li>
-                                            </ul>                            
                                         </div>
                                     </div>
                                 </div>
@@ -265,13 +297,15 @@ class __TwigTemplate_c125d7a0b9c301efdfd7280fe6d1feb4efb10c0b11ba3bdeb8f716552be
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 {% endblock %}
 
-", "quartier/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\quartier\\show.html.twig");
+", "quartier/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\show.html.twig");
     }
 }

@@ -654,6 +654,6 @@ class __TwigTemplate_2bc714ba229ec059f067eab9cbd13849f1b7d00713276b13f584ecbfa12
     {% endblock %}
   </body>
 </html>
-", "base.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\base.html.twig");
     }
 }

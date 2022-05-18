@@ -86,48 +86,83 @@ class __TwigTemplate_518c001b78b6a184f18d3e2d3ab0449d16a0a282eb93b62a87f0560b231
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <img class=\"col-md-4 mx-auto\" src=\"";
-        // line 14
+        echo "    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 16
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
+        echo "\" title=\"Accueil Quartier\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                    <p class=\"text-muted font-13 m-b-30\">
+                        Ajout Quartier.
+                    </p>
+                    <div class=\"row\">
+                        <div class=\"col-md-8 col-xs-12 mx-auto\">
+                            <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                <div class=\"card-body p-0\">
+                                    <div class=\"row\">
+                                        <div class=\"col-lg-6 mx-auto\">
+                                            <div class=\"p-5\">
+                                                <div class=\"text-center\">
+                                                    <img class=\"col-md-4 mx-auto\" src=\"";
+        // line 39
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/logo.png"), "html", null, true);
         echo "\" alt=\"logo image\">
-                            </div>
-                            </div>
-                            ";
-        // line 17
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 17, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
+                                                </div>
+                                                </div>
+                                                ";
+        // line 42
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
         echo "
-                                <div class=\"form-floating mb-3\">
-                                    ";
-        // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 19, $this->source); })()), "nom_quartier", [], "any", false, false, false, 19), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Quartier", "required" => "required", "autofocus" => "autofocus"]]);
+                                                    <div class=\"form-floating mb-3\">
+                                                        ";
+        // line 44
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 44, $this->source); })()), "nom_quartier", [], "any", false, false, false, 44), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Quartier", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
-                                </div>
-                                <div class=\"form-group\">
-                                    <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
-                                    <a href=\"";
-        // line 23
+                                                    </div>
+                                                    <div class=\"form-group\">
+                                                        <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
+                                                        <a href=\"";
+        // line 48
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
-        echo "\" class=\"btn btn-secondary\">Accueil <i class=\"fas fa-home\"></i></a>
-                                </div>
-                            ";
-        // line 25
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 25, $this->source); })()), 'form_end');
+        echo "\" class=\"btn btn-primary\">Accueil <i class=\"fas fa-home\"></i></a>
+                                                    </div>
+                                                ";
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 ";
         
@@ -150,7 +185,7 @@ class __TwigTemplate_518c001b78b6a184f18d3e2d3ab0449d16a0a282eb93b62a87f0560b231
 
     public function getDebugInfo()
     {
-        return array (  122 => 25,  117 => 23,  110 => 19,  105 => 17,  99 => 14,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  150 => 50,  145 => 48,  138 => 44,  133 => 42,  127 => 39,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -160,35 +195,67 @@ class __TwigTemplate_518c001b78b6a184f18d3e2d3ab0449d16a0a282eb93b62a87f0560b231
 {% block title %}Quartier | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <img class=\"col-md-4 mx-auto\" src=\"{{ asset('assets/images/logo.png') }}\" alt=\"logo image\">
-                            </div>
-                            </div>
-                            {{form_start(form, {'attr':{'class':'form'}})}}
-                                <div class=\"form-floating mb-3\">
-                                    {{form_row(form.nom_quartier, {'attr':{'class':\"form-control\", 'placeholder':\"Quartier\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_quartier_index') }}\" title=\"Accueil Quartier\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                    <p class=\"text-muted font-13 m-b-30\">
+                        Ajout Quartier.
+                    </p>
+                    <div class=\"row\">
+                        <div class=\"col-md-8 col-xs-12 mx-auto\">
+                            <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                <div class=\"card-body p-0\">
+                                    <div class=\"row\">
+                                        <div class=\"col-lg-6 mx-auto\">
+                                            <div class=\"p-5\">
+                                                <div class=\"text-center\">
+                                                    <img class=\"col-md-4 mx-auto\" src=\"{{ asset('assets/images/logo.png') }}\" alt=\"logo image\">
+                                                </div>
+                                                </div>
+                                                {{form_start(form, {'attr':{'class':'form'}})}}
+                                                    <div class=\"form-floating mb-3\">
+                                                        {{form_row(form.nom_quartier, {'attr':{'class':\"form-control\", 'placeholder':\"Quartier\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                                    </div>
+                                                    <div class=\"form-group\">
+                                                        <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
+                                                        <a href=\"{{ path('app_quartier_index') }}\" class=\"btn btn-primary\">Accueil <i class=\"fas fa-home\"></i></a>
+                                                    </div>
+                                                {{ form_end(form) }}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class=\"form-group\">
-                                    <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
-                                    <a href=\"{{ path('app_quartier_index') }}\" class=\"btn btn-secondary\">Accueil <i class=\"fas fa-home\"></i></a>
-                                </div>
-                            {{ form_end(form) }}
+                            </div>
                         </div>
                     </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 {% endblock %}
-", "quartier/new.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\quartier\\new.html.twig");
+", "quartier/new.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\new.html.twig");
     }
 }

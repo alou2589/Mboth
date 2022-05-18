@@ -89,19 +89,23 @@ class __TwigTemplate_bad9feed729730d106e592cf7b9b00941cb7e8b0f410edb28c2b7c6d0c7
         echo "<div class=\"row\">
     <div class=\"col-12 m-1\">
         <div class=\"card\">
-            <div class=\"card-header\">                                        
+            <div class=\"card-header\">    
                 <a href=\"";
         // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 10, $this->source); })()), "id", [], "any", false, false, false, 10)]), "html", null, true);
-        echo "\" class=\"text-decoration-none float-right\" title=\"Supprimer\"><i class=\"fas fa-trash-alt text-danger\"></i> </a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_liste_secteur", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 10, $this->source); })()), "id", [], "any", false, false, false, 10)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Liste\"><i class=\"fas fa-list text-info\"></i> </a>                                   
                 <a href=\"";
         // line 11
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 11, $this->source); })()), "id", [], "any", false, false, false, 11)]), "html", null, true);
-        echo "\" class=\"text-decoration-none float-right\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 11, $this->source); })()), "id", [], "any", false, false, false, 11)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"><i class=\"fas fa-trash-alt text-danger\"></i> </a>
                 <a href=\"";
         // line 12
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 12, $this->source); })()), "id", [], "any", false, false, false, 12)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                <a href=\"";
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_index");
-        echo "\" class=\"text-decoration-none float-right\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
             </div>
             <div class=\"card-body\">
                 <div class=\"row\">
@@ -111,53 +115,47 @@ class __TwigTemplate_bad9feed729730d106e592cf7b9b00941cb7e8b0f410edb28c2b7c6d0c7
                                 <div class=\"row\">
                                     <div class=\"col-lg-10 mx-auto\">
                                         <div class=\"p-2\">
-                                            <div class=\"text-center\">
-                                                <img class=\"col-md-4 mx-auto\" src=\"";
-        // line 23
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/logo.png"), "html", null, true);
-        echo "\" alt=\"logo image\">
-                                            </div>
                                             <ul class=\"list-group\">
                                                 <li class=\"list-group-item\">
                                                     <p><strong>Id</strong>: ";
-        // line 27
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 27, $this->source); })()), "id", [], "any", false, false, false, 27), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 25, $this->source); })()), "id", [], "any", false, false, false, 25), "html", null, true);
         echo "</p>
                                                 </li>
                                                 <li class=\"list-group-item\">
                                                     <p><strong>Cellule</strong>: ";
-        // line 30
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 30, $this->source); })()), "Nomcellule", [], "any", false, false, false, 30), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 28, $this->source); })()), "Nomcellule", [], "any", false, false, false, 28), "html", null, true);
         echo "</p>
                                                 </li>
                                                 <li class=\"list-group-item\">
                                                     <p><strong>Quartier</strong>: ";
-        // line 33
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 33, $this->source); })()), "quartier", [], "any", false, false, false, 33), "NomQuartier", [], "any", false, false, false, 33), "html", null, true);
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 31, $this->source); })()), "quartier", [], "any", false, false, false, 31), "NomQuartier", [], "any", false, false, false, 31), "html", null, true);
         echo "</p>
                                                 </li>
                                                 <li class=\"list-group-item\">
                                                     <p> <strong>Dernière modification</strong> : ";
-        // line 36
-        ((twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 36, $this->source); })()), "updatedAt", [], "any", false, false, false, 36)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 36, $this->source); })()), "updatedAt", [], "any", false, false, false, 36), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
+        // line 34
+        ((twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 34, $this->source); })()), "updatedAt", [], "any", false, false, false, 34)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 34, $this->source); })()), "updatedAt", [], "any", false, false, false, 34), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
         echo "</p>
                                                 </li>
                                                 <li class=\"list-group-item\">
                                                     <p> <strong>Création</strong> : ";
-        // line 39
-        ((twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 39, $this->source); })()), "createdAt", [], "any", false, false, false, 39)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 39, $this->source); })()), "createdAt", [], "any", false, false, false, 39), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
+        // line 37
+        ((twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 37, $this->source); })()), "createdAt", [], "any", false, false, false, 37)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 37, $this->source); })()), "createdAt", [], "any", false, false, false, 37), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
         echo "</p>
                                                 </li>
                                                 <li class=\"list-group-item\">
                                                     <p>
                                                         <strong>Fiche Information:</strong> : 
                                                         <a href=\"";
-        // line 44
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 44, $this->source); })()), "id", [], "any", false, false, false, 44)]), "html", null, true);
+        // line 42
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 42, $this->source); })()), "id", [], "any", false, false, false, 42)]), "html", null, true);
         echo "\" class=\"text-decoration-none\" title=\"Liste Personnes\"><i class=\"fas fa-users text-info\"></i> </a>
                                                         <a href=\"";
-        // line 45
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_education", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 45, $this->source); })()), "id", [], "any", false, false, false, 45)]), "html", null, true);
+        // line 43
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_education", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 43, $this->source); })()), "id", [], "any", false, false, false, 43)]), "html", null, true);
         echo "\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
@@ -198,7 +196,7 @@ class __TwigTemplate_bad9feed729730d106e592cf7b9b00941cb7e8b0f410edb28c2b7c6d0c7
 
     public function getDebugInfo()
     {
-        return array (  160 => 45,  156 => 44,  148 => 39,  142 => 36,  136 => 33,  130 => 30,  124 => 27,  117 => 23,  103 => 12,  99 => 11,  95 => 10,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  158 => 43,  154 => 42,  146 => 37,  140 => 34,  134 => 31,  128 => 28,  122 => 25,  107 => 13,  103 => 12,  99 => 11,  95 => 10,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -211,10 +209,11 @@ class __TwigTemplate_bad9feed729730d106e592cf7b9b00941cb7e8b0f410edb28c2b7c6d0c7
 <div class=\"row\">
     <div class=\"col-12 m-1\">
         <div class=\"card\">
-            <div class=\"card-header\">                                        
-                <a href=\"{{ path('app_cellule_delete', {'id': cellule.id}) }}\" class=\"text-decoration-none float-right\" title=\"Supprimer\"><i class=\"fas fa-trash-alt text-danger\"></i> </a>
-                <a href=\"{{ path('app_cellule_edit', {'id': cellule.id}) }}\" class=\"text-decoration-none float-right\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
-                <a href=\"{{ path('app_cellule_index') }}\" class=\"text-decoration-none float-right\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+            <div class=\"card-header\">    
+                <a href=\"{{ path('app_cellule_liste_secteur', {'id': cellule.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Liste\"><i class=\"fas fa-list text-info\"></i> </a>                                   
+                <a href=\"{{ path('app_cellule_delete', {'id': cellule.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"><i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                <a href=\"{{ path('app_cellule_edit', {'id': cellule.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                <a href=\"{{ path('app_cellule_index') }}\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
             </div>
             <div class=\"card-body\">
                 <div class=\"row\">
@@ -224,9 +223,6 @@ class __TwigTemplate_bad9feed729730d106e592cf7b9b00941cb7e8b0f410edb28c2b7c6d0c7
                                 <div class=\"row\">
                                     <div class=\"col-lg-10 mx-auto\">
                                         <div class=\"p-2\">
-                                            <div class=\"text-center\">
-                                                <img class=\"col-md-4 mx-auto\" src=\"{{ asset('assets/images/logo.png') }}\" alt=\"logo image\">
-                                            </div>
                                             <ul class=\"list-group\">
                                                 <li class=\"list-group-item\">
                                                     <p><strong>Id</strong>: {{ cellule.id }}</p>
@@ -269,6 +265,6 @@ class __TwigTemplate_bad9feed729730d106e592cf7b9b00941cb7e8b0f410edb28c2b7c6d0c7
 {% endblock %}
 
 
-", "cellule/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\cellule\\show.html.twig");
+", "cellule/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\cellule\\show.html.twig");
     }
 }

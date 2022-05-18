@@ -86,61 +86,68 @@ class __TwigTemplate_b13837fe768114449b616942ce8437c4e8db3e5754509d5a68bf2835f87
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">
-    <div class=\"col-lg-12 grid-margin stretch-card\">
-    <div class=\"card\">
-        <div class=\"card-header bg-light\">
-            <a class=\"btn btn-success\" href=\"";
-        // line 10
+        echo "    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Cellule</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_new");
-        echo "\" title=\"Ajout Cellule\"><i class=\"fas fa-fw fa-plus-circle text-success\"></i></a>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+        echo "\" title=\"Ajout Cellule\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des cellules existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Cellule</th>
                             <th class=\"text-center\">Quartier</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Date de Création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 26
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["cellules"]) || array_key_exists("cellules", $context) ? $context["cellules"] : (function () { throw new RuntimeError('Variable "cellules" does not exist.', 26, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["cellules"]) || array_key_exists("cellules", $context) ? $context["cellules"] : (function () { throw new RuntimeError('Variable "cellules" does not exist.', 41, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["cellule"]) {
-            // line 27
+            // line 42
             echo "                        <tr>
                             <td class=\"text-center\">";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cellule"], "id", [], "any", false, false, false, 28), "html", null, true);
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cellule"], "id", [], "any", false, false, false, 43), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cellule"], "nomcellule", [], "any", false, false, false, 29), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cellule"], "nomcellule", [], "any", false, false, false, 44), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["cellule"], "quartier", [], "any", false, false, false, 30), "NomQuartier", [], "any", false, false, false, 30), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 31
-            ((twig_get_attribute($this->env, $this->source, $context["cellule"], "updatedAt", [], "any", false, false, false, 31)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cellule"], "updatedAt", [], "any", false, false, false, 31), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 32
-            ((twig_get_attribute($this->env, $this->source, $context["cellule"], "createdAt", [], "any", false, false, false, 32)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["cellule"], "createdAt", [], "any", false, false, false, 32), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["cellule"], "quartier", [], "any", false, false, false, 45), "NomQuartier", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">
                                 <a href=\"";
-            // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_show", ["id" => twig_get_attribute($this->env, $this->source, $context["cellule"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_show", ["id" => twig_get_attribute($this->env, $this->source, $context["cellule"], "id", [], "any", false, false, false, 47)]), "html", null, true);
             echo "\"><i class=\"fas fa-eye text-info\" title=\"Détails\"></i></a>
                             </td>
                         </tr>
@@ -148,23 +155,25 @@ class __TwigTemplate_b13837fe768114449b616942ce8437c4e8db3e5754509d5a68bf2835f87
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 38
+            // line 51
             echo "                        <tr>
-                            <td class=\"text-center\" colspan=\"5\">Pas de données</td>
+                            <td class=\"text-center\" colspan=\"5\">no records found</td>
                         </tr>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cellule'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 42
+        // line 55
         echo "                    </tbody>
-                </table>
+                  </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -186,7 +195,7 @@ class __TwigTemplate_b13837fe768114449b616942ce8437c4e8db3e5754509d5a68bf2835f87
 
     public function getDebugInfo()
     {
-        return array (  161 => 42,  152 => 38,  143 => 34,  138 => 32,  134 => 31,  130 => 30,  126 => 29,  122 => 28,  119 => 27,  114 => 26,  95 => 10,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  168 => 55,  159 => 51,  150 => 47,  145 => 45,  141 => 44,  137 => 43,  134 => 42,  129 => 41,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -196,22 +205,37 @@ class __TwigTemplate_b13837fe768114449b616942ce8437c4e8db3e5754509d5a68bf2835f87
 {% block title %}Cellule | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">
-    <div class=\"col-lg-12 grid-margin stretch-card\">
-    <div class=\"card\">
-        <div class=\"card-header bg-light\">
-            <a class=\"btn btn-success\" href=\"{{ path('app_cellule_new') }}\" title=\"Ajout Cellule\"><i class=\"fas fa-fw fa-plus-circle text-success\"></i></a>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Cellule</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_cellule_new') }}\" title=\"Ajout Cellule\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des cellules existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Cellule</th>
                             <th class=\"text-center\">Quartier</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Date de Création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
@@ -221,26 +245,26 @@ class __TwigTemplate_b13837fe768114449b616942ce8437c4e8db3e5754509d5a68bf2835f87
                             <td class=\"text-center\">{{ cellule.id }}</td>
                             <td class=\"text-center\">{{ cellule.nomcellule }}</td>
                             <td class=\"text-center\">{{ cellule.quartier.NomQuartier }}</td>
-                            <td class=\"text-center\">{{ cellule.updatedAt ? cellule.updatedAt|date('Y-m-d à H:i:s') : '' }}</td>
-                            <td class=\"text-center\">{{ cellule.createdAt ? cellule.createdAt|date('Y-m-d à H:i:s') : '' }}</td>
                             <td class=\"text-center\">
                                 <a href=\"{{ path('app_cellule_show', {'id': cellule.id}) }}\"><i class=\"fas fa-eye text-info\" title=\"Détails\"></i></a>
                             </td>
                         </tr>
                     {% else %}
                         <tr>
-                            <td class=\"text-center\" colspan=\"5\">Pas de données</td>
+                            <td class=\"text-center\" colspan=\"5\">no records found</td>
                         </tr>
                     {% endfor %}
                     </tbody>
-                </table>
+                  </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    </div>
-</div>
 {% endblock %}
 
-", "cellule/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\cellule\\index.html.twig");
+", "cellule/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\cellule\\index.html.twig");
     }
 }

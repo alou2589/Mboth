@@ -119,40 +119,30 @@ class __TwigTemplate_e5981e487d76b87c937a104f59fce53c258285ee36401f020158508e522
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Quartier</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 42
+        // line 40
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["quartiers"]) || array_key_exists("quartiers", $context) ? $context["quartiers"] : (function () { throw new RuntimeError('Variable "quartiers" does not exist.', 42, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["quartiers"]) || array_key_exists("quartiers", $context) ? $context["quartiers"] : (function () { throw new RuntimeError('Variable "quartiers" does not exist.', 40, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["quartier"]) {
-            // line 43
+            // line 41
             echo "                        <tr>
                             <td class=\"text-center\">";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quartier"], "id", [], "any", false, false, false, 44), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quartier"], "id", [], "any", false, false, false, 42), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quartier"], "nomQuartier", [], "any", false, false, false, 45), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 46
-            ((twig_get_attribute($this->env, $this->source, $context["quartier"], "updatedAt", [], "any", false, false, false, 46)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quartier"], "updatedAt", [], "any", false, false, false, 46), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 47
-            ((twig_get_attribute($this->env, $this->source, $context["quartier"], "createdAt", [], "any", false, false, false, 47)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quartier"], "createdAt", [], "any", false, false, false, 47), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["quartier"], "nomQuartier", [], "any", false, false, false, 43), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">
                                 <a href=\"";
-            // line 49
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_show", ["id" => twig_get_attribute($this->env, $this->source, $context["quartier"], "id", [], "any", false, false, false, 49)]), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_show", ["id" => twig_get_attribute($this->env, $this->source, $context["quartier"], "id", [], "any", false, false, false, 45)]), "html", null, true);
             echo "\"><i class=\"fas fa-eye text-info\" title=\"Détails\"></i></a>
                             </td>
                         </tr>
@@ -160,7 +150,7 @@ class __TwigTemplate_e5981e487d76b87c937a104f59fce53c258285ee36401f020158508e522
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 53
+            // line 49
             echo "                        <tr>
                             <td class=\"text-center\" colspan=\"5\">no records found</td>
                         </tr>
@@ -169,7 +159,7 @@ class __TwigTemplate_e5981e487d76b87c937a104f59fce53c258285ee36401f020158508e522
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['quartier'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 57
+        // line 53
         echo "                    </tbody>
                   </table>
                 </div>
@@ -200,7 +190,7 @@ class __TwigTemplate_e5981e487d76b87c937a104f59fce53c258285ee36401f020158508e522
 
     public function getDebugInfo()
     {
-        return array (  173 => 57,  164 => 53,  155 => 49,  150 => 47,  146 => 46,  142 => 45,  138 => 44,  135 => 43,  130 => 42,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  163 => 53,  154 => 49,  145 => 45,  140 => 43,  136 => 42,  133 => 41,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -240,8 +230,6 @@ class __TwigTemplate_e5981e487d76b87c937a104f59fce53c258285ee36401f020158508e522
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Quartier</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
@@ -250,8 +238,6 @@ class __TwigTemplate_e5981e487d76b87c937a104f59fce53c258285ee36401f020158508e522
                         <tr>
                             <td class=\"text-center\">{{ quartier.id }}</td>
                             <td class=\"text-center\">{{ quartier.nomQuartier }}</td>
-                            <td class=\"text-center\">{{ quartier.updatedAt ? quartier.updatedAt|date('Y-m-d à H:i:s') : '' }}</td>
-                            <td class=\"text-center\">{{ quartier.createdAt ? quartier.createdAt|date('Y-m-d à H:i:s') : '' }}</td>
                             <td class=\"text-center\">
                                 <a href=\"{{ path('app_quartier_show', {'id': quartier.id}) }}\"><i class=\"fas fa-eye text-info\" title=\"Détails\"></i></a>
                             </td>
@@ -271,6 +257,6 @@ class __TwigTemplate_e5981e487d76b87c937a104f59fce53c258285ee36401f020158508e522
       </div>
     </div>
 {% endblock %}
-", "quartier/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\quartier\\index.html.twig");
+", "quartier/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\index.html.twig");
     }
 }

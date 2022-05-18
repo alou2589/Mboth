@@ -86,127 +86,148 @@ class __TwigTemplate_d019751a849affccec2936bcfa2f40a7ec00587c4593cb8325c8588c870
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Secteur</h1>
-    <p class=\"mb-4\">";
-        // line 8
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 8, $this->source); })()), "NomQuartier", [], "any", false, false, false, 8), "html", null, true);
-        echo " / <strong class=\"text-primary\">Education</strong>  </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"#\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
-                    <thead>
-                        <tr>
-                            <th class=\"text-center\">Id</th>
-                            <th class=\"text-center\">Nom Complet</th>
-                            <th class=\"text-center\">Adresse</th>
-                            <th class=\"text-center\">Ecole</th>
-                            <th class=\"text-center\">Classe</th>
-                            <th class=\"text-center\">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    ";
-        // line 29
+        echo "
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_new");
+        echo "\" title=\"Ajout Quartier\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                    <p class=\"text-muted font-13 m-b-30\">
+                        <strong class=\"text-primary\">Education</strong> / Liste des élèves du Quartier ";
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 30, $this->source); })()), "NomQuartier", [], "any", false, false, false, 30), "html", null, true);
+        echo ".
+                    </p>
+                    <table  id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
+                        <thead>
+                            <tr>
+                                <th class=\"text-center\">Id</th>
+                                <th class=\"text-center\">Nom Complet</th>
+                                <th class=\"text-center\">Adresse</th>
+                                <th class=\"text-center\">Ecole</th>
+                                <th class=\"text-center\">Classe</th>
+                                <th class=\"text-center\">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        ";
+        // line 44
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 29, $this->source); })()), "cellules", [], "any", false, false, false, 29));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 44, $this->source); })()), "cellules", [], "any", false, false, false, 44));
         foreach ($context['_seq'] as $context["_key"] => $context["cellule"]) {
-            // line 30
-            echo "                        ";
+            // line 45
+            echo "                            ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["cellule"], "secteurs", [], "any", false, false, false, 30));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["cellule"], "secteurs", [], "any", false, false, false, 45));
             foreach ($context['_seq'] as $context["_key"] => $context["secteur"]) {
-                // line 31
-                echo "                            ";
+                // line 46
+                echo "                                ";
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["secteur"], "maisons", [], "any", false, false, false, 31));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["secteur"], "maisons", [], "any", false, false, false, 46));
                 foreach ($context['_seq'] as $context["_key"] => $context["maison"]) {
-                    // line 32
-                    echo "                                ";
+                    // line 47
+                    echo "                                    ";
                     $context['_parent'] = $context;
-                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["maison"], "personnes", [], "any", false, false, false, 32));
+                    $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["maison"], "personnes", [], "any", false, false, false, 47));
                     foreach ($context['_seq'] as $context["_key"] => $context["personne"]) {
-                        // line 33
-                        echo "                                    ";
+                        // line 48
+                        echo "                                        ";
                         $context['_parent'] = $context;
-                        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["personne"], "eleves", [], "any", false, false, false, 33));
+                        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["personne"], "eleves", [], "any", false, false, false, 48));
                         foreach ($context['_seq'] as $context["_key"] => $context["eleve"]) {
-                            // line 34
-                            echo "                                        <tr>
-                                            <td class=\"text-center\">";
-                            // line 35
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["eleve"], "id", [], "any", false, false, false, 35), "html", null, true);
+                            // line 49
+                            echo "                                            <tr>
+                                                <td class=\"text-center\">";
+                            // line 50
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["eleve"], "id", [], "any", false, false, false, 50), "html", null, true);
                             echo "</td>
-                                            <td class=\"text-center\">";
-                            // line 36
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 36), "prenom", [], "any", false, false, false, 36), "html", null, true);
+                                                <td class=\"text-center\">";
+                            // line 51
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 51), "prenom", [], "any", false, false, false, 51), "html", null, true);
                             echo " ";
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 36), "nom", [], "any", false, false, false, 36), "html", null, true);
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 51), "nom", [], "any", false, false, false, 51), "html", null, true);
                             echo "</td>
-                                            <td class=\"text-center\">";
-                            // line 37
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 37), "maison", [], "any", false, false, false, 37), "secteur", [], "any", false, false, false, 37), "NomSecteur", [], "any", false, false, false, 37), "html", null, true);
+                                                <td class=\"text-center\">";
+                            // line 52
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 52), "maison", [], "any", false, false, false, 52), "secteur", [], "any", false, false, false, 52), "NomSecteur", [], "any", false, false, false, 52), "html", null, true);
                             echo "/";
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 37), "maison", [], "any", false, false, false, 37), "secteur", [], "any", false, false, false, 37), "cellule", [], "any", false, false, false, 37), "NomCellule", [], "any", false, false, false, 37), "html", null, true);
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "personne", [], "any", false, false, false, 52), "maison", [], "any", false, false, false, 52), "secteur", [], "any", false, false, false, 52), "cellule", [], "any", false, false, false, 52), "NomCellule", [], "any", false, false, false, 52), "html", null, true);
                             echo "</td>
-                                            <td class=\"text-center\">";
-                            // line 38
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "ecole", [], "any", false, false, false, 38), "NomEcole", [], "any", false, false, false, 38), "html", null, true);
+                                                <td class=\"text-center\">";
+                            // line 53
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "ecole", [], "any", false, false, false, 53), "NomEcole", [], "any", false, false, false, 53), "html", null, true);
                             echo "</td>
-                                            <td class=\"text-center\">";
-                            // line 39
-                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "classe", [], "any", false, false, false, 39), "NomClasse", [], "any", false, false, false, 39), "html", null, true);
+                                                <td class=\"text-center\">";
+                            // line 54
+                            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["eleve"], "classe", [], "any", false, false, false, 54), "NomClasse", [], "any", false, false, false, 54), "html", null, true);
                             echo "</td>
-                                            <td class=\"text-center\">
-                                                <a href=\"";
-                            // line 41
-                            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_eleve_show", ["id" => twig_get_attribute($this->env, $this->source, $context["eleve"], "id", [], "any", false, false, false, 41)]), "html", null, true);
+                                                <td class=\"text-center\">
+                                                    <a href=\"";
+                            // line 56
+                            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_eleve_show", ["id" => twig_get_attribute($this->env, $this->source, $context["eleve"], "id", [], "any", false, false, false, 56)]), "html", null, true);
                             echo "\"><i class=\"fas fa-eye text-info\"></i></a>
-                                            </td>
-                                        </tr>
-                                    ";
+                                                </td>
+                                            </tr>
+                                        ";
                         }
                         $_parent = $context['_parent'];
                         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['eleve'], $context['_parent'], $context['loop']);
                         $context = array_intersect_key($context, $_parent) + $_parent;
-                        // line 44
+                        // line 59
                         echo "                            
-                                ";
+                                    ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['personne'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 46
-                    echo "                            ";
+                    // line 61
+                    echo "                                ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['maison'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 47
-                echo "                        ";
+                // line 62
+                echo "                            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['secteur'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 48
-            echo "                    ";
+            // line 63
+            echo "                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['cellule'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 49
-        echo "                    </tbody>
-                </table>
+        // line 64
+        echo "                        </tbody>
+                    </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -228,7 +249,7 @@ class __TwigTemplate_d019751a849affccec2936bcfa2f40a7ec00587c4593cb8325c8588c870
 
     public function getDebugInfo()
     {
-        return array (  204 => 49,  198 => 48,  192 => 47,  186 => 46,  179 => 44,  169 => 41,  164 => 39,  160 => 38,  154 => 37,  148 => 36,  144 => 35,  141 => 34,  136 => 33,  131 => 32,  126 => 31,  121 => 30,  117 => 29,  93 => 8,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  222 => 64,  216 => 63,  210 => 62,  204 => 61,  197 => 59,  187 => 56,  182 => 54,  178 => 53,  172 => 52,  166 => 51,  162 => 50,  159 => 49,  154 => 48,  149 => 47,  144 => 46,  139 => 45,  135 => 44,  118 => 30,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -238,56 +259,74 @@ class __TwigTemplate_d019751a849affccec2936bcfa2f40a7ec00587c4593cb8325c8588c870
 {% block title %}Quartier | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Secteur</h1>
-    <p class=\"mb-4\">{{quartier.NomQuartier}} / <strong class=\"text-primary\">Education</strong>  </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"#\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
-                    <thead>
-                        <tr>
-                            <th class=\"text-center\">Id</th>
-                            <th class=\"text-center\">Nom Complet</th>
-                            <th class=\"text-center\">Adresse</th>
-                            <th class=\"text-center\">Ecole</th>
-                            <th class=\"text-center\">Classe</th>
-                            <th class=\"text-center\">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {% for cellule in quartier.cellules %}
-                        {% for secteur in cellule.secteurs %}
-                            {% for maison in secteur.maisons %}
-                                {% for personne in maison.personnes %}
-                                    {% for eleve in personne.eleves %}
-                                        <tr>
-                                            <td class=\"text-center\">{{ eleve.id }}</td>
-                                            <td class=\"text-center\">{{ eleve.personne.prenom }} {{ eleve.personne.nom }}</td>
-                                            <td class=\"text-center\">{{ eleve.personne.maison.secteur.NomSecteur }}/{{eleve.personne.maison.secteur.cellule.NomCellule}}</td>
-                                            <td class=\"text-center\">{{eleve.ecole.NomEcole}}</td>
-                                            <td class=\"text-center\">{{eleve.classe.NomClasse}}</td>
-                                            <td class=\"text-center\">
-                                                <a href=\"{{ path('app_eleve_show', {'id':eleve.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
-                                            </td>
-                                        </tr>
-                                    {% endfor %}                            
+
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_quartier_new') }}\" title=\"Ajout Quartier\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                    <p class=\"text-muted font-13 m-b-30\">
+                        <strong class=\"text-primary\">Education</strong> / Liste des élèves du Quartier {{ quartier.NomQuartier}}.
+                    </p>
+                    <table  id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
+                        <thead>
+                            <tr>
+                                <th class=\"text-center\">Id</th>
+                                <th class=\"text-center\">Nom Complet</th>
+                                <th class=\"text-center\">Adresse</th>
+                                <th class=\"text-center\">Ecole</th>
+                                <th class=\"text-center\">Classe</th>
+                                <th class=\"text-center\">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for cellule in quartier.cellules %}
+                            {% for secteur in cellule.secteurs %}
+                                {% for maison in secteur.maisons %}
+                                    {% for personne in maison.personnes %}
+                                        {% for eleve in personne.eleves %}
+                                            <tr>
+                                                <td class=\"text-center\">{{ eleve.id }}</td>
+                                                <td class=\"text-center\">{{ eleve.personne.prenom }} {{ eleve.personne.nom }}</td>
+                                                <td class=\"text-center\">{{ eleve.personne.maison.secteur.NomSecteur }}/{{eleve.personne.maison.secteur.cellule.NomCellule}}</td>
+                                                <td class=\"text-center\">{{eleve.ecole.NomEcole}}</td>
+                                                <td class=\"text-center\">{{eleve.classe.NomClasse}}</td>
+                                                <td class=\"text-center\">
+                                                    <a href=\"{{ path('app_eleve_show', {'id':eleve.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}                            
+                                    {% endfor %}
                                 {% endfor %}
                             {% endfor %}
                         {% endfor %}
-                    {% endfor %}
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 {% endblock %}
-", "quartier/education.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\quartier\\education.html.twig");
+", "quartier/education.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\education.html.twig");
     }
 }

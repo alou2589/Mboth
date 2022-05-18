@@ -6,10 +6,11 @@
 <div class="row">
     <div class="col-12 m-1">
         <div class="card">
-            <div class="card-header">                                        
-                <a href="{{ path('app_cellule_delete', {'id': cellule.id}) }}" class="text-decoration-none float-right" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i> </a>
-                <a href="{{ path('app_cellule_edit', {'id': cellule.id}) }}" class="text-decoration-none float-right" title="Modifier"> <i class="fas fa-edit text-warning"></i> </a>
-                <a href="{{ path('app_cellule_index') }}" class="text-decoration-none float-right" title="Accueil"><i class="fas fa-home text-primary"></i></a>
+            <div class="card-header">    
+                <a href="{{ path('app_cellule_liste_secteur', {'id': cellule.id}) }}" class="text-decoration-none float-left m-1" title="Liste"><i class="fas fa-list text-info"></i> </a>                                   
+                <a href="{{ path('app_cellule_delete', {'id': cellule.id}) }}" class="text-decoration-none float-left m-1" title="Supprimer"><i class="fas fa-trash-alt text-danger"></i> </a>
+                <a href="{{ path('app_cellule_edit', {'id': cellule.id}) }}" class="text-decoration-none float-left m-1" title="Modifier"> <i class="fas fa-edit text-warning"></i> </a>
+                <a href="{{ path('app_cellule_index') }}" class="text-decoration-none float-left m-1" title="Accueil"><i class="fas fa-home text-primary"></i></a>
             </div>
             <div class="card-body">
                 <div class="row">
@@ -19,9 +20,6 @@
                                 <div class="row">
                                     <div class="col-lg-10 mx-auto">
                                         <div class="p-2">
-                                            <div class="text-center">
-                                                <img class="col-md-4 mx-auto" src="{{ asset('assets/images/logo.png') }}" alt="logo image">
-                                            </div>
                                             <ul class="list-group">
                                                 <li class="list-group-item">
                                                     <p><strong>Id</strong>: {{ cellule.id }}</p>

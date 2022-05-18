@@ -71,6 +71,6 @@ class __TwigTemplate_4f45d703599870f58e526af2347d0f5390702ac61315f9ceee406fb0c61
             Gentelella - Bootstrap Admin Template by <a href=\"https://colorlib.com\">Colorlib</a>
           </div>
           <div class=\"clearfix\"></div>
-        </footer>", "partials/_footer.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\partials\\_footer.html.twig");
+        </footer>", "partials/_footer.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\partials\\_footer.html.twig");
     }
 }

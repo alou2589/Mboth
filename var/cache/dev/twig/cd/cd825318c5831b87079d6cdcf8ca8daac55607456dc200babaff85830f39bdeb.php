@@ -86,69 +86,74 @@ class __TwigTemplate_a13a60a47f637f4eccd50241a87d55bb95486fe57b935c4ab648152f57d
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Maison</h1>
-    <p class=\"mb-4\">Les maisons se situant à Mboth </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"";
-        // line 12
+        echo "
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_new");
-        echo "\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+        echo "\" title=\"Ajout Maison\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des maisons existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Maison</th>
                             <th class=\"text-center\">Code maison</th>
                             <th class=\"text-center\">Secteur</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Date de création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 30
+        // line 43
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["maisons"]) || array_key_exists("maisons", $context) ? $context["maisons"] : (function () { throw new RuntimeError('Variable "maisons" does not exist.', 30, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["maisons"]) || array_key_exists("maisons", $context) ? $context["maisons"] : (function () { throw new RuntimeError('Variable "maisons" does not exist.', 43, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["maison"]) {
-            // line 31
+            // line 44
             echo "                        <tr>
                             <td class=\"text-center\">";
-            // line 32
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 32), "html", null, true);
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "nomMaison", [], "any", false, false, false, 33), "html", null, true);
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "nomMaison", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 34
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "codeMaison", [], "any", false, false, false, 34), "html", null, true);
+            // line 47
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "codeMaison", [], "any", false, false, false, 47), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
-            // line 35
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["maison"], "secteur", [], "any", false, false, false, 35), "NomSecteur", [], "any", false, false, false, 35), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 36
-            ((twig_get_attribute($this->env, $this->source, $context["maison"], "updatedAt", [], "any", false, false, false, 36)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "updatedAt", [], "any", false, false, false, 36), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 37
-            ((twig_get_attribute($this->env, $this->source, $context["maison"], "createdAt", [], "any", false, false, false, 37)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "createdAt", [], "any", false, false, false, 37), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+            // line 48
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["maison"], "secteur", [], "any", false, false, false, 48), "NomSecteur", [], "any", false, false, false, 48), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">
                                 <a href=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_show", ["id" => twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 39)]), "html", null, true);
+            // line 50
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_show", ["id" => twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 50)]), "html", null, true);
             echo "\"><i class=\"fas fa-eye text-info\"></i></a>
                             </td>
                         </tr>
@@ -156,22 +161,25 @@ class __TwigTemplate_a13a60a47f637f4eccd50241a87d55bb95486fe57b935c4ab648152f57d
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 43
+            // line 54
             echo "                        <tr>
-                            <td colspan=\"6\">no records found</td>
+                            <td class=\"text-center\" colspan=\"5\">no records found</td>
                         </tr>
                     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['maison'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 47
+        // line 58
         echo "                    </tbody>
-                </table>
+                  </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -193,7 +201,7 @@ class __TwigTemplate_a13a60a47f637f4eccd50241a87d55bb95486fe57b935c4ab648152f57d
 
     public function getDebugInfo()
     {
-        return array (  169 => 47,  160 => 43,  151 => 39,  146 => 37,  142 => 36,  138 => 35,  134 => 34,  130 => 33,  126 => 32,  123 => 31,  118 => 30,  97 => 12,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  174 => 58,  165 => 54,  156 => 50,  151 => 48,  147 => 47,  143 => 46,  139 => 45,  136 => 44,  131 => 43,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -203,26 +211,39 @@ class __TwigTemplate_a13a60a47f637f4eccd50241a87d55bb95486fe57b935c4ab648152f57d
 {% block title %}Maison | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Maison</h1>
-    <p class=\"mb-4\">Les maisons se situant à Mboth </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"{{ path('app_maison_new') }}\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Quartier</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_maison_new') }}\" title=\"Ajout Maison\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des maisons existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Maison</th>
                             <th class=\"text-center\">Code maison</th>
                             <th class=\"text-center\">Secteur</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Date de création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
@@ -233,24 +254,25 @@ class __TwigTemplate_a13a60a47f637f4eccd50241a87d55bb95486fe57b935c4ab648152f57d
                             <td class=\"text-center\">{{ maison.nomMaison }}</td>
                             <td class=\"text-center\">{{ maison.codeMaison }}</td>
                             <td class=\"text-center\">{{ maison.secteur.NomSecteur }}</td>
-                            <td class=\"text-center\">{{ maison.updatedAt ? maison.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                            <td class=\"text-center\">{{ maison.createdAt ? maison.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                             <td class=\"text-center\">
                                 <a href=\"{{ path('app_maison_show', {'id': maison.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
                             </td>
                         </tr>
                     {% else %}
                         <tr>
-                            <td colspan=\"6\">no records found</td>
+                            <td class=\"text-center\" colspan=\"5\">no records found</td>
                         </tr>
                     {% endfor %}
                     </tbody>
-                </table>
+                  </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 {% endblock %}
-", "maison/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\BaseMboth\\templates\\maison\\index.html.twig");
+", "maison/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\maison\\index.html.twig");
     }
 }
