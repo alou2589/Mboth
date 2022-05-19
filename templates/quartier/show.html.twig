@@ -33,39 +33,39 @@
           </div>
           <div class="x_content">
             <div class="row">
-              <div class="col-sm-12">
-                <div class="card-box table-responsive">
-                  <p class="text-muted font-13 m-b-30">
-                    Quartier {{ quartier.NomQuartier}}.
-                  </p>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-5 col-xs-12 mr-2">
-                                    <div class="card o-hidden border-0 shadow-lg my-5">
-                                        <div class="card-body p-1">
-                                            <div class="row">
-                                                <div class="col-lg-10 mx-auto">
-                                                    <div class="p-5">
-                                                        <ul class="list-group">
-                                                            <li class="list-group-item">
-                                                                <p><strong>Id</strong>: {{ quartier.id }}</p>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <p><strong>Quartier</strong>: {{ quartier.NomQuartier }}</p>
-                                                            </li>
-                                                            <li class="list-group-item">
-                                                                <p>
-                                                                    <strong>Fiche Information:</strong> :                                                                                            
-
-                                                                    <a href="{{ path('app_quartier_personne', {'id':quartier.id}) }}" class="text-decoration-none" title="Population"><i class="fas fa-users text-info"></i> </a>
-                                                                    <a href="{{ path('app_quartier_education', {'id':quartier.id}) }}" class="text-decoration-none" title="Education"><i class="fas fa-user-graduate text-primary"></i> </a>
-                                                                    <a href="#" class="text-decoration-none" title="Santé"><i class="fas fa-heartbeat text-danger"></i> </a>
-                                                                    <a href="#" class="text-decoration-none" title="Environnement"><i class="fas fa-leaf text-success"></i> </a>
-                                                                    <a href="#" class="text-decoration-none" title="Economie"><i class="fas fa-hand-holding-usd text-secondary"></i> </a>
-                                                                </p>
-                                                            </li>
-                                                        </ul>                            
+                <div class="col-sm-12">
+                    <div class="card-box table-responsive">
+                        <p class="text-muted font-13 m-b-30">
+                          Quartier {{ quartier.NomQuartier}}.
+                        </p>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-5 col-xs-12 mr-2">
+                                        <div class="card o-hidden border-0 shadow-lg my-5">
+                                            <div class="card-body p-1">
+                                                <div class="row">
+                                                    <div class="col-lg-10 mx-auto">
+                                                        <div class="p-5">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Id</strong>: {{ quartier.id }}</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Quartier</strong>: {{ quartier.NomQuartier }}</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <p>
+                                                                        <strong>Fiche Information:</strong> :    
+                                                                        <a href="{{ path('app_quartier_personne', {'id':quartier.id}) }}" class="text-decoration-none" title="Population"><i class="fas fa-users text-info"></i> </a>
+                                                                        <a href="{{ path('app_quartier_education', {'id':quartier.id}) }}" class="text-decoration-none" title="Education"><i class="fas fa-user-graduate text-primary"></i> </a>
+                                                                        <a href="#" class="text-decoration-none" title="Santé"><i class="fas fa-heartbeat text-danger"></i> </a>
+                                                                        <a href="#" class="text-decoration-none" title="Environnement"><i class="fas fa-leaf text-success"></i> </a>
+                                                                        <a href="#" class="text-decoration-none" title="Economie"><i class="fas fa-hand-holding-usd text-secondary"></i> </a>
+                                                                    </p>
+                                                                </li>
+                                                            </ul>                            
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -76,7 +76,6 @@
                         </div>
                     </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>

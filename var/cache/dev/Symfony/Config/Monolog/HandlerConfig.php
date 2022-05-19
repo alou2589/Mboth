@@ -2,6 +2,7 @@
 
 namespace Symfony\Config\Monolog;
 
+require_once __DIR__.\DIRECTORY_SEPARATOR.'HandlerConfig'.\DIRECTORY_SEPARATOR.'ProcessPsr3MessagesConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'HandlerConfig'.\DIRECTORY_SEPARATOR.'ExcludedHttpCodeConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'HandlerConfig'.\DIRECTORY_SEPARATOR.'PublisherConfig.php';
 require_once __DIR__.\DIRECTORY_SEPARATOR.'HandlerConfig'.\DIRECTORY_SEPARATOR.'MongoConfig.php';
@@ -27,6 +28,7 @@ class HandlerConfig
     private $level;
     private $bubble;
     private $appName;
+    private $fillExtraContext;
     private $includeStacktraces;
     private $processPsr3Messages;
     private $path;
@@ -74,24 +76,8 @@ class HandlerConfig
     private $title;
     private $host;
     private $port;
-    private $publisher;
-    private $mongo;
-    private $elasticsearch;
-    private $index;
-    private $documentType;
-    private $ignoreError;
-    private $redis;
-    private $predis;
     private $config;
     private $members;
-    private $fromEmail;
-    private $toEmail;
-    private $subject;
-    private $contentType;
-    private $headers;
-    private $mailer;
-    private $emailPrototype;
-    private $lazy;
     private $connectionString;
     private $timeout;
     private $time;
@@ -106,13 +92,34 @@ class HandlerConfig
     private $release;
     private $environment;
     private $messageType;
+    private $parseMode;
+    private $disableWebpagePreview;
+    private $disableNotification;
+    private $splitLongMessages;
+    private $delayBetweenMessages;
     private $tags;
     private $consoleFormaterOptions;
     private $consoleFormatterOptions;
-    private $verbosityLevels;
-    private $channels;
     private $formatter;
     private $nested;
+    private $publisher;
+    private $mongo;
+    private $elasticsearch;
+    private $index;
+    private $documentType;
+    private $ignoreError;
+    private $redis;
+    private $predis;
+    private $fromEmail;
+    private $toEmail;
+    private $subject;
+    private $contentType;
+    private $headers;
+    private $mailer;
+    private $emailPrototype;
+    private $lazy;
+    private $verbosityLevels;
+    private $channels;
     private $_usedProperties = [];
     
     /**
@@ -198,6 +205,19 @@ class HandlerConfig
      * @param ParamConfigurator|bool $value
      * @return $this
      */
+    public function fillExtraContext($value): static
+    {
+        $this->_usedProperties['fillExtraContext'] = true;
+        $this->fillExtraContext = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default false
+     * @param ParamConfigurator|bool $value
+     * @return $this
+     */
     public function includeStacktraces($value): static
     {
         $this->_usedProperties['includeStacktraces'] = true;
@@ -206,17 +226,16 @@ class HandlerConfig
         return $this;
     }
     
-    /**
-     * @default null
-     * @param ParamConfigurator|bool $value
-     * @return $this
-     */
-    public function processPsr3Messages($value): static
+    public function processPsr3Messages(array $value = []): \Symfony\Config\Monolog\HandlerConfig\ProcessPsr3MessagesConfig
     {
-        $this->_usedProperties['processPsr3Messages'] = true;
-        $this->processPsr3Messages = $value;
+        if (null === $this->processPsr3Messages) {
+            $this->_usedProperties['processPsr3Messages'] = true;
+            $this->processPsr3Messages = new \Symfony\Config\Monolog\HandlerConfig\ProcessPsr3MessagesConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "processPsr3Messages()" has already been initialized. You cannot pass values the second time you call processPsr3Messages().');
+        }
     
-        return $this;
+        return $this->processPsr3Messages;
     }
     
     /**
@@ -799,105 +818,6 @@ class HandlerConfig
         return $this;
     }
     
-    public function publisher(array $value = []): \Symfony\Config\Monolog\HandlerConfig\PublisherConfig
-    {
-        if (null === $this->publisher) {
-            $this->_usedProperties['publisher'] = true;
-            $this->publisher = new \Symfony\Config\Monolog\HandlerConfig\PublisherConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "publisher()" has already been initialized. You cannot pass values the second time you call publisher().');
-        }
-    
-        return $this->publisher;
-    }
-    
-    public function mongo(array $value = []): \Symfony\Config\Monolog\HandlerConfig\MongoConfig
-    {
-        if (null === $this->mongo) {
-            $this->_usedProperties['mongo'] = true;
-            $this->mongo = new \Symfony\Config\Monolog\HandlerConfig\MongoConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "mongo()" has already been initialized. You cannot pass values the second time you call mongo().');
-        }
-    
-        return $this->mongo;
-    }
-    
-    public function elasticsearch(array $value = []): \Symfony\Config\Monolog\HandlerConfig\ElasticsearchConfig
-    {
-        if (null === $this->elasticsearch) {
-            $this->_usedProperties['elasticsearch'] = true;
-            $this->elasticsearch = new \Symfony\Config\Monolog\HandlerConfig\ElasticsearchConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "elasticsearch()" has already been initialized. You cannot pass values the second time you call elasticsearch().');
-        }
-    
-        return $this->elasticsearch;
-    }
-    
-    /**
-     * @default 'monolog'
-     * @param ParamConfigurator|mixed $value
-     * @return $this
-     */
-    public function index($value): static
-    {
-        $this->_usedProperties['index'] = true;
-        $this->index = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @default 'logs'
-     * @param ParamConfigurator|mixed $value
-     * @return $this
-     */
-    public function documentType($value): static
-    {
-        $this->_usedProperties['documentType'] = true;
-        $this->documentType = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @default false
-     * @param ParamConfigurator|mixed $value
-     * @return $this
-     */
-    public function ignoreError($value): static
-    {
-        $this->_usedProperties['ignoreError'] = true;
-        $this->ignoreError = $value;
-    
-        return $this;
-    }
-    
-    public function redis(array $value = []): \Symfony\Config\Monolog\HandlerConfig\RedisConfig
-    {
-        if (null === $this->redis) {
-            $this->_usedProperties['redis'] = true;
-            $this->redis = new \Symfony\Config\Monolog\HandlerConfig\RedisConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "redis()" has already been initialized. You cannot pass values the second time you call redis().');
-        }
-    
-        return $this->redis;
-    }
-    
-    public function predis(array $value = []): \Symfony\Config\Monolog\HandlerConfig\PredisConfig
-    {
-        if (null === $this->predis) {
-            $this->_usedProperties['predis'] = true;
-            $this->predis = new \Symfony\Config\Monolog\HandlerConfig\PredisConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "predis()" has already been initialized. You cannot pass values the second time you call predis().');
-        }
-    
-        return $this->predis;
-    }
-    
     /**
      * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
      *
@@ -920,109 +840,6 @@ class HandlerConfig
     {
         $this->_usedProperties['members'] = true;
         $this->members = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @default null
-     * @param ParamConfigurator|mixed $value
-     * @return $this
-     */
-    public function fromEmail($value): static
-    {
-        $this->_usedProperties['fromEmail'] = true;
-        $this->fromEmail = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
-     * @return $this
-     */
-    public function toEmail(ParamConfigurator|array $value): static
-    {
-        $this->_usedProperties['toEmail'] = true;
-        $this->toEmail = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @default null
-     * @param ParamConfigurator|mixed $value
-     * @return $this
-     */
-    public function subject($value): static
-    {
-        $this->_usedProperties['subject'] = true;
-        $this->subject = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @default null
-     * @param ParamConfigurator|mixed $value
-     * @return $this
-     */
-    public function contentType($value): static
-    {
-        $this->_usedProperties['contentType'] = true;
-        $this->contentType = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
-     *
-     * @return $this
-     */
-    public function headers(ParamConfigurator|array $value): static
-    {
-        $this->_usedProperties['headers'] = true;
-        $this->headers = $value;
-    
-        return $this;
-    }
-    
-    /**
-     * @default null
-     * @param ParamConfigurator|mixed $value
-     * @return $this
-     */
-    public function mailer($value): static
-    {
-        $this->_usedProperties['mailer'] = true;
-        $this->mailer = $value;
-    
-        return $this;
-    }
-    
-    public function emailPrototype(array $value = []): \Symfony\Config\Monolog\HandlerConfig\EmailPrototypeConfig
-    {
-        if (null === $this->emailPrototype) {
-            $this->_usedProperties['emailPrototype'] = true;
-            $this->emailPrototype = new \Symfony\Config\Monolog\HandlerConfig\EmailPrototypeConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "emailPrototype()" has already been initialized. You cannot pass values the second time you call emailPrototype().');
-        }
-    
-        return $this->emailPrototype;
-    }
-    
-    /**
-     * @default true
-     * @param ParamConfigurator|bool $value
-     * @return $this
-     */
-    public function lazy($value): static
-    {
-        $this->_usedProperties['lazy'] = true;
-        $this->lazy = $value;
     
         return $this;
     }
@@ -1210,6 +1027,71 @@ class HandlerConfig
     }
     
     /**
+     * @default null
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function parseMode($value): static
+    {
+        $this->_usedProperties['parseMode'] = true;
+        $this->parseMode = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default null
+     * @param ParamConfigurator|bool $value
+     * @return $this
+     */
+    public function disableWebpagePreview($value): static
+    {
+        $this->_usedProperties['disableWebpagePreview'] = true;
+        $this->disableWebpagePreview = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default null
+     * @param ParamConfigurator|bool $value
+     * @return $this
+     */
+    public function disableNotification($value): static
+    {
+        $this->_usedProperties['disableNotification'] = true;
+        $this->disableNotification = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default false
+     * @param ParamConfigurator|bool $value
+     * @return $this
+     */
+    public function splitLongMessages($value): static
+    {
+        $this->_usedProperties['splitLongMessages'] = true;
+        $this->splitLongMessages = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default false
+     * @param ParamConfigurator|bool $value
+     * @return $this
+     */
+    public function delayBetweenMessages($value): static
+    {
+        $this->_usedProperties['delayBetweenMessages'] = true;
+        $this->delayBetweenMessages = $value;
+    
+        return $this;
+    }
+    
+    /**
      * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
      *
      * @return $this
@@ -1253,30 +1135,6 @@ class HandlerConfig
         return $this;
     }
     
-    public function verbosityLevels(array $value = []): \Symfony\Config\Monolog\HandlerConfig\VerbosityLevelsConfig
-    {
-        if (null === $this->verbosityLevels) {
-            $this->_usedProperties['verbosityLevels'] = true;
-            $this->verbosityLevels = new \Symfony\Config\Monolog\HandlerConfig\VerbosityLevelsConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "verbosityLevels()" has already been initialized. You cannot pass values the second time you call verbosityLevels().');
-        }
-    
-        return $this->verbosityLevels;
-    }
-    
-    public function channels(array $value = []): \Symfony\Config\Monolog\HandlerConfig\ChannelsConfig
-    {
-        if (null === $this->channels) {
-            $this->_usedProperties['channels'] = true;
-            $this->channels = new \Symfony\Config\Monolog\HandlerConfig\ChannelsConfig($value);
-        } elseif ([] !== $value) {
-            throw new InvalidConfigurationException('The node created by "channels()" has already been initialized. You cannot pass values the second time you call channels().');
-        }
-    
-        return $this->channels;
-    }
-    
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -1301,6 +1159,232 @@ class HandlerConfig
         $this->nested = $value;
     
         return $this;
+    }
+    
+    public function publisher(array $value = []): \Symfony\Config\Monolog\HandlerConfig\PublisherConfig
+    {
+        if (null === $this->publisher) {
+            $this->_usedProperties['publisher'] = true;
+            $this->publisher = new \Symfony\Config\Monolog\HandlerConfig\PublisherConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "publisher()" has already been initialized. You cannot pass values the second time you call publisher().');
+        }
+    
+        return $this->publisher;
+    }
+    
+    public function mongo(array $value = []): \Symfony\Config\Monolog\HandlerConfig\MongoConfig
+    {
+        if (null === $this->mongo) {
+            $this->_usedProperties['mongo'] = true;
+            $this->mongo = new \Symfony\Config\Monolog\HandlerConfig\MongoConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "mongo()" has already been initialized. You cannot pass values the second time you call mongo().');
+        }
+    
+        return $this->mongo;
+    }
+    
+    public function elasticsearch(array $value = []): \Symfony\Config\Monolog\HandlerConfig\ElasticsearchConfig
+    {
+        if (null === $this->elasticsearch) {
+            $this->_usedProperties['elasticsearch'] = true;
+            $this->elasticsearch = new \Symfony\Config\Monolog\HandlerConfig\ElasticsearchConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "elasticsearch()" has already been initialized. You cannot pass values the second time you call elasticsearch().');
+        }
+    
+        return $this->elasticsearch;
+    }
+    
+    /**
+     * @default 'monolog'
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function index($value): static
+    {
+        $this->_usedProperties['index'] = true;
+        $this->index = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default 'logs'
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function documentType($value): static
+    {
+        $this->_usedProperties['documentType'] = true;
+        $this->documentType = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default false
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function ignoreError($value): static
+    {
+        $this->_usedProperties['ignoreError'] = true;
+        $this->ignoreError = $value;
+    
+        return $this;
+    }
+    
+    public function redis(array $value = []): \Symfony\Config\Monolog\HandlerConfig\RedisConfig
+    {
+        if (null === $this->redis) {
+            $this->_usedProperties['redis'] = true;
+            $this->redis = new \Symfony\Config\Monolog\HandlerConfig\RedisConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "redis()" has already been initialized. You cannot pass values the second time you call redis().');
+        }
+    
+        return $this->redis;
+    }
+    
+    public function predis(array $value = []): \Symfony\Config\Monolog\HandlerConfig\PredisConfig
+    {
+        if (null === $this->predis) {
+            $this->_usedProperties['predis'] = true;
+            $this->predis = new \Symfony\Config\Monolog\HandlerConfig\PredisConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "predis()" has already been initialized. You cannot pass values the second time you call predis().');
+        }
+    
+        return $this->predis;
+    }
+    
+    /**
+     * @default null
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function fromEmail($value): static
+    {
+        $this->_usedProperties['fromEmail'] = true;
+        $this->fromEmail = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
+     *
+     * @return $this
+     */
+    public function toEmail(ParamConfigurator|array $value): static
+    {
+        $this->_usedProperties['toEmail'] = true;
+        $this->toEmail = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default null
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function subject($value): static
+    {
+        $this->_usedProperties['subject'] = true;
+        $this->subject = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default null
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function contentType($value): static
+    {
+        $this->_usedProperties['contentType'] = true;
+        $this->contentType = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @param ParamConfigurator|list<ParamConfigurator|mixed> $value
+     *
+     * @return $this
+     */
+    public function headers(ParamConfigurator|array $value): static
+    {
+        $this->_usedProperties['headers'] = true;
+        $this->headers = $value;
+    
+        return $this;
+    }
+    
+    /**
+     * @default null
+     * @param ParamConfigurator|mixed $value
+     * @return $this
+     */
+    public function mailer($value): static
+    {
+        $this->_usedProperties['mailer'] = true;
+        $this->mailer = $value;
+    
+        return $this;
+    }
+    
+    public function emailPrototype(array $value = []): \Symfony\Config\Monolog\HandlerConfig\EmailPrototypeConfig
+    {
+        if (null === $this->emailPrototype) {
+            $this->_usedProperties['emailPrototype'] = true;
+            $this->emailPrototype = new \Symfony\Config\Monolog\HandlerConfig\EmailPrototypeConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "emailPrototype()" has already been initialized. You cannot pass values the second time you call emailPrototype().');
+        }
+    
+        return $this->emailPrototype;
+    }
+    
+    /**
+     * @default true
+     * @param ParamConfigurator|bool $value
+     * @return $this
+     */
+    public function lazy($value): static
+    {
+        $this->_usedProperties['lazy'] = true;
+        $this->lazy = $value;
+    
+        return $this;
+    }
+    
+    public function verbosityLevels(array $value = []): \Symfony\Config\Monolog\HandlerConfig\VerbosityLevelsConfig
+    {
+        if (null === $this->verbosityLevels) {
+            $this->_usedProperties['verbosityLevels'] = true;
+            $this->verbosityLevels = new \Symfony\Config\Monolog\HandlerConfig\VerbosityLevelsConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "verbosityLevels()" has already been initialized. You cannot pass values the second time you call verbosityLevels().');
+        }
+    
+        return $this->verbosityLevels;
+    }
+    
+    public function channels(array $value = []): \Symfony\Config\Monolog\HandlerConfig\ChannelsConfig
+    {
+        if (null === $this->channels) {
+            $this->_usedProperties['channels'] = true;
+            $this->channels = new \Symfony\Config\Monolog\HandlerConfig\ChannelsConfig($value);
+        } elseif ([] !== $value) {
+            throw new InvalidConfigurationException('The node created by "channels()" has already been initialized. You cannot pass values the second time you call channels().');
+        }
+    
+        return $this->channels;
     }
     
     public function __construct(array $value = [])
@@ -1342,6 +1426,12 @@ class HandlerConfig
             unset($value['app_name']);
         }
     
+        if (array_key_exists('fill_extra_context', $value)) {
+            $this->_usedProperties['fillExtraContext'] = true;
+            $this->fillExtraContext = $value['fill_extra_context'];
+            unset($value['fill_extra_context']);
+        }
+    
         if (array_key_exists('include_stacktraces', $value)) {
             $this->_usedProperties['includeStacktraces'] = true;
             $this->includeStacktraces = $value['include_stacktraces'];
@@ -1350,7 +1440,7 @@ class HandlerConfig
     
         if (array_key_exists('process_psr_3_messages', $value)) {
             $this->_usedProperties['processPsr3Messages'] = true;
-            $this->processPsr3Messages = $value['process_psr_3_messages'];
+            $this->processPsr3Messages = new \Symfony\Config\Monolog\HandlerConfig\ProcessPsr3MessagesConfig($value['process_psr_3_messages']);
             unset($value['process_psr_3_messages']);
         }
     
@@ -1624,54 +1714,6 @@ class HandlerConfig
             unset($value['port']);
         }
     
-        if (array_key_exists('publisher', $value)) {
-            $this->_usedProperties['publisher'] = true;
-            $this->publisher = new \Symfony\Config\Monolog\HandlerConfig\PublisherConfig($value['publisher']);
-            unset($value['publisher']);
-        }
-    
-        if (array_key_exists('mongo', $value)) {
-            $this->_usedProperties['mongo'] = true;
-            $this->mongo = new \Symfony\Config\Monolog\HandlerConfig\MongoConfig($value['mongo']);
-            unset($value['mongo']);
-        }
-    
-        if (array_key_exists('elasticsearch', $value)) {
-            $this->_usedProperties['elasticsearch'] = true;
-            $this->elasticsearch = new \Symfony\Config\Monolog\HandlerConfig\ElasticsearchConfig($value['elasticsearch']);
-            unset($value['elasticsearch']);
-        }
-    
-        if (array_key_exists('index', $value)) {
-            $this->_usedProperties['index'] = true;
-            $this->index = $value['index'];
-            unset($value['index']);
-        }
-    
-        if (array_key_exists('document_type', $value)) {
-            $this->_usedProperties['documentType'] = true;
-            $this->documentType = $value['document_type'];
-            unset($value['document_type']);
-        }
-    
-        if (array_key_exists('ignore_error', $value)) {
-            $this->_usedProperties['ignoreError'] = true;
-            $this->ignoreError = $value['ignore_error'];
-            unset($value['ignore_error']);
-        }
-    
-        if (array_key_exists('redis', $value)) {
-            $this->_usedProperties['redis'] = true;
-            $this->redis = new \Symfony\Config\Monolog\HandlerConfig\RedisConfig($value['redis']);
-            unset($value['redis']);
-        }
-    
-        if (array_key_exists('predis', $value)) {
-            $this->_usedProperties['predis'] = true;
-            $this->predis = new \Symfony\Config\Monolog\HandlerConfig\PredisConfig($value['predis']);
-            unset($value['predis']);
-        }
-    
         if (array_key_exists('config', $value)) {
             $this->_usedProperties['config'] = true;
             $this->config = $value['config'];
@@ -1682,54 +1724,6 @@ class HandlerConfig
             $this->_usedProperties['members'] = true;
             $this->members = $value['members'];
             unset($value['members']);
-        }
-    
-        if (array_key_exists('from_email', $value)) {
-            $this->_usedProperties['fromEmail'] = true;
-            $this->fromEmail = $value['from_email'];
-            unset($value['from_email']);
-        }
-    
-        if (array_key_exists('to_email', $value)) {
-            $this->_usedProperties['toEmail'] = true;
-            $this->toEmail = $value['to_email'];
-            unset($value['to_email']);
-        }
-    
-        if (array_key_exists('subject', $value)) {
-            $this->_usedProperties['subject'] = true;
-            $this->subject = $value['subject'];
-            unset($value['subject']);
-        }
-    
-        if (array_key_exists('content_type', $value)) {
-            $this->_usedProperties['contentType'] = true;
-            $this->contentType = $value['content_type'];
-            unset($value['content_type']);
-        }
-    
-        if (array_key_exists('headers', $value)) {
-            $this->_usedProperties['headers'] = true;
-            $this->headers = $value['headers'];
-            unset($value['headers']);
-        }
-    
-        if (array_key_exists('mailer', $value)) {
-            $this->_usedProperties['mailer'] = true;
-            $this->mailer = $value['mailer'];
-            unset($value['mailer']);
-        }
-    
-        if (array_key_exists('email_prototype', $value)) {
-            $this->_usedProperties['emailPrototype'] = true;
-            $this->emailPrototype = new \Symfony\Config\Monolog\HandlerConfig\EmailPrototypeConfig($value['email_prototype']);
-            unset($value['email_prototype']);
-        }
-    
-        if (array_key_exists('lazy', $value)) {
-            $this->_usedProperties['lazy'] = true;
-            $this->lazy = $value['lazy'];
-            unset($value['lazy']);
         }
     
         if (array_key_exists('connection_string', $value)) {
@@ -1816,6 +1810,36 @@ class HandlerConfig
             unset($value['message_type']);
         }
     
+        if (array_key_exists('parse_mode', $value)) {
+            $this->_usedProperties['parseMode'] = true;
+            $this->parseMode = $value['parse_mode'];
+            unset($value['parse_mode']);
+        }
+    
+        if (array_key_exists('disable_webpage_preview', $value)) {
+            $this->_usedProperties['disableWebpagePreview'] = true;
+            $this->disableWebpagePreview = $value['disable_webpage_preview'];
+            unset($value['disable_webpage_preview']);
+        }
+    
+        if (array_key_exists('disable_notification', $value)) {
+            $this->_usedProperties['disableNotification'] = true;
+            $this->disableNotification = $value['disable_notification'];
+            unset($value['disable_notification']);
+        }
+    
+        if (array_key_exists('split_long_messages', $value)) {
+            $this->_usedProperties['splitLongMessages'] = true;
+            $this->splitLongMessages = $value['split_long_messages'];
+            unset($value['split_long_messages']);
+        }
+    
+        if (array_key_exists('delay_between_messages', $value)) {
+            $this->_usedProperties['delayBetweenMessages'] = true;
+            $this->delayBetweenMessages = $value['delay_between_messages'];
+            unset($value['delay_between_messages']);
+        }
+    
         if (array_key_exists('tags', $value)) {
             $this->_usedProperties['tags'] = true;
             $this->tags = $value['tags'];
@@ -1834,18 +1858,6 @@ class HandlerConfig
             unset($value['console_formatter_options']);
         }
     
-        if (array_key_exists('verbosity_levels', $value)) {
-            $this->_usedProperties['verbosityLevels'] = true;
-            $this->verbosityLevels = new \Symfony\Config\Monolog\HandlerConfig\VerbosityLevelsConfig($value['verbosity_levels']);
-            unset($value['verbosity_levels']);
-        }
-    
-        if (array_key_exists('channels', $value)) {
-            $this->_usedProperties['channels'] = true;
-            $this->channels = new \Symfony\Config\Monolog\HandlerConfig\ChannelsConfig($value['channels']);
-            unset($value['channels']);
-        }
-    
         if (array_key_exists('formatter', $value)) {
             $this->_usedProperties['formatter'] = true;
             $this->formatter = $value['formatter'];
@@ -1856,6 +1868,114 @@ class HandlerConfig
             $this->_usedProperties['nested'] = true;
             $this->nested = $value['nested'];
             unset($value['nested']);
+        }
+    
+        if (array_key_exists('publisher', $value)) {
+            $this->_usedProperties['publisher'] = true;
+            $this->publisher = new \Symfony\Config\Monolog\HandlerConfig\PublisherConfig($value['publisher']);
+            unset($value['publisher']);
+        }
+    
+        if (array_key_exists('mongo', $value)) {
+            $this->_usedProperties['mongo'] = true;
+            $this->mongo = new \Symfony\Config\Monolog\HandlerConfig\MongoConfig($value['mongo']);
+            unset($value['mongo']);
+        }
+    
+        if (array_key_exists('elasticsearch', $value)) {
+            $this->_usedProperties['elasticsearch'] = true;
+            $this->elasticsearch = new \Symfony\Config\Monolog\HandlerConfig\ElasticsearchConfig($value['elasticsearch']);
+            unset($value['elasticsearch']);
+        }
+    
+        if (array_key_exists('index', $value)) {
+            $this->_usedProperties['index'] = true;
+            $this->index = $value['index'];
+            unset($value['index']);
+        }
+    
+        if (array_key_exists('document_type', $value)) {
+            $this->_usedProperties['documentType'] = true;
+            $this->documentType = $value['document_type'];
+            unset($value['document_type']);
+        }
+    
+        if (array_key_exists('ignore_error', $value)) {
+            $this->_usedProperties['ignoreError'] = true;
+            $this->ignoreError = $value['ignore_error'];
+            unset($value['ignore_error']);
+        }
+    
+        if (array_key_exists('redis', $value)) {
+            $this->_usedProperties['redis'] = true;
+            $this->redis = new \Symfony\Config\Monolog\HandlerConfig\RedisConfig($value['redis']);
+            unset($value['redis']);
+        }
+    
+        if (array_key_exists('predis', $value)) {
+            $this->_usedProperties['predis'] = true;
+            $this->predis = new \Symfony\Config\Monolog\HandlerConfig\PredisConfig($value['predis']);
+            unset($value['predis']);
+        }
+    
+        if (array_key_exists('from_email', $value)) {
+            $this->_usedProperties['fromEmail'] = true;
+            $this->fromEmail = $value['from_email'];
+            unset($value['from_email']);
+        }
+    
+        if (array_key_exists('to_email', $value)) {
+            $this->_usedProperties['toEmail'] = true;
+            $this->toEmail = $value['to_email'];
+            unset($value['to_email']);
+        }
+    
+        if (array_key_exists('subject', $value)) {
+            $this->_usedProperties['subject'] = true;
+            $this->subject = $value['subject'];
+            unset($value['subject']);
+        }
+    
+        if (array_key_exists('content_type', $value)) {
+            $this->_usedProperties['contentType'] = true;
+            $this->contentType = $value['content_type'];
+            unset($value['content_type']);
+        }
+    
+        if (array_key_exists('headers', $value)) {
+            $this->_usedProperties['headers'] = true;
+            $this->headers = $value['headers'];
+            unset($value['headers']);
+        }
+    
+        if (array_key_exists('mailer', $value)) {
+            $this->_usedProperties['mailer'] = true;
+            $this->mailer = $value['mailer'];
+            unset($value['mailer']);
+        }
+    
+        if (array_key_exists('email_prototype', $value)) {
+            $this->_usedProperties['emailPrototype'] = true;
+            $this->emailPrototype = new \Symfony\Config\Monolog\HandlerConfig\EmailPrototypeConfig($value['email_prototype']);
+            unset($value['email_prototype']);
+        }
+    
+        if (array_key_exists('lazy', $value)) {
+            $this->_usedProperties['lazy'] = true;
+            $this->lazy = $value['lazy'];
+            unset($value['lazy']);
+        }
+    
+        if (array_key_exists('verbosity_levels', $value)) {
+            $this->_usedProperties['verbosityLevels'] = true;
+            $this->verbosityLevels = new \Symfony\Config\Monolog\HandlerConfig\VerbosityLevelsConfig($value['verbosity_levels']);
+            unset($value['verbosity_levels']);
+        }
+    
+        if (array_key_exists('channels', $value)) {
+            $this->_usedProperties['channels'] = true;
+            $this->channels = new \Symfony\Config\Monolog\HandlerConfig\ChannelsConfig($value['channels']);
+            unset($value['channels']);
         }
     
         if ([] !== $value) {
@@ -1884,11 +2004,14 @@ class HandlerConfig
         if (isset($this->_usedProperties['appName'])) {
             $output['app_name'] = $this->appName;
         }
+        if (isset($this->_usedProperties['fillExtraContext'])) {
+            $output['fill_extra_context'] = $this->fillExtraContext;
+        }
         if (isset($this->_usedProperties['includeStacktraces'])) {
             $output['include_stacktraces'] = $this->includeStacktraces;
         }
         if (isset($this->_usedProperties['processPsr3Messages'])) {
-            $output['process_psr_3_messages'] = $this->processPsr3Messages;
+            $output['process_psr_3_messages'] = $this->processPsr3Messages->toArray();
         }
         if (isset($this->_usedProperties['path'])) {
             $output['path'] = $this->path;
@@ -2025,59 +2148,11 @@ class HandlerConfig
         if (isset($this->_usedProperties['port'])) {
             $output['port'] = $this->port;
         }
-        if (isset($this->_usedProperties['publisher'])) {
-            $output['publisher'] = $this->publisher->toArray();
-        }
-        if (isset($this->_usedProperties['mongo'])) {
-            $output['mongo'] = $this->mongo->toArray();
-        }
-        if (isset($this->_usedProperties['elasticsearch'])) {
-            $output['elasticsearch'] = $this->elasticsearch->toArray();
-        }
-        if (isset($this->_usedProperties['index'])) {
-            $output['index'] = $this->index;
-        }
-        if (isset($this->_usedProperties['documentType'])) {
-            $output['document_type'] = $this->documentType;
-        }
-        if (isset($this->_usedProperties['ignoreError'])) {
-            $output['ignore_error'] = $this->ignoreError;
-        }
-        if (isset($this->_usedProperties['redis'])) {
-            $output['redis'] = $this->redis->toArray();
-        }
-        if (isset($this->_usedProperties['predis'])) {
-            $output['predis'] = $this->predis->toArray();
-        }
         if (isset($this->_usedProperties['config'])) {
             $output['config'] = $this->config;
         }
         if (isset($this->_usedProperties['members'])) {
             $output['members'] = $this->members;
-        }
-        if (isset($this->_usedProperties['fromEmail'])) {
-            $output['from_email'] = $this->fromEmail;
-        }
-        if (isset($this->_usedProperties['toEmail'])) {
-            $output['to_email'] = $this->toEmail;
-        }
-        if (isset($this->_usedProperties['subject'])) {
-            $output['subject'] = $this->subject;
-        }
-        if (isset($this->_usedProperties['contentType'])) {
-            $output['content_type'] = $this->contentType;
-        }
-        if (isset($this->_usedProperties['headers'])) {
-            $output['headers'] = $this->headers;
-        }
-        if (isset($this->_usedProperties['mailer'])) {
-            $output['mailer'] = $this->mailer;
-        }
-        if (isset($this->_usedProperties['emailPrototype'])) {
-            $output['email_prototype'] = $this->emailPrototype->toArray();
-        }
-        if (isset($this->_usedProperties['lazy'])) {
-            $output['lazy'] = $this->lazy;
         }
         if (isset($this->_usedProperties['connectionString'])) {
             $output['connection_string'] = $this->connectionString;
@@ -2121,6 +2196,21 @@ class HandlerConfig
         if (isset($this->_usedProperties['messageType'])) {
             $output['message_type'] = $this->messageType;
         }
+        if (isset($this->_usedProperties['parseMode'])) {
+            $output['parse_mode'] = $this->parseMode;
+        }
+        if (isset($this->_usedProperties['disableWebpagePreview'])) {
+            $output['disable_webpage_preview'] = $this->disableWebpagePreview;
+        }
+        if (isset($this->_usedProperties['disableNotification'])) {
+            $output['disable_notification'] = $this->disableNotification;
+        }
+        if (isset($this->_usedProperties['splitLongMessages'])) {
+            $output['split_long_messages'] = $this->splitLongMessages;
+        }
+        if (isset($this->_usedProperties['delayBetweenMessages'])) {
+            $output['delay_between_messages'] = $this->delayBetweenMessages;
+        }
         if (isset($this->_usedProperties['tags'])) {
             $output['tags'] = $this->tags;
         }
@@ -2130,17 +2220,65 @@ class HandlerConfig
         if (isset($this->_usedProperties['consoleFormatterOptions'])) {
             $output['console_formatter_options'] = $this->consoleFormatterOptions;
         }
-        if (isset($this->_usedProperties['verbosityLevels'])) {
-            $output['verbosity_levels'] = $this->verbosityLevels->toArray();
-        }
-        if (isset($this->_usedProperties['channels'])) {
-            $output['channels'] = $this->channels->toArray();
-        }
         if (isset($this->_usedProperties['formatter'])) {
             $output['formatter'] = $this->formatter;
         }
         if (isset($this->_usedProperties['nested'])) {
             $output['nested'] = $this->nested;
+        }
+        if (isset($this->_usedProperties['publisher'])) {
+            $output['publisher'] = $this->publisher->toArray();
+        }
+        if (isset($this->_usedProperties['mongo'])) {
+            $output['mongo'] = $this->mongo->toArray();
+        }
+        if (isset($this->_usedProperties['elasticsearch'])) {
+            $output['elasticsearch'] = $this->elasticsearch->toArray();
+        }
+        if (isset($this->_usedProperties['index'])) {
+            $output['index'] = $this->index;
+        }
+        if (isset($this->_usedProperties['documentType'])) {
+            $output['document_type'] = $this->documentType;
+        }
+        if (isset($this->_usedProperties['ignoreError'])) {
+            $output['ignore_error'] = $this->ignoreError;
+        }
+        if (isset($this->_usedProperties['redis'])) {
+            $output['redis'] = $this->redis->toArray();
+        }
+        if (isset($this->_usedProperties['predis'])) {
+            $output['predis'] = $this->predis->toArray();
+        }
+        if (isset($this->_usedProperties['fromEmail'])) {
+            $output['from_email'] = $this->fromEmail;
+        }
+        if (isset($this->_usedProperties['toEmail'])) {
+            $output['to_email'] = $this->toEmail;
+        }
+        if (isset($this->_usedProperties['subject'])) {
+            $output['subject'] = $this->subject;
+        }
+        if (isset($this->_usedProperties['contentType'])) {
+            $output['content_type'] = $this->contentType;
+        }
+        if (isset($this->_usedProperties['headers'])) {
+            $output['headers'] = $this->headers;
+        }
+        if (isset($this->_usedProperties['mailer'])) {
+            $output['mailer'] = $this->mailer;
+        }
+        if (isset($this->_usedProperties['emailPrototype'])) {
+            $output['email_prototype'] = $this->emailPrototype->toArray();
+        }
+        if (isset($this->_usedProperties['lazy'])) {
+            $output['lazy'] = $this->lazy;
+        }
+        if (isset($this->_usedProperties['verbosityLevels'])) {
+            $output['verbosity_levels'] = $this->verbosityLevels->toArray();
+        }
+        if (isset($this->_usedProperties['channels'])) {
+            $output['channels'] = $this->channels->toArray();
         }
     
         return $output;

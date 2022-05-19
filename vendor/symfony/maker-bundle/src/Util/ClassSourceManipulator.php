@@ -253,8 +253,7 @@ final class ClassSourceManipulator
 
     public function addGetter(string $propertyName, $returnType, bool $isReturnTypeNullable, array $commentLines = []): void
     {
-        $methodName = 'get'.Str::asCamelCase($propertyName);
-
+        $methodName = ('bool' === $returnType ? 'is' : 'get').Str::asCamelCase($propertyName);
         $this->addCustomGetter($propertyName, $methodName, $returnType, $isReturnTypeNullable, $commentLines);
     }
 
@@ -513,6 +512,13 @@ final class ClassSourceManipulator
             throw new \Exception('Invalid value: loop before quoting.');
         }
 
+        if (\function_exists('enum_exists')) {
+            // do we have an enum ?
+            if (\is_object($value) && enum_exists(\get_class($value))) {
+                $value = $value->value;
+            }
+        }
+
         return sprintf('"%s"', $value);
     }
 
@@ -694,7 +700,7 @@ final class ClassSourceManipulator
         $paramBuilder->setTypeHint($typeHint);
         $adderNodeBuilder->addParam($paramBuilder->getNode());
 
-        //if (!$this->avatars->contains($avatar))
+        // if (!$this->avatars->contains($avatar))
         $containsMethodCallNode = new Node\Expr\MethodCall(
             new Node\Expr\PropertyFetch(new Node\Expr\Variable('this'), $relation->getPropertyName()),
             'contains',
@@ -749,7 +755,7 @@ final class ClassSourceManipulator
             // $this->avatars->removeElement($avatar);
             $removerNodeBuilder->addStmt(BuilderHelpers::normalizeStmt($removeElementCall));
         } else {
-            //if ($this->avatars->removeElement($avatar))
+            // if ($this->avatars->removeElement($avatar))
             $ifRemoveElementStmt = new Node\Stmt\If_($removeElementCall);
             $removerNodeBuilder->addStmt($ifRemoveElementStmt);
             if ($relation instanceof RelationOneToMany) {
@@ -1199,6 +1205,8 @@ final class ClassSourceManipulator
                 return '\\'.\DateInterval::class;
 
             case 'object':
+                return 'object';
+
             case 'binary':
             case 'blob':
             default:

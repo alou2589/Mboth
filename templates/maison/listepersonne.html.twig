@@ -1,20 +1,37 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Personne | {{ parent() }}{% endblock %}
+{% block title %}Maison | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class="row">    
-    <h1 class="h3 mb-2 text-gray-800">Maison</h1>
-    <p class="mb-4">Les membres de la maison: <strong class="text-primary">{{maison.NomMaison}}/{{maison.CodeMaison}}</strong> </p>
-    <div class="card shadow mb-4">
-        <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">
-                <a class="btn btn-success" href="{{ path('app_maison_new_personne', {'id':maison.id}) }}">Ajout <i class="fas fa-fw fa-plus"></i></a>
-            </h6>
-        </div>
-        <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-hovered" id="dataTable" width="100%" cellspacing="0">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Maison</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li>
+                    <a href="{{path('app_maison_show', {'id':maison.id})}}" class="collapse-link"><i class="fa fa-home"></i></a>  
+                </li>
+                <li>
+                    <a  href="{{ path('app_maison_new_personne', {'id':maison.id}) }}" title="Ajout Personne" ><i class="fas fa-fw fa-plus-circle"></i></a>
+                </li>
+                <li>
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card-box table-responsive">
+                  <p class="text-muted font-13 m-b-30">
+                    Population / {{ maison.NomMaison}}.
+                  </p>
+                  <table id="datatable-buttons" class="table table-striped table-bordered" style="width:100%">
                     <thead>
                         <tr>
                             <th class="text-center">Id</th>
@@ -45,13 +62,16 @@
                         </tr>
                     {% else %}
                         <tr>
-                            <td colspan="10">no records found</td>
+                            <td colspan="6">no records found</td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 {% endblock %}

@@ -3,40 +3,55 @@
 {% block title %}Quartier | {{ parent() }}{% endblock %}
 
 {% block body %}
-    <div class="row">
-      <div class="col-md-12 col-sm-12 ">
-        <div class="x_panel">
-          <div class="x_title">
-            <h2>Quartier</h2>
-            <ul class="nav navbar-right panel_toolbox">
-              <li>
-                  <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-              </li>
-              <li>
-                  <a href="{{ path('app_quartier_new') }}" title="Ajout Quartier" ><i class="fas fa-fw fa-plus-circle"></i></a>
-              </li>
-              <li>
-                  <a class="close-link"><i class="fa fa-close"></i></a>
-              </li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
-          <div class="x_content">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card-box table-responsive">
-                    <p class="text-muted font-13 m-b-30">
-                        Suppression du Quartier {{ quartier.NomQuartier}}
-                    </p>
-                    {{form_start(form, {'attr':{'class':'form'}})}}
-                        <div class="form-floating mb-3">
-                            {{form_row(form.nom_quartier, {'attr':{'class':"form-control", 'placeholder':"Quartier", 'required':"required", 'autofocus':"autofocus"}})}}
+<div class="row">
+  <div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Quartier</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          <li>
+              <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+          <li>
+              <a href="{{ path('app_quartier_show', {'id':quartier.id}) }}" title="Accueil Quartier" ><i class="fas fa-fw fa-home"></i></a>
+          </li>
+          <li>
+              <a class="close-link"><i class="fa fa-close"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-box table-responsive">
+              <p class="text-muted font-13 m-b-30">
+                Modification Quartier
+              </p>
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 mr-2">
+                      <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-1">
+                          <div class="row">
+                            <div class="col-lg-10 mx-auto">
+                              <div class="p-5">
+                                {{form_start(form, {'attr':{'class':'form'}})}}
+                                    <div class="form-floating mb-3">
+                                        {{form_row(form.nom_quartier, {'attr':{'class':"form-control", 'placeholder':"Quartier", 'required':"required", 'autofocus':"autofocus"}})}}
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-warning">Modifier <i class="fas fa-edit"></i></button>
+                                    </div>
+                                {{ form_end(form) }}
+                                </div>
+                            </div>
+                          </div>
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-warning">Modifier <i class="fas fa-edit"></i></button>
-                            <a href="{{ path('app_quartier_show', {'id':quartier.id}) }}" class="btn btn-primary">Accueil <i class="fas fa-home"></i> </a>
-                        </div>
-                    {{ form_end(form) }}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -44,5 +59,7 @@
         </div>
       </div>
     </div>
+  </div>
+</div>
 
 {% endblock %}

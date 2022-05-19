@@ -3,63 +3,62 @@
 {% block title %}Quartier | {{ parent() }}{% endblock %}
 
 {% block body %}
-    <div class="row">
-      <div class="col-md-12 col-sm-12 ">
-        <div class="x_panel">
-          <div class="x_title">
-            <h2>Quartier</h2>
-            <ul class="nav navbar-right panel_toolbox">
-                <li>
-                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                </li>
-                <li>
-                    <a class="collapse-link" href="{{ path('app_quartier_liste_cellule', {'id':quartier.id}) }}" class="text-decoration-none float-left m-1" title="Liste Cellule"><i class="fas fa-list text-info"></i> </a> 
-                </li>
-                <li>
-                    <a class="collapse-link" href="{{ path('app_quartier_delete', {'id': quartier.id}) }}" class="text-decoration-none float-left m-1" title="Supprimer"> <i class="fas fa-trash-alt text-danger"></i> </a>
-                </li>
-                <li>
-                    <a class="collapse-link" href="{{ path('app_quartier_edit', {'id': quartier.id}) }}"  class="text-decoration-none float-left m-1" title="Modifier"> <i class="fas fa-edit text-warning"></i> </a>
-                </li>
-                <li>
-                    <a class="collapse-link" href="{{ path('app_quartier_index') }}" class="text-decoration-none float-left m-1" title="Accueil"><i class="fas fa-home text-primary"></i></a>
-                </li>
-                <li>
-                    <a class="close-link"><i class="fa fa-close"></i></a>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
-          </div>
-          <div class="x_content">
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="card-box table-responsive">
-                  <p class="text-muted font-13 m-b-30">
-                    Quartier {{ quartier.NomQuartier}}.
-                  </p>
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-5 col-xs-12 mr-2">
-                                    <div class="card o-hidden border-0 shadow-lg my-5">
-                                        <div class="card-body p-1">
-                                            <div class="row">
-                                                <div class="col-lg-10 mx-auto">
-                                                    <div class="p-5">
-                            {{form_start(form, {'attr':{'class':'form'}})}}
-                                <div class="form-floating mb-3">
-                                    {{form_row(form.nom_cellule, {'attr':{'class':"form-control", 'placeholder':"Cellule", 'required':"required", 'autofocus':"autofocus"}})}}
+<div class="row">
+  <div class="col-md-12 col-sm-12 ">
+    <div class="x_panel">
+      <div class="x_title">
+        <h2>Quartier</h2>
+        <ul class="nav navbar-right panel_toolbox">
+          <li>
+              <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+          </li>
+          <li>
+              <a href="{{ path('app_quartier_show', {'id':quartier.id}) }}" title="Accueil Quartier" ><i class="fas fa-fw fa-home"></i></a>
+          </li>
+          <li>
+              <a class="close-link"><i class="fa fa-close"></i></a>
+          </li>
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="card-box table-responsive">
+              <p class="text-muted font-13 m-b-30">
+                Modification Quartier
+              </p>
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-5 col-xs-12 mr-2">
+                      <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-1">
+                          <div class="row">
+                            <div class="col-lg-10 mx-auto">
+                                <div class="p-5">
+                                    {{form_start(form, {'attr':{'class':'form'}})}}
+                                        <div class="form-floating mb-3">
+                                            {{form_row(form.nom_cellule, {'attr':{'class':"form-control", 'placeholder':"Cellule", 'required':"required", 'autofocus':"autofocus"}})}}
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-success">Valider <i class="fas fa-save"></i></button>
+                                        </div>
+                                    {{ form_end(form) }}
                                 </div>
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-success">Valider <i class="fas fa-save"></i></button>
-                                    <a href="{{ path('app_cellule_index') }}" class="btn btn-primary">Accueil <i class="fas fa-home"></i></a>
-                                </div>
-                            {{ form_end(form) }}
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
 {% endblock %}

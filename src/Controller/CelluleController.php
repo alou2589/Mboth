@@ -127,10 +127,7 @@ class CelluleController extends AbstractController
     #[Route("/{id}/listepersonnes",name:"app_cellule_personne", methods: ['GET'])]
     public function societe(Cellule $cellule)
     {
-        $secteurs=$cellule->getSecteurs();
-
         return $this->render('cellule/listepersonne.html.twig',[
-            'secteurs'=>$secteurs,
             'cellule'=>$cellule
         ]);
     }

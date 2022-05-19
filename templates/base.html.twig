@@ -45,6 +45,7 @@
             <!-- Custom Theme Style -->
             <link href="{{asset('assets/build/css/custom.min.css')}}" rel="stylesheet" />
             <link rel="shortcut icon" href="{{asset('assets/images/logo-mini.png')}}" />
+            <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
         {% endblock %}
 
     </head>
@@ -146,6 +147,9 @@
         <script src="{{asset('assets/vendors/pdfmake/build/vfs_fonts.js')}}"></script>
         <!-- Custom Theme Scripts -->
         <script src="{{asset('assets/build/js/custom.min.js')}}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="{{asset('assets/build/js/select2.js')}}"></script>
+        
     {% endblock %}
   </body>
 </html>
