@@ -370,6 +370,6 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
               </a>
             </div>
             <!-- /menu footer buttons -->
-          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\partials\\_sidebar.html.twig");
+          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\partials\\_sidebar.html.twig");
     }
 }

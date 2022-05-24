@@ -142,8 +142,8 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: ";
@@ -165,7 +165,7 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
                                                                 </li>
                                                                 <li class=\"list-group-item\">
                                                                     <p>
-                                                                        <strong>Fiche Information:</strong> : 
+                                                                        <strong>Fiche Info:</strong> : 
                                                                         <a href=\"";
         // line 62
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 62, $this->source); })()), "id", [], "any", false, false, false, 62)]), "html", null, true);
@@ -270,8 +270,8 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: {{ cellule.id }}</p>
@@ -284,7 +284,7 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
                                                                 </li>
                                                                 <li class=\"list-group-item\">
                                                                     <p>
-                                                                        <strong>Fiche Information:</strong> : 
+                                                                        <strong>Fiche Info:</strong> : 
                                                                         <a href=\"{{ path('app_cellule_personne', {'id':cellule.id}) }}\" class=\"text-decoration-none\" title=\"Liste Personnes\"><i class=\"fas fa-users text-info\"></i> </a>
                                                                         <a href=\"{{ path('app_cellule_education', {'id':cellule.id}) }}\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
@@ -314,6 +314,6 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
 {% endblock %}
 
 
-", "cellule/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\cellule\\show.html.twig");
+", "cellule/show.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\cellule\\show.html.twig");
     }
 }

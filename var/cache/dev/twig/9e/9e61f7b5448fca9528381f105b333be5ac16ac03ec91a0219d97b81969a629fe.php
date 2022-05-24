@@ -96,9 +96,9 @@ class __TwigTemplate_4e5b3a7071120b7d410fc5b1ad6d1c3e23306c11113c7bf54d4cc76c71f
                   <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
               </li>
               <li>
-                  <a href=\"";
+                  <a class=\"collapse-link\" href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["secteur"]) || array_key_exists("secteur", $context) ? $context["secteur"] : (function () { throw new RuntimeError('Variable "secteur" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_index");
         echo "\" title=\"Accueil Secteur\" ><i class=\"fas fa-fw fa-home\"></i></a>
               </li>
               <li>
@@ -203,7 +203,7 @@ class __TwigTemplate_4e5b3a7071120b7d410fc5b1ad6d1c3e23306c11113c7bf54d4cc76c71f
                   <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
               </li>
               <li>
-                  <a href=\"{{ path('app_secteur_show', {'id':secteur.id}) }}\" title=\"Accueil Secteur\" ><i class=\"fas fa-fw fa-home\"></i></a>
+                  <a class=\"collapse-link\" href=\"{{ path('app_secteur_index')}}\" title=\"Accueil Secteur\" ><i class=\"fas fa-fw fa-home\"></i></a>
               </li>
               <li>
                   <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -255,6 +255,6 @@ class __TwigTemplate_4e5b3a7071120b7d410fc5b1ad6d1c3e23306c11113c7bf54d4cc76c71f
       </div>
     </div>
 {% endblock %}
-", "secteur/new.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\secteur\\new.html.twig");
+", "secteur/new.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\secteur\\new.html.twig");
     }
 }

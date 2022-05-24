@@ -44,8 +44,8 @@
                                         <div class="card o-hidden border-0 shadow-lg my-5">
                                             <div class="card-body p-1">
                                                 <div class="row">
-                                                    <div class="col-lg-10 mx-auto">
-                                                        <div class="p-5">
+                                                    <div class="col-lg-10 col-xs-12 mx-auto">
+                                                        <div class="p-1">
                                                             <ul class="list-group">
                                                                 <li class="list-group-item">
                                                                     <p><strong>Id</strong>: {{ cellule.id }}</p>
@@ -58,7 +58,7 @@
                                                                 </li>
                                                                 <li class="list-group-item">
                                                                     <p>
-                                                                        <strong>Fiche Information:</strong> : 
+                                                                        <strong>Fiche Info:</strong> : 
                                                                         <a href="{{ path('app_cellule_personne', {'id':cellule.id}) }}" class="text-decoration-none" title="Liste Personnes"><i class="fas fa-users text-info"></i> </a>
                                                                         <a href="{{ path('app_cellule_education', {'id':cellule.id}) }}" class="text-decoration-none" title="Education"><i class="fas fa-user-graduate text-primary"></i> </a>
                                                                         <a href="#" class="text-decoration-none" title="Santé"><i class="fas fa-heartbeat text-danger"></i> </a>

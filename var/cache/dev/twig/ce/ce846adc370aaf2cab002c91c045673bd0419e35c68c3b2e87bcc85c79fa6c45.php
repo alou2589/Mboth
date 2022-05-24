@@ -139,12 +139,12 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"row\">
-                                    <div class=\"col-md-5 col-xs-12 mr-2\">
+                                    <div class=\"col-md-6 col-xs-12 mr-2\">
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: ";
@@ -160,7 +160,7 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                                                                 </li>
                                                                 <li class=\"list-group-item\">
                                                                     <p>
-                                                                        <strong>Fiche Information:</strong> :    
+                                                                        <strong>Fiche Info:</strong> :    
                                                                         <a href=\"";
         // line 60
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 60, $this->source); })()), "id", [], "any", false, false, false, 60)]), "html", null, true);
@@ -261,12 +261,12 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                         <div class=\"card\">
                             <div class=\"card-body\">
                                 <div class=\"row\">
-                                    <div class=\"col-md-5 col-xs-12 mr-2\">
+                                    <div class=\"col-md-6 col-xs-12 mr-2\">
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: {{ quartier.id }}</p>
@@ -276,7 +276,7 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                                                                 </li>
                                                                 <li class=\"list-group-item\">
                                                                     <p>
-                                                                        <strong>Fiche Information:</strong> :    
+                                                                        <strong>Fiche Info:</strong> :    
                                                                         <a href=\"{{ path('app_quartier_personne', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Population\"><i class=\"fas fa-users text-info\"></i> </a>
                                                                         <a href=\"{{ path('app_quartier_education', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
@@ -304,6 +304,6 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
 
 {% endblock %}
 
-", "quartier/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\show.html.twig");
+", "quartier/show.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\quartier\\show.html.twig");
     }
 }

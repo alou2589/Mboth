@@ -98,7 +98,7 @@ class __TwigTemplate_794f352e9edc735ba6810fd41d3790528ab4cb6de29adca8ba8b18a1db6
               <li>
                   <a href=\"";
         // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["maison"]) || array_key_exists("maison", $context) ? $context["maison"] : (function () { throw new RuntimeError('Variable "maison" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_index");
         echo "\" title=\"Accueil Maison\" ><i class=\"fas fa-fw fa-home\"></i></a>
               </li>
               <li>
@@ -203,7 +203,7 @@ class __TwigTemplate_794f352e9edc735ba6810fd41d3790528ab4cb6de29adca8ba8b18a1db6
                   <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
               </li>
               <li>
-                  <a href=\"{{ path('app_maison_show', {'id':maison.id}) }}\" title=\"Accueil Maison\" ><i class=\"fas fa-fw fa-home\"></i></a>
+                  <a href=\"{{ path('app_maison_index') }}\" title=\"Accueil Maison\" ><i class=\"fas fa-fw fa-home\"></i></a>
               </li>
               <li>
                   <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -256,6 +256,6 @@ class __TwigTemplate_794f352e9edc735ba6810fd41d3790528ab4cb6de29adca8ba8b18a1db6
     </div>
 {% endblock %}
 
-", "maison/new.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\maison\\new.html.twig");
+", "maison/new.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\maison\\new.html.twig");
     }
 }
