@@ -6,6 +6,7 @@ use App\Entity\Cellule;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class QuartierCelluleType extends AbstractType
 {
@@ -13,6 +14,11 @@ class QuartierCelluleType extends AbstractType
     {
         $builder
             ->add('nom_cellule')
+            ->add('localisation', TextareaType::class, [
+                'attr'=> [
+                    'class'=>'tinymce'
+                ]
+            ])
         ;
     }
 

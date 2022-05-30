@@ -116,21 +116,21 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
         // line 49
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_niveau_etude_index");
         echo "\">Niveau Etude</a></li>
-                      <li><a href=\"t";
+                      <li><a href=\"";
         // line 50
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_index");
         echo "\">Ecole</a></li>
-                      <li><a href=\"t";
+                      <li><a href=\"";
         // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_index");
         echo "\">Classe</a></li>
-                      <li><a href=\"t";
+                      <li><a href=\"";
         // line 52
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_eleve_index");
         echo "\">Eleve</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-bar-chart-o\"></i> Data Presentation <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-heartbeat\"></i> Santé <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
                       <li><a href=\"chartjs.html\">Chart JS</a></li>
                       <li><a href=\"chartjs2.html\">Chart JS2</a></li>
@@ -139,10 +139,29 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
                       <li><a href=\"other_charts.html\">Other Charts</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-clone\"></i>Layouts <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-leaf\"></i> Environnement <span class=\"fa fa-chevron-down\"></span></a>
+                    <ul class=\"nav child_menu\">
+                      <li><a href=\"chartjs.html\">Chart JS</a></li>
+                      <li><a href=\"chartjs2.html\">Chart JS2</a></li>
+                      <li><a href=\"morisjs.html\">Moris JS</a></li>
+                      <li><a href=\"echarts.html\">ECharts</a></li>
+                      <li><a href=\"other_charts.html\">Other Charts</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class=\"fa fa-hand-holding-usd\"></i>Economie <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
                       <li><a href=\"fixed_sidebar.html\">Fixed Sidebar</a></li>
                       <li><a href=\"fixed_footer.html\">Fixed Footer</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class=\"fa fa-chart-bar\"></i> Statistiques <span class=\"fa fa-chevron-down\"></span></a>
+                    <ul class=\"nav child_menu\">
+                      <li><a href=\"chartjs.html\">Global</a></li>
+                      <li><a href=\"chartjs2.html\">Education</a></li>
+                      <li><a href=\"morisjs.html\">Santé</a></li>
+                      <li><a href=\"echarts.html\">Economie</a></li>
+                      <li><a href=\"other_charts.html\">Environnement</a></li>
+                      <li><a href=\"other_charts.html\">Environnement</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -150,44 +169,14 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
               <div class=\"menu_section\">
                 <h3>Live On</h3>
                 <ul class=\"nav side-menu\">
-                  <li><a><i class=\"fa fa-bug\"></i> Additional Pages <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-bug\"></i> Utilisateurs <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"e_commerce.html\">E-commerce</a></li>
-                      <li><a href=\"projects.html\">Projects</a></li>
-                      <li><a href=\"project_detail.html\">Project Detail</a></li>
-                      <li><a href=\"contacts.html\">Contacts</a></li>
-                      <li><a href=\"profile.html\">Profile</a></li>
+                      <li><a href=\"";
+        // line 96
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
+        echo "\">Utilisateurs</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-windows\"></i> Extras <span class=\"fa fa-chevron-down\"></span></a>
-                    <ul class=\"nav child_menu\">
-                      <li><a href=\"page_403.html\">403 Error</a></li>
-                      <li><a href=\"page_404.html\">404 Error</a></li>
-                      <li><a href=\"page_500.html\">500 Error</a></li>
-                      <li><a href=\"plain_page.html\">Plain Page</a></li>
-                      <li><a href=\"login.html\">Login Page</a></li>
-                      <li><a href=\"pricing_tables.html\">Pricing Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class=\"fa fa-sitemap\"></i> Multilevel Menu <span class=\"fa fa-chevron-down\"></span></a>
-                    <ul class=\"nav child_menu\">
-                        <li><a href=\"#level1_1\">Level One</a>
-                        </li>
-                        <li><a>Level One<span class=\"fa fa-chevron-down\"></span></a>
-                          <ul class=\"nav child_menu\">
-                            <li class=\"sub_menu\"><a href=\"level2.html\">Level Two</a>
-                            </li>
-                            <li><a href=\"#level2_1\">Level Two</a>
-                            </li>
-                            <li><a href=\"#level2_2\">Level Two</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href=\"#level1_2\">Level One</a>
-                        </li>
-                    </ul>
-                  </li>                  
-                  <li><a href=\"javascript:void(0)\"><i class=\"fa fa-laptop\"></i> Landing Page <span class=\"label label-success pull-right\">Coming Soon</span></a></li>
                 </ul>
               </div>
 
@@ -231,7 +220,7 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
 
     public function getDebugInfo()
     {
-        return array (  129 => 52,  125 => 51,  121 => 50,  117 => 49,  109 => 44,  105 => 43,  97 => 38,  93 => 37,  89 => 36,  80 => 30,  58 => 11,  47 => 3,  43 => 1,);
+        return array (  176 => 96,  129 => 52,  125 => 51,  121 => 50,  117 => 49,  109 => 44,  105 => 43,  97 => 38,  93 => 37,  89 => 36,  80 => 30,  58 => 11,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -285,12 +274,12 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
                   <li><a><i class=\"fas fa-user-graduate\"></i> Education <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
                       <li><a href=\"{{ path('app_niveau_etude_index') }}\">Niveau Etude</a></li>
-                      <li><a href=\"t{{ path('app_ecole_index') }}\">Ecole</a></li>
-                      <li><a href=\"t{{ path('app_classe_index') }}\">Classe</a></li>
-                      <li><a href=\"t{{ path('app_eleve_index') }}\">Eleve</a></li>
+                      <li><a href=\"{{ path('app_ecole_index') }}\">Ecole</a></li>
+                      <li><a href=\"{{ path('app_classe_index') }}\">Classe</a></li>
+                      <li><a href=\"{{ path('app_eleve_index') }}\">Eleve</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-bar-chart-o\"></i> Data Presentation <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-heartbeat\"></i> Santé <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
                       <li><a href=\"chartjs.html\">Chart JS</a></li>
                       <li><a href=\"chartjs2.html\">Chart JS2</a></li>
@@ -299,10 +288,29 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
                       <li><a href=\"other_charts.html\">Other Charts</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-clone\"></i>Layouts <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-leaf\"></i> Environnement <span class=\"fa fa-chevron-down\"></span></a>
+                    <ul class=\"nav child_menu\">
+                      <li><a href=\"chartjs.html\">Chart JS</a></li>
+                      <li><a href=\"chartjs2.html\">Chart JS2</a></li>
+                      <li><a href=\"morisjs.html\">Moris JS</a></li>
+                      <li><a href=\"echarts.html\">ECharts</a></li>
+                      <li><a href=\"other_charts.html\">Other Charts</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class=\"fa fa-hand-holding-usd\"></i>Economie <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
                       <li><a href=\"fixed_sidebar.html\">Fixed Sidebar</a></li>
                       <li><a href=\"fixed_footer.html\">Fixed Footer</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class=\"fa fa-chart-bar\"></i> Statistiques <span class=\"fa fa-chevron-down\"></span></a>
+                    <ul class=\"nav child_menu\">
+                      <li><a href=\"chartjs.html\">Global</a></li>
+                      <li><a href=\"chartjs2.html\">Education</a></li>
+                      <li><a href=\"morisjs.html\">Santé</a></li>
+                      <li><a href=\"echarts.html\">Economie</a></li>
+                      <li><a href=\"other_charts.html\">Environnement</a></li>
+                      <li><a href=\"other_charts.html\">Environnement</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -310,44 +318,11 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
               <div class=\"menu_section\">
                 <h3>Live On</h3>
                 <ul class=\"nav side-menu\">
-                  <li><a><i class=\"fa fa-bug\"></i> Additional Pages <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-bug\"></i> Utilisateurs <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"e_commerce.html\">E-commerce</a></li>
-                      <li><a href=\"projects.html\">Projects</a></li>
-                      <li><a href=\"project_detail.html\">Project Detail</a></li>
-                      <li><a href=\"contacts.html\">Contacts</a></li>
-                      <li><a href=\"profile.html\">Profile</a></li>
+                      <li><a href=\"{{path('app_user_index')}}\">Utilisateurs</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-windows\"></i> Extras <span class=\"fa fa-chevron-down\"></span></a>
-                    <ul class=\"nav child_menu\">
-                      <li><a href=\"page_403.html\">403 Error</a></li>
-                      <li><a href=\"page_404.html\">404 Error</a></li>
-                      <li><a href=\"page_500.html\">500 Error</a></li>
-                      <li><a href=\"plain_page.html\">Plain Page</a></li>
-                      <li><a href=\"login.html\">Login Page</a></li>
-                      <li><a href=\"pricing_tables.html\">Pricing Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class=\"fa fa-sitemap\"></i> Multilevel Menu <span class=\"fa fa-chevron-down\"></span></a>
-                    <ul class=\"nav child_menu\">
-                        <li><a href=\"#level1_1\">Level One</a>
-                        </li>
-                        <li><a>Level One<span class=\"fa fa-chevron-down\"></span></a>
-                          <ul class=\"nav child_menu\">
-                            <li class=\"sub_menu\"><a href=\"level2.html\">Level Two</a>
-                            </li>
-                            <li><a href=\"#level2_1\">Level Two</a>
-                            </li>
-                            <li><a href=\"#level2_2\">Level Two</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href=\"#level1_2\">Level One</a>
-                        </li>
-                    </ul>
-                  </li>                  
-                  <li><a href=\"javascript:void(0)\"><i class=\"fa fa-laptop\"></i> Landing Page <span class=\"label label-success pull-right\">Coming Soon</span></a></li>
                 </ul>
               </div>
 
@@ -370,6 +345,6 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
               </a>
             </div>
             <!-- /menu footer buttons -->
-          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\partials\\_sidebar.html.twig");
+          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\partials\\_sidebar.html.twig");
     }
 }

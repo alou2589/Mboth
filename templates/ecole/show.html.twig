@@ -4,46 +4,67 @@
 
 {% block body %}
 <div class="row">
-    <div class="card m-1">
-        <div class="card-header">
-            <a href="{{ path('app_ecole_delete', {'id': ecole.id}) }}" class="text-decoration-none" title="Supprimer"> <i class="fas fa-trash-alt text-danger float-right"></i> </a>
-            <a href="{{ path('app_ecole_edit', {'id': ecole.id}) }}"  class="text-decoration-none" title="Modifier"> <i class="fas fa-edit text-warning float-right"></i> </a>
-            <a href="{{ path('app_ecole_index') }}" class="text-decoration-none" title="Accueil"><i class="fas fa-home text-primary float-right"></i></a>
-        </div>
-        <div class="card-body">
+      <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Cellule</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_ecole_liste_classe', {'id':ecole.id}) }}" class="text-decoration-none float-left m-1" title="Liste Classe"><i class="fas fa-list text-info"></i> </a> 
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_ecole_delete', {'id': ecole.id}) }}" class="text-decoration-none float-left m-1" title="Supprimer"> <i class="fas fa-trash-alt text-danger"></i> </a>
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_ecole_edit', {'id': ecole.id}) }}"  class="text-decoration-none float-left m-1" title="Modifier"> <i class="fas fa-edit text-warning"></i> </a>
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_ecole_index') }}" class="text-decoration-none float-left m-1" title="Accueil"><i class="fas fa-home text-primary"></i></a>
+                </li>
+                <li>
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
             <div class="row">
-                <div class="col-md-5 col-xs-12 mr-2">
-                    <div class="card o-hidden border-0 shadow-lg">
-                        <div class="card-body p-0">
-                            <div class="row">
-                                <div class="col-lg-10 col-xs-12 mx-auto">
-                                    <div class="p-2">
-                                        <div class="text-center">
-                                            <img class="col-md-4 mx-auto" src="{{ asset('assets/images/logo.png') }}" alt="logo image">
+                <div class="col-sm-12">
+                    <div class="card-box table-responsive">
+                        <p class="text-muted font-13 m-b-30">
+                          Ecole {{ ecole.NomEcole}}.
+                        </p>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-5 col-xs-12 mr-2">
+                                        <div class="card o-hidden border-0 shadow-lg my-5">
+                                            <div class="card-body p-1">
+                                                <div class="row">
+                                                    <div class="col-lg-10 col-xs-12 mx-auto">
+                                                        <div class="p-1">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Id</strong>: {{ ecole.id }}</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Niveau</strong>: {{ ecole.NiveauEtude.NomNiveauEtude }}</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Ecole</strong>: {{ ecole.NomEcole }}</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    {{ ecole.Description|raw|raw }}                                                               
+                                                                </li>
+                                                            </ul>                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <ul class="list-group">
-                                            <li class="list-group-item">
-                                                <p><strong>Id</strong>: {{ ecole.id }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p><strong>Niveau</strong>: {{ ecole.NiveauEtude.NomNiveauEtude }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p><strong>Ecole</strong>: {{ ecole.NomEcole }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p><strong>Description :</strong> Copier le lien ci-dessous</p><a href="{{ecole.Description|raw}}">{{ ecole.Description|raw }}</a>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p> <strong>Dernière modification</strong> : {{ ecole.updatedAt ? ecole.updatedAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p> <strong>Création</strong> : {{ ecole.createdAt ? ecole.createdAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                            </li>
-                                            <li class="list-group-item">  
-                                                <a href="{{ path('app_ecole_liste_classe', {'id':ecole.id}) }}" class="text-decoration-none" title="Liste Classe"><i class="fas fa-list text-info float-right"></i> </a>
-                                            </li>
-                                        </ul>                            
                                     </div>
                                 </div>
                             </div>
@@ -51,11 +72,10 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
-
 {% endblock %}
 
 

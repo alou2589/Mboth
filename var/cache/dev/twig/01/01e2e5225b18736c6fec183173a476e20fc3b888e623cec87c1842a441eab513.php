@@ -132,58 +132,48 @@ class __TwigTemplate_a996ba3da0cf6b478e4c754298618f776b60ccc530f7650ddbed64a071d
                             <th class=\"text-center\">Date et Lieu de Naissance</th>
                             <th class=\"text-center\">Sexe</th>
                             <th class=\"text-center\">Situation matrimoniale</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Date de Création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 49
+        // line 47
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["personnes"]) || array_key_exists("personnes", $context) ? $context["personnes"] : (function () { throw new RuntimeError('Variable "personnes" does not exist.', 49, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["personnes"]) || array_key_exists("personnes", $context) ? $context["personnes"] : (function () { throw new RuntimeError('Variable "personnes" does not exist.', 47, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["personne"]) {
-            // line 50
+            // line 48
             echo "                        <tr>
                             <td class=\"text-center\">";
+            // line 49
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "id", [], "any", false, false, false, 49), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center\">";
+            // line 50
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "prenom", [], "any", false, false, false, 50), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center\">";
             // line 51
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "id", [], "any", false, false, false, 51), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "nom", [], "any", false, false, false, 51), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
             // line 52
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "prenom", [], "any", false, false, false, 52), "html", null, true);
+            ((twig_get_attribute($this->env, $this->source, $context["personne"], "dateNaissance", [], "any", false, false, false, 52)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "dateNaissance", [], "any", false, false, false, 52), "Y-m-d"), "html", null, true))) : (print ("")));
+            echo " à ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "lieuNaissance", [], "any", false, false, false, 52), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
             // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "nom", [], "any", false, false, false, 53), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "sexe", [], "any", false, false, false, 53), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
             // line 54
-            ((twig_get_attribute($this->env, $this->source, $context["personne"], "dateNaissance", [], "any", false, false, false, 54)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "dateNaissance", [], "any", false, false, false, 54), "Y-m-d"), "html", null, true))) : (print ("")));
-            echo " à ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "lieuNaissance", [], "any", false, false, false, 54), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 55
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "sexe", [], "any", false, false, false, 55), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 56
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "situationMatrimoniale", [], "any", false, false, false, 56), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 57
-            ((twig_get_attribute($this->env, $this->source, $context["personne"], "updatedAt", [], "any", false, false, false, 57)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "updatedAt", [], "any", false, false, false, 57), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 58
-            ((twig_get_attribute($this->env, $this->source, $context["personne"], "createdAt", [], "any", false, false, false, 58)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "createdAt", [], "any", false, false, false, 58), "Y-m-d H:i:s"), "html", null, true))) : (print ("")));
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["personne"], "situationMatrimoniale", [], "any", false, false, false, 54), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">
                                 <a href=\"";
-            // line 60
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_show", ["id" => twig_get_attribute($this->env, $this->source, $context["personne"], "id", [], "any", false, false, false, 60)]), "html", null, true);
+            // line 56
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_show", ["id" => twig_get_attribute($this->env, $this->source, $context["personne"], "id", [], "any", false, false, false, 56)]), "html", null, true);
             echo "\"><i class=\"fas fa-eye text-info\"></i></a>
                             </td>
                         </tr>
@@ -191,7 +181,7 @@ class __TwigTemplate_a996ba3da0cf6b478e4c754298618f776b60ccc530f7650ddbed64a071d
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 64
+            // line 60
             echo "                        <tr>
                             <td colspan=\"6\">no records found</td>
                         </tr>
@@ -200,7 +190,7 @@ class __TwigTemplate_a996ba3da0cf6b478e4c754298618f776b60ccc530f7650ddbed64a071d
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['personne'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 68
+        // line 64
         echo "                    </tbody>
                 </table>
                 </div>
@@ -231,7 +221,7 @@ class __TwigTemplate_a996ba3da0cf6b478e4c754298618f776b60ccc530f7650ddbed64a071d
 
     public function getDebugInfo()
     {
-        return array (  204 => 68,  195 => 64,  186 => 60,  181 => 58,  177 => 57,  173 => 56,  169 => 55,  163 => 54,  159 => 53,  155 => 52,  151 => 51,  148 => 50,  143 => 49,  123 => 32,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  194 => 64,  185 => 60,  176 => 56,  171 => 54,  167 => 53,  161 => 52,  157 => 51,  153 => 50,  149 => 49,  146 => 48,  141 => 47,  123 => 32,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -278,8 +268,6 @@ class __TwigTemplate_a996ba3da0cf6b478e4c754298618f776b60ccc530f7650ddbed64a071d
                             <th class=\"text-center\">Date et Lieu de Naissance</th>
                             <th class=\"text-center\">Sexe</th>
                             <th class=\"text-center\">Situation matrimoniale</th>
-                            <th class=\"text-center\">Dernière Modification</th>
-                            <th class=\"text-center\">Date de Création</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
                     </thead>
@@ -292,8 +280,6 @@ class __TwigTemplate_a996ba3da0cf6b478e4c754298618f776b60ccc530f7650ddbed64a071d
                             <td class=\"text-center\">{{ personne.dateNaissance ? personne.dateNaissance|date('Y-m-d') : '' }} à {{ personne.lieuNaissance }}</td>
                             <td class=\"text-center\">{{ personne.sexe }}</td>
                             <td class=\"text-center\">{{ personne.situationMatrimoniale }}</td>
-                            <td class=\"text-center\">{{ personne.updatedAt ? personne.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
-                            <td class=\"text-center\">{{ personne.createdAt ? personne.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                             <td class=\"text-center\">
                                 <a href=\"{{ path('app_personne_show', {'id': personne.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
                             </td>
@@ -313,6 +299,6 @@ class __TwigTemplate_a996ba3da0cf6b478e4c754298618f776b60ccc530f7650ddbed64a071d
       </div>
     </div>
 {% endblock %}
-", "maison/listepersonne.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\maison\\listepersonne.html.twig");
+", "maison/listepersonne.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\maison\\listepersonne.html.twig");
     }
 }

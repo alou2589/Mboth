@@ -138,7 +138,7 @@ class __TwigTemplate_af47db55b22c4e1ce12d36bbf1648cf7d3c5b6aed7b0841025e15111e16
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
                                                         <div class=\"p-5\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
@@ -293,7 +293,7 @@ class __TwigTemplate_af47db55b22c4e1ce12d36bbf1648cf7d3c5b6aed7b0841025e15111e16
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
                                                         <div class=\"p-5\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
@@ -349,6 +349,6 @@ class __TwigTemplate_af47db55b22c4e1ce12d36bbf1648cf7d3c5b6aed7b0841025e15111e16
       </div>
     </div>
 {% endblock %}
-", "personne/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\personne\\show.html.twig");
+", "personne/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\personne\\show.html.twig");
     }
 }

@@ -86,45 +86,73 @@ class __TwigTemplate_f6cced52872648ab25e156160d9baf94c92c3ddb92c0b7962becd305bd1
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 7
-        echo "
-<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <img class=\"col-md-4 mx-auto\" src=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/logo.png"), "html", null, true);
-        echo "\" alt=\"logo image\">
-                            </div>
-                            Supprimer  <strong> ";
-        // line 18
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 18, $this->source); })()), "NomEcole", [], "any", false, false, false, 18), "html", null, true);
-        echo " </strong>
-                            <form method=\"post\" action=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 19, $this->source); })()), "id", [], "any", false, false, false, 19)]), "html", null, true);
+        echo "    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Ecole</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 17
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_index");
+        echo "\" title=\"Accueil Ecole\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Suppression Ecole
+                  </p>
+                  <div class=\"card\">
+                    <div class=\"card-body\">
+                      <div class=\"row\">
+                        <div class=\"col-md-5 col-xs-12 mr-2\">
+                          <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                            <div class=\"card-body p-1\">
+                              <div class=\"row\">
+                                <div class=\"col-lg-10 mx-auto\">
+                                  <div class=\"p-5\">
+                                    <p>Supprimer  <strong> ";
+        // line 41
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 41, $this->source); })()), "NomEcole", [], "any", false, false, false, 41), "html", null, true);
+        echo " </strong></p>
+                                    <form method=\"post\" action=\"";
+        // line 42
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 42, $this->source); })()), "id", [], "any", false, false, false, 42)]), "html", null, true);
         echo "\" onsubmit=\"return confirm(Êtes-vous sûr de vouloir effectuer cette action ?');\">
-                                <input type=\"hidden\" name=\"_token\" value=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20))), "html", null, true);
+                                        <input type=\"hidden\" name=\"_token\" value=\"";
+        // line 43
+        echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 43, $this->source); })()), "id", [], "any", false, false, false, 43))), "html", null, true);
         echo "\">
-                                <button class=\"btn btn-danger\">Delete <i class=\"fas fa-trash-alt\"></i></button>
-                                <a href=\"";
-        // line 22
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 22, $this->source); })()), "id", [], "any", false, false, false, 22)]), "html", null, true);
-        echo "\" class=\"btn btn-primary\">Accueil <i class=\"fas fa-home\"></i></a>
-                            </form>
+                                        <button class=\"btn btn-danger\">Delete <i class=\"fas fa-trash-alt\"></i></button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -146,7 +174,7 @@ class __TwigTemplate_f6cced52872648ab25e156160d9baf94c92c3ddb92c0b7962becd305bd1
 
     public function getDebugInfo()
     {
-        return array (  118 => 22,  113 => 20,  109 => 19,  105 => 18,  100 => 16,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
+        return array (  136 => 43,  132 => 42,  128 => 41,  101 => 17,  89 => 7,  79 => 6,  59 => 4,  36 => 2,);
     }
 
     public function getSourceContext()
@@ -157,31 +185,62 @@ class __TwigTemplate_f6cced52872648ab25e156160d9baf94c92c3ddb92c0b7962becd305bd1
 {% block title %}Ecole | {{ parent() }}{% endblock %}
 
 {% block body %}
-
-<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <img class=\"col-md-4 mx-auto\" src=\"{{ asset('assets/images/logo.png') }}\" alt=\"logo image\">
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Ecole</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_ecole_index') }}\" title=\"Accueil Ecole\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Suppression Ecole
+                  </p>
+                  <div class=\"card\">
+                    <div class=\"card-body\">
+                      <div class=\"row\">
+                        <div class=\"col-md-5 col-xs-12 mr-2\">
+                          <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                            <div class=\"card-body p-1\">
+                              <div class=\"row\">
+                                <div class=\"col-lg-10 mx-auto\">
+                                  <div class=\"p-5\">
+                                    <p>Supprimer  <strong> {{ecole.NomEcole}} </strong></p>
+                                    <form method=\"post\" action=\"{{ path('app_ecole_delete', {'id': ecole.id}) }}\" onsubmit=\"return confirm(Êtes-vous sûr de vouloir effectuer cette action ?');\">
+                                        <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ ecole.id) }}\">
+                                        <button class=\"btn btn-danger\">Delete <i class=\"fas fa-trash-alt\"></i></button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            Supprimer  <strong> {{ecole.NomEcole}} </strong>
-                            <form method=\"post\" action=\"{{ path('app_ecole_delete', {'id': ecole.id}) }}\" onsubmit=\"return confirm(Êtes-vous sûr de vouloir effectuer cette action ?');\">
-                                <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ ecole.id) }}\">
-                                <button class=\"btn btn-danger\">Delete <i class=\"fas fa-trash-alt\"></i></button>
-                                <a href=\"{{ path('app_ecole_show', {'id':ecole.id}) }}\" class=\"btn btn-primary\">Accueil <i class=\"fas fa-home\"></i></a>
-                            </form>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 {% endblock %}
-", "ecole/delete.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\ecole\\delete.html.twig");
+", "ecole/delete.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\ecole\\delete.html.twig");
     }
 }

@@ -471,6 +471,6 @@ class __TwigTemplate_47cd281de5331380e106038f0dbed1bcc569712c9ab2f294f3dfa2bbdb7
         </div>
     {% endif %}
 {% endblock %}
-", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
+", "@WebProfiler/Collector/twig.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\twig.html.twig");
     }
 }

@@ -87,85 +87,99 @@ class __TwigTemplate_ca2bbde05edba90586112c4c6471e3e05afddf9ab660a8204881f8e645f
 
         // line 6
         echo "<div class=\"row\">
-    <div class=\"col-12 m-1\">
-        <div class=\"card\">
-            <div class=\"card-header\">
-                <a href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 10, $this->source); })()), "id", [], "any", false, false, false, 10)]), "html", null, true);
-        echo "\" class=\"text-decoration-none\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger float-right\"></i> </a>
-                <a href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 11, $this->source); })()), "id", [], "any", false, false, false, 11)]), "html", null, true);
-        echo "\"  class=\"text-decoration-none\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning float-right\"></i> </a>
-                <a href=\"";
-        // line 12
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_index");
-        echo "\" class=\"text-decoration-none\" title=\"Accueil\"><i class=\"fas fa-home text-primary float-right\"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class=\"card-body\">
-        <div class=\"row\">
-            <div class=\"col-md-5 col-xs-12 mr-2\">
-                <div class=\"card o-hidden border-0 shadow-lg\">
-                    <div class=\"card-body p-0\">
-                        <div class=\"row\">
-                            <div class=\"col-lg-10 mx-auto\">
-                                <div class=\"p-2\">
-                                    <div class=\"text-center\">
-                                        <img class=\"col-md-4 mx-auto\" src=\"";
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Classe</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+                <li>
+                    <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_liste_eleve", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Liste Elèves\"><i class=\"fas fa-list text-info\"></i> </a> 
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 19, $this->source); })()), "id", [], "any", false, false, false, 19)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 22
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 22, $this->source); })()), "id", [], "any", false, false, false, 22)]), "html", null, true);
+        echo "\"  class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
         // line 25
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/logo.png"), "html", null, true);
-        echo "\" alt=\"logo image\">
-                                    </div>
-                                        <ul class=\"list-group\">
-                                            <li class=\"list-group-item\">
-                                                <p><strong>Id</strong>: ";
-        // line 29
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 29, $this->source); })()), "id", [], "any", false, false, false, 29), "html", null, true);
-        echo "</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p><strong>Classe</strong>: ";
-        // line 32
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 32, $this->source); })()), "NomClasse", [], "any", false, false, false, 32), "html", null, true);
-        echo "</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p><strong>Niveau</strong>: ";
-        // line 35
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 35, $this->source); })()), "niveauEtude", [], "any", false, false, false, 35), "NomNiveauEtude", [], "any", false, false, false, 35), "html", null, true);
-        echo "</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p> <strong>Dernière modification</strong> : ";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_index");
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+                </li>
+                <li>
+                    <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+                <div class=\"col-sm-12\">
+                    <div class=\"card-box table-responsive\">
+                        <p class=\"text-muted font-13 m-b-30\">
+                          Classe ";
         // line 38
-        ((twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 38, $this->source); })()), "updatedAt", [], "any", false, false, false, 38)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 38, $this->source); })()), "updatedAt", [], "any", false, false, false, 38), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 38, $this->source); })()), "NomClasse", [], "any", false, false, false, 38), "html", null, true);
+        echo ".
+                        </p>
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"row\">
+                                    <div class=\"col-md-5 col-xs-12 mr-2\">
+                                        <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                            <div class=\"card-body p-1\">
+                                                <div class=\"row\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
+                                                            <ul class=\"list-group\">
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Id</strong>: ";
+        // line 51
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 51, $this->source); })()), "id", [], "any", false, false, false, 51), "html", null, true);
         echo "</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p> <strong>Création</strong> : ";
-        // line 41
-        ((twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 41, $this->source); })()), "createdAt", [], "any", false, false, false, 41)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 41, $this->source); })()), "createdAt", [], "any", false, false, false, 41), "Y-m-d à H:i:s"), "html", null, true))) : (print ("")));
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Classe</strong>: ";
+        // line 54
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 54, $this->source); })()), "NomClasse", [], "any", false, false, false, 54), "html", null, true);
         echo "</p>
-                                            </li>
-                                            <li class=\"list-group-item\">  
-                                                <a href=\"";
-        // line 44
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_liste_eleve", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 44, $this->source); })()), "id", [], "any", false, false, false, 44)]), "html", null, true);
-        echo "\" class=\"text-decoration-none float-right\" title=\"Liste Eleve\"><i class=\"fas fa-user-graduate text-info\"></i> </a>
-                                            </li>
-                                        </ul>                            
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Niveau</strong>: ";
+        // line 57
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 57, $this->source); })()), "niveauEtude", [], "any", false, false, false, 57), "NomNiveauEtude", [], "any", false, false, false, 57), "html", null, true);
+        echo "</p>
+                                                                </li>
+                                                            </ul>                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 ";
         
@@ -188,7 +202,7 @@ class __TwigTemplate_ca2bbde05edba90586112c4c6471e3e05afddf9ab660a8204881f8e645f
 
     public function getDebugInfo()
     {
-        return array (  156 => 44,  150 => 41,  144 => 38,  138 => 35,  132 => 32,  126 => 29,  119 => 25,  103 => 12,  99 => 11,  95 => 10,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -199,56 +213,76 @@ class __TwigTemplate_ca2bbde05edba90586112c4c6471e3e05afddf9ab660a8204881f8e645f
 
 {% block body %}
 <div class=\"row\">
-    <div class=\"col-12 m-1\">
-        <div class=\"card\">
-            <div class=\"card-header\">
-                <a href=\"{{ path('app_classe_delete', {'id': classe.id}) }}\" class=\"text-decoration-none\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger float-right\"></i> </a>
-                <a href=\"{{ path('app_classe_edit', {'id': classe.id}) }}\"  class=\"text-decoration-none\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning float-right\"></i> </a>
-                <a href=\"{{ path('app_classe_index') }}\" class=\"text-decoration-none\" title=\"Accueil\"><i class=\"fas fa-home text-primary float-right\"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class=\"card-body\">
-        <div class=\"row\">
-            <div class=\"col-md-5 col-xs-12 mr-2\">
-                <div class=\"card o-hidden border-0 shadow-lg\">
-                    <div class=\"card-body p-0\">
-                        <div class=\"row\">
-                            <div class=\"col-lg-10 mx-auto\">
-                                <div class=\"p-2\">
-                                    <div class=\"text-center\">
-                                        <img class=\"col-md-4 mx-auto\" src=\"{{ asset('assets/images/logo.png') }}\" alt=\"logo image\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Classe</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+                <li>
+                    <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_classe_liste_eleve', {'id':classe.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Liste Elèves\"><i class=\"fas fa-list text-info\"></i> </a> 
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_classe_delete', {'id': classe.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_classe_edit', {'id': classe.id}) }}\"  class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_classe_index') }}\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+                </li>
+                <li>
+                    <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+                <div class=\"col-sm-12\">
+                    <div class=\"card-box table-responsive\">
+                        <p class=\"text-muted font-13 m-b-30\">
+                          Classe {{ classe.NomClasse}}.
+                        </p>
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"row\">
+                                    <div class=\"col-md-5 col-xs-12 mr-2\">
+                                        <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                            <div class=\"card-body p-1\">
+                                                <div class=\"row\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
+                                                            <ul class=\"list-group\">
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Id</strong>: {{ classe.id }}</p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Classe</strong>: {{ classe.NomClasse }}</p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Niveau</strong>: {{ classe.niveauEtude.NomNiveauEtude }}</p>
+                                                                </li>
+                                                            </ul>                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                        <ul class=\"list-group\">
-                                            <li class=\"list-group-item\">
-                                                <p><strong>Id</strong>: {{ classe.id }}</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p><strong>Classe</strong>: {{ classe.NomClasse }}</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p><strong>Niveau</strong>: {{ classe.niveauEtude.NomNiveauEtude }}</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p> <strong>Dernière modification</strong> : {{ classe.updatedAt ? classe.updatedAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                            </li>
-                                            <li class=\"list-group-item\">
-                                                <p> <strong>Création</strong> : {{ classe.createdAt ? classe.createdAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                            </li>
-                                            <li class=\"list-group-item\">  
-                                                <a href=\"{{ path('app_classe_liste_eleve', {'id':classe.id}) }}\" class=\"text-decoration-none float-right\" title=\"Liste Eleve\"><i class=\"fas fa-user-graduate text-info\"></i> </a>
-                                            </li>
-                                        </ul>                            
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
-{% endblock %}", "classe/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\classe\\show.html.twig");
+{% endblock %}", "classe/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\classe\\show.html.twig");
     }
 }

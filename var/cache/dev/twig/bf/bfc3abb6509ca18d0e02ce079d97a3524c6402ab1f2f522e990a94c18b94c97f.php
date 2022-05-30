@@ -86,69 +86,100 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <h1 class=\"h4 text-gray-900 mb-4\">Andeu Defar <strong>Mboth</strong></h1>
-                            </div>
-                            ";
+        echo "    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Utilisateur</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
         // line 16
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
-        echo "
-                                <div class=\"form-check form-switch\">
-                                    ";
-        // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "active", [], "any", false, false, false, 18), 'row', ["attr" => ["class" => "form-check-input", "role" => "switch", "id" => "flexSwitchCheckDefault", "required" => "required"]]);
-        echo "
-                                </div>
-                                    <div class=\"form-floating mb-3\">
-                                        ";
-        // line 21
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "personne", [], "any", false, false, false, 21), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "placeholder" => "Utilisateur", "required" => "required", "autofocus" => "autofocus"]]);
-        echo "
-                                    </div>
-                                <div class=\"form-floating mb-3\">
-                                    ";
-        // line 24
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 24, $this->source); })()), "username", [], "any", false, false, false, 24), 'row', ["attr" => ["class" => "form-control", "id" => "floatingInput", "placeholder" => "Nom d'utilisateur", "autocomplete" => "email", "required" => "required", "autofocus" => "autofocus"]]);
-        echo "
-                                </div>
-                                <div class=\"form-floating mb-3\">
-                                    ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), "email", [], "any", false, false, false, 27), 'row', ["attr" => ["class" => "form-control", "id" => "floatingInput", "placeholder" => "Adresse email", "autocomplete" => "email", "required" => "required"]]);
-        echo "
-                                </div>
-                                <div class=\"form-floating mb-3\">
-                                    ";
-        // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 30, $this->source); })()), "password", [], "any", false, false, false, 30), 'row', ["attr" => ["value" => "passe123", "class" => "form-control", "id" => "floatingInput", "placeholder" => "Adresse email", "readonly" => "readonly", "required" => "required"]]);
-        echo "
-                                </div>
-                                <div class=\"form-group\">
-                                    <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
-                                    <a href=\"";
-        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
-        echo "\" class=\"btn btn-primary\">Accueil <i class=\"fas fa-home\"></i></a>
-                                </div>
-                            ";
-        // line 36
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 36, $this->source); })()), 'form_end');
+        echo "\" title=\"Accueil Utilisateur\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Ajout Utilisateur
+                  </p>
+                  <div class=\"card\">
+                    <div class=\"card-body\">
+                      <div class=\"row\">
+                        <div class=\"col-md-5 col-xs-12 mr-2\">
+                          <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                            <div class=\"card-body p-1\">
+                              <div class=\"row\">
+                                <div class=\"col-lg-10 mx-auto\">
+                                  <div class=\"p-5\">
+                                    ";
+        // line 40
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 40, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
         echo "
+                                        <div class=\"form-check form-switch\">
+                                            ";
+        // line 42
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "active", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "form-check-input", "role" => "switch", "id" => "flexSwitchCheckDefault", "required" => "required"]]);
+        echo "
+                                        </div>
+                                            <div class=\"form-floating mb-3\">
+                                                ";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "personne", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "placeholder" => "Utilisateur", "required" => "required", "autofocus" => "autofocus"]]);
+        echo "
+                                            </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 48
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), "username", [], "any", false, false, false, 48), 'row', ["attr" => ["class" => "form-control", "id" => "floatingInput", "placeholder" => "Nom d'utilisateur", "autocomplete" => "email", "required" => "required", "autofocus" => "autofocus"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 51
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 51, $this->source); })()), "email", [], "any", false, false, false, 51), 'row', ["attr" => ["class" => "form-control", "id" => "floatingInput", "placeholder" => "Adresse email", "autocomplete" => "email", "required" => "required"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 54
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 54, $this->source); })()), "password", [], "any", false, false, false, 54), 'row', ["attr" => ["value" => "passe123", "class" => "form-control", "id" => "floatingInput", "placeholder" => "Adresse email", "readonly" => "readonly", "required" => "required"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-group\">
+                                            <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
+                                        </div>
+                                    ";
+        // line 59
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 59, $this->source); })()), 'form_end');
+        echo "
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
 
 ";
         
@@ -171,7 +202,7 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
 
     public function getDebugInfo()
     {
-        return array (  142 => 36,  137 => 34,  130 => 30,  124 => 27,  118 => 24,  112 => 21,  106 => 18,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  165 => 59,  157 => 54,  151 => 51,  145 => 48,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -181,47 +212,78 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
 {% block title %}Utilisateur | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <h1 class=\"h4 text-gray-900 mb-4\">Andeu Defar <strong>Mboth</strong></h1>
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Utilisateur</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_user_index') }}\" title=\"Accueil Utilisateur\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Ajout Utilisateur
+                  </p>
+                  <div class=\"card\">
+                    <div class=\"card-body\">
+                      <div class=\"row\">
+                        <div class=\"col-md-5 col-xs-12 mr-2\">
+                          <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                            <div class=\"card-body p-1\">
+                              <div class=\"row\">
+                                <div class=\"col-lg-10 mx-auto\">
+                                  <div class=\"p-5\">
+                                    {{form_start(form, {'attr':{'class':'form'}})}}
+                                        <div class=\"form-check form-switch\">
+                                            {{form_row(form.active, {'attr':{'class':\"form-check-input\",'role':\"switch\", 'id':\"flexSwitchCheckDefault\",'required':\"required\"}})}}
+                                        </div>
+                                            <div class=\"form-floating mb-3\">
+                                                {{form_row(form.personne, {'attr':{'class':\"form-control js-example-basic-single\", 'placeholder':\"Utilisateur\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                            </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.username, {'attr':{'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Nom d'utilisateur\", 'autocomplete':\"email\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.email, {'attr':{'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Adresse email\", 'autocomplete':\"email\", 'required':\"required\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.password, {'attr':{'value':\"passe123\",'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Adresse email\", 'readonly':\"readonly\", 'required':\"required\"}})}}
+                                        </div>
+                                        <div class=\"form-group\">
+                                            <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
+                                        </div>
+                                    {{ form_end(form) }}
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            {{form_start(form, {'attr':{'class':'form'}})}}
-                                <div class=\"form-check form-switch\">
-                                    {{form_row(form.active, {'attr':{'class':\"form-check-input\",'role':\"switch\", 'id':\"flexSwitchCheckDefault\",'required':\"required\"}})}}
-                                </div>
-                                    <div class=\"form-floating mb-3\">
-                                        {{form_row(form.personne, {'attr':{'class':\"form-control js-example-basic-single\", 'placeholder':\"Utilisateur\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
-                                    </div>
-                                <div class=\"form-floating mb-3\">
-                                    {{form_row(form.username, {'attr':{'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Nom d'utilisateur\", 'autocomplete':\"email\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
-                                </div>
-                                <div class=\"form-floating mb-3\">
-                                    {{form_row(form.email, {'attr':{'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Adresse email\", 'autocomplete':\"email\", 'required':\"required\"}})}}
-                                </div>
-                                <div class=\"form-floating mb-3\">
-                                    {{form_row(form.password, {'attr':{'value':\"passe123\",'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Adresse email\", 'readonly':\"readonly\", 'required':\"required\"}})}}
-                                </div>
-                                <div class=\"form-group\">
-                                    <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-home\"></i> </button>
-                                    <a href=\"{{ path('app_user_index') }}\" class=\"btn btn-primary\">Accueil <i class=\"fas fa-home\"></i></a>
-                                </div>
-                            {{ form_end(form) }}
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-
 
 {% endblock %}
-", "user/new.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\user\\new.html.twig");
+", "user/new.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\user\\new.html.twig");
     }
 }

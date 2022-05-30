@@ -8,6 +8,7 @@ use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class EcoleType extends AbstractType
@@ -21,7 +22,9 @@ class EcoleType extends AbstractType
                 'attr'=>['class'=>'js-example-basic-single']
             ])
             ->add('nom_ecole')
-            ->add('description', CKEditorType::class)
+            ->add('description', TextareaType::class, [
+                'attr' => ['class' => 'tinymce'],
+            ])
         ;
     }
 

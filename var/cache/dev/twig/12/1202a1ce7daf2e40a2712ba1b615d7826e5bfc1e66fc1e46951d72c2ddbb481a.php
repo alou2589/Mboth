@@ -898,6 +898,6 @@ class __TwigTemplate_c1cd2656a42d2f62458d8ade1dab4908e391ec4b350b80e2e1aee4cee7a
         </tbody>
     </table>
 {% endmacro %}
-", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
+", "@WebProfiler/Collector/translation.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\translation.html.twig");
     }
 }

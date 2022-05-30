@@ -174,6 +174,12 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
                                                                 </li>
+                                                                <li class=\"list-group-item\">
+                                                                    ";
+        // line 68
+        echo twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 68, $this->source); })()), "Localisation", [], "any", false, false, false, 68);
+        echo "                                                               
+                                                                </li>
                                                             </ul>                            
                                                         </div>
                                                     </div>
@@ -213,7 +219,7 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
 
     public function getDebugInfo()
     {
-        return array (  170 => 61,  166 => 60,  158 => 55,  152 => 52,  136 => 39,  120 => 26,  114 => 23,  108 => 20,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  180 => 68,  170 => 61,  166 => 60,  158 => 55,  152 => 52,  136 => 39,  120 => 26,  114 => 23,  108 => 20,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -284,6 +290,9 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
                                                                 </li>
+                                                                <li class=\"list-group-item\">
+                                                                    {{ quartier.Localisation|raw|raw }}                                                               
+                                                                </li>
                                                             </ul>                            
                                                         </div>
                                                     </div>
@@ -304,6 +313,6 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
 
 {% endblock %}
 
-", "quartier/show.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\quartier\\show.html.twig");
+", "quartier/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\quartier\\show.html.twig");
     }
 }

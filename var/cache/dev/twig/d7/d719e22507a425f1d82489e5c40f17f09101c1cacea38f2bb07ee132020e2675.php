@@ -86,53 +86,82 @@ class __TwigTemplate_8f1c975c00ec72bb0d9d40b61ebb3ac3e623f9c4630b8ac15e193498534
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <img class=\"col-md-4 mx-auto\" src=\"";
-        // line 14
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/logo.png"), "html", null, true);
-        echo "\" alt=\"logo image\">
-                            </div>
-                            ";
+        echo "    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Classe</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
         // line 16
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 16, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
-        echo "
-                                <div class=\"form-floating mb-3\">
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["classe"]) || array_key_exists("classe", $context) ? $context["classe"] : (function () { throw new RuntimeError('Variable "classe" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
+        echo "\" title=\"Accueil Classe\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Ajout Elève
+                  </p>
+                  <div class=\"card\">
+                    <div class=\"card-body\">
+                      <div class=\"row\">
+                        <div class=\"col-md-5 col-xs-12 mr-2\">
+                          <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                            <div class=\"card-body p-1\">
+                              <div class=\"row\">
+                                <div class=\"col-lg-10 mx-auto\">
+                                  <div class=\"p-5\">
                                     ";
-        // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 18, $this->source); })()), "personne", [], "any", false, false, false, 18), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "required" => "required"]]);
+        // line 40
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 40, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
         echo "
-                                </div>
-                                <div class=\"form-floating mb-3\">
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 42
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "personne", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "required" => "required"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "ecole", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "required" => "required"]]);
+        echo "
+                                        </div>   
+                                        <div class=\"form-group\">
+                                            <button type=\"submit\" class=\"btn btn-success \">Valider <i class=\"fas fa-save\"></i> </button>
+                                        </div>
                                     ";
-        // line 21
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 21, $this->source); })()), "ecole", [], "any", false, false, false, 21), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "required" => "required"]]);
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
-                                </div>   
-                                <div class=\"form-group\">
-                                    <button type=\"submit\" class=\"btn bg-gradient-success text-white\">Valider <i class=\"fas fa-save\"></i> </button>
-                                    <a href=\"";
-        // line 25
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_classe_liste_eleve");
-        echo "\" class=\"btn bg-gradient-secondary text-white\">Accueil <i class=\"fas fa-home\"></i></a>
+                                  </div>
                                 </div>
-                            ";
-        // line 27
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 27, $this->source); })()), 'form_end');
-        echo "
+                              </div>
+                            </div>
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 ";
         
@@ -155,7 +184,7 @@ class __TwigTemplate_8f1c975c00ec72bb0d9d40b61ebb3ac3e623f9c4630b8ac15e193498534
 
     public function getDebugInfo()
     {
-        return array (  127 => 27,  122 => 25,  115 => 21,  109 => 18,  104 => 16,  99 => 14,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 50,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -165,38 +194,70 @@ class __TwigTemplate_8f1c975c00ec72bb0d9d40b61ebb3ac3e623f9c4630b8ac15e193498534
 {% block title %}Classe | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-6 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <img class=\"col-md-4 mx-auto\" src=\"{{ asset('assets/images/logo.png') }}\" alt=\"logo image\">
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Classe</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_classe_show', {'id':classe.id}) }}\" title=\"Accueil Classe\" ><i class=\"fas fa-fw fa-home\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    Ajout Elève
+                  </p>
+                  <div class=\"card\">
+                    <div class=\"card-body\">
+                      <div class=\"row\">
+                        <div class=\"col-md-5 col-xs-12 mr-2\">
+                          <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                            <div class=\"card-body p-1\">
+                              <div class=\"row\">
+                                <div class=\"col-lg-10 mx-auto\">
+                                  <div class=\"p-5\">
+                                    {{form_start(form, {'attr':{'class':'form'}})}}
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.personne, {'attr':{'class':\"form-control js-example-basic-single\", 'required':\"required\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.ecole, {'attr':{'class':\"form-control js-example-basic-single\", 'required':\"required\"}})}}
+                                        </div>   
+                                        <div class=\"form-group\">
+                                            <button type=\"submit\" class=\"btn btn-success \">Valider <i class=\"fas fa-save\"></i> </button>
+                                        </div>
+                                    {{ form_end(form) }}
+                                  </div>
+                                </div>
+                              </div>
                             </div>
-                            {{form_start(form, {'attr':{'class':'form'}})}}
-                                <div class=\"form-floating mb-3\">
-                                    {{form_row(form.personne, {'attr':{'class':\"form-control js-example-basic-single\", 'required':\"required\"}})}}
-                                </div>
-                                <div class=\"form-floating mb-3\">
-                                    {{form_row(form.ecole, {'attr':{'class':\"form-control js-example-basic-single\", 'required':\"required\"}})}}
-                                </div>   
-                                <div class=\"form-group\">
-                                    <button type=\"submit\" class=\"btn bg-gradient-success text-white\">Valider <i class=\"fas fa-save\"></i> </button>
-                                    <a href=\"{{ path('app_classe_liste_eleve') }}\" class=\"btn bg-gradient-secondary text-white\">Accueil <i class=\"fas fa-home\"></i></a>
-                                </div>
-                            {{ form_end(form) }}
+                          </div>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 {% endblock %}
 
-", "classe/neweleve.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\classe\\neweleve.html.twig");
+", "classe/neweleve.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\classe\\neweleve.html.twig");
     }
 }

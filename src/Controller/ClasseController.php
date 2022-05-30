@@ -96,12 +96,12 @@ class ClasseController extends AbstractController
     public function neweleve(Request $request, Classe $classe, EleveRepository $eleveRepository): Response
     {
         $eleve=new Eleve();
-        $form = $this->createForm(ClasseEleveType::class, $classe);
+        $form = $this->createForm(ClasseEleveType::class, $eleve);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $eleve->setUpdatedAt(new \DateTimeImmutable());
             $eleve->setCreatedAt(new \DateTimeImmutable());
-            $eleve->setClasse($eleve->getClasse());
+            $eleve->setClasse($classe);
             $eleveRepository->add($eleve);
             return $this->redirectToRoute('app_classe_liste_eleve', ['id'=>$classe->getId()], Response::HTTP_SEE_OTHER);
         }

@@ -86,77 +86,94 @@ class __TwigTemplate_4d6cd9811d82fa9daf453fcc5169d525578ab9b3e46e8911eaa551fce38
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Ecole</h1>
-    <p class=\"mb-4\">Liste des écoles </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"";
-        // line 12
+        echo "    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Niveau Etude</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_new");
-        echo "\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
-                    <thead>
-                        <tr>
-                            <th class=\"text-center\">Id</th>
-                            <th class=\"text-center\">Ecole</th>
-                            <th class=\"text-center\">Niveau</th>
-                            <th class=\"text-center\">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    ";
-        // line 27
+        echo "\" title=\"Ajout Ecole\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                    <p class=\"text-muted font-13 m-b-30\">
+                      La liste des niveaux d'etude existant à mboth.
+                    </p>
+                    <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
+                        <thead>
+                            <tr>
+                                <th class=\"text-center\">Id</th>
+                                <th class=\"text-center\">Ecole</th>
+                                <th class=\"text-center\">Niveau</th>
+                                <th class=\"text-center\">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        ";
+        // line 41
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["ecoles"]) || array_key_exists("ecoles", $context) ? $context["ecoles"] : (function () { throw new RuntimeError('Variable "ecoles" does not exist.', 27, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["ecoles"]) || array_key_exists("ecoles", $context) ? $context["ecoles"] : (function () { throw new RuntimeError('Variable "ecoles" does not exist.', 41, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["ecole"]) {
-            // line 28
-            echo "                        <tr>
-                            <td class=\"text-center\">";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ecole"], "id", [], "any", false, false, false, 29), "html", null, true);
+            // line 42
+            echo "                            <tr>
+                                <td class=\"text-center\">";
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ecole"], "id", [], "any", false, false, false, 43), "html", null, true);
             echo "</td>
-                            <td class=\"text-center\">";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ecole"], "nomEcole", [], "any", false, false, false, 30), "html", null, true);
+                                <td class=\"text-center\">";
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["ecole"], "nomEcole", [], "any", false, false, false, 44), "html", null, true);
             echo "</td>
-                            <td class=\"text-center\">";
-            // line 31
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["ecole"], "NiveauEtude", [], "any", false, false, false, 31), "NomNiveauEtude", [], "any", false, false, false, 31), "html", null, true);
+                                <td class=\"text-center\">";
+            // line 45
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["ecole"], "NiveauEtude", [], "any", false, false, false, 45), "NomNiveauEtude", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
-                            <td class=\"text-center\">
-                                <a href=\"";
-            // line 33
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_show", ["id" => twig_get_attribute($this->env, $this->source, $context["ecole"], "id", [], "any", false, false, false, 33)]), "html", null, true);
+                                <td class=\"text-center\">
+                                    <a href=\"";
+            // line 47
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_ecole_show", ["id" => twig_get_attribute($this->env, $this->source, $context["ecole"], "id", [], "any", false, false, false, 47)]), "html", null, true);
             echo "\"><i class=\"fas fa-eye text-info\"></i></a>
-                            </td>
-                        </tr>
-                    ";
+                                </td>
+                            </tr>
+                        ";
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 37
-            echo "                        <tr>
-                            <td colspan=\"4\">no records found</td>
-                        </tr>
-                    ";
+            // line 51
+            echo "                            <tr>
+                                <td colspan=\"4\">no records found</td>
+                            </tr>
+                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['ecole'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
-        echo "                    </tbody>
-                </table>
+        // line 55
+        echo "                        </tbody>
+                    </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -178,7 +195,7 @@ class __TwigTemplate_4d6cd9811d82fa9daf453fcc5169d525578ab9b3e46e8911eaa551fce38
 
     public function getDebugInfo()
     {
-        return array (  154 => 41,  145 => 37,  136 => 33,  131 => 31,  127 => 30,  123 => 29,  120 => 28,  115 => 27,  97 => 12,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  168 => 55,  159 => 51,  150 => 47,  145 => 45,  141 => 44,  137 => 43,  134 => 42,  129 => 41,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -188,48 +205,65 @@ class __TwigTemplate_4d6cd9811d82fa9daf453fcc5169d525578ab9b3e46e8911eaa551fce38
 {% block title %}Ecole | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Ecole</h1>
-    <p class=\"mb-4\">Liste des écoles </p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"{{ path('app_ecole_new') }}\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
-                    <thead>
-                        <tr>
-                            <th class=\"text-center\">Id</th>
-                            <th class=\"text-center\">Ecole</th>
-                            <th class=\"text-center\">Niveau</th>
-                            <th class=\"text-center\">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    {% for ecole in ecoles %}
-                        <tr>
-                            <td class=\"text-center\">{{ ecole.id }}</td>
-                            <td class=\"text-center\">{{ ecole.nomEcole }}</td>
-                            <td class=\"text-center\">{{ ecole.NiveauEtude.NomNiveauEtude }}</td>
-                            <td class=\"text-center\">
-                                <a href=\"{{ path('app_ecole_show', {'id': ecole.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
-                            </td>
-                        </tr>
-                    {% else %}
-                        <tr>
-                            <td colspan=\"4\">no records found</td>
-                        </tr>
-                    {% endfor %}
-                    </tbody>
-                </table>
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Niveau Etude</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_ecole_new') }}\" title=\"Ajout Ecole\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                    <p class=\"text-muted font-13 m-b-30\">
+                      La liste des niveaux d'etude existant à mboth.
+                    </p>
+                    <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
+                        <thead>
+                            <tr>
+                                <th class=\"text-center\">Id</th>
+                                <th class=\"text-center\">Ecole</th>
+                                <th class=\"text-center\">Niveau</th>
+                                <th class=\"text-center\">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for ecole in ecoles %}
+                            <tr>
+                                <td class=\"text-center\">{{ ecole.id }}</td>
+                                <td class=\"text-center\">{{ ecole.nomEcole }}</td>
+                                <td class=\"text-center\">{{ ecole.NiveauEtude.NomNiveauEtude }}</td>
+                                <td class=\"text-center\">
+                                    <a href=\"{{ path('app_ecole_show', {'id': ecole.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan=\"4\">no records found</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 {% endblock %}
-", "ecole/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\ecole\\index.html.twig");
+", "ecole/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\ecole\\index.html.twig");
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Form;
 
 use App\Entity\Ecole;
+use App\Entity\Eleve;
 use App\Entity\Personne;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -17,7 +18,7 @@ class ClasseEleveType extends AbstractType
             ->add('personne', EntityType::class, [
                 'class'=>Personne::class,
                 'choice_label'=>function(Personne $personne){
-                    return $personne->getPrenom().''.$personne->getNom();
+                    return $personne->getPrenom().' '.$personne->getNom();
                 },
             ])
             ->add('ecole', EntityType::class, [

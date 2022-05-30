@@ -33,6 +33,9 @@ class Cellule
     #[ORM\OneToMany(mappedBy: 'cellule', targetEntity: Secteur::class, orphanRemoval: true)]
     private $secteurs;
 
+    #[ORM\Column(type: 'text')]
+    private $localisation;
+
     public function __construct()
     {
         $this->secteurs = new ArrayCollection();
@@ -117,6 +120,18 @@ class Cellule
                 $secteur->setCellule(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getLocalisation(): ?string
+    {
+        return $this->localisation;
+    }
+
+    public function setLocalisation(string $localisation): self
+    {
+        $this->localisation = $localisation;
 
         return $this;
     }

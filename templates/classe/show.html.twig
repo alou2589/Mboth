@@ -4,54 +4,74 @@
 
 {% block body %}
 <div class="row">
-    <div class="col-12 m-1">
-        <div class="card">
-            <div class="card-header">
-                <a href="{{ path('app_classe_delete', {'id': classe.id}) }}" class="text-decoration-none" title="Supprimer"> <i class="fas fa-trash-alt text-danger float-right"></i> </a>
-                <a href="{{ path('app_classe_edit', {'id': classe.id}) }}"  class="text-decoration-none" title="Modifier"> <i class="fas fa-edit text-warning float-right"></i> </a>
-                <a href="{{ path('app_classe_index') }}" class="text-decoration-none" title="Accueil"><i class="fas fa-home text-primary float-right"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-5 col-xs-12 mr-2">
-                <div class="card o-hidden border-0 shadow-lg">
-                    <div class="card-body p-0">
-                        <div class="row">
-                            <div class="col-lg-10 col-xs-12 mx-auto">
-                                <div class="p-2">
-                                    <div class="text-center">
-                                        <img class="col-md-4 mx-auto" src="{{ asset('assets/images/logo.png') }}" alt="logo image">
+      <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Classe</h2>
+            <ul class="nav navbar-right panel_toolbox">
+                <li>
+                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_classe_liste_eleve', {'id':classe.id}) }}" class="text-decoration-none float-left m-1" title="Liste Elèves"><i class="fas fa-list text-info"></i> </a> 
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_classe_delete', {'id': classe.id}) }}" class="text-decoration-none float-left m-1" title="Supprimer"> <i class="fas fa-trash-alt text-danger"></i> </a>
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_classe_edit', {'id': classe.id}) }}"  class="text-decoration-none float-left m-1" title="Modifier"> <i class="fas fa-edit text-warning"></i> </a>
+                </li>
+                <li>
+                    <a class="collapse-link" href="{{ path('app_classe_index') }}" class="text-decoration-none float-left m-1" title="Accueil"><i class="fas fa-home text-primary"></i></a>
+                </li>
+                <li>
+                    <a class="close-link"><i class="fa fa-close"></i></a>
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card-box table-responsive">
+                        <p class="text-muted font-13 m-b-30">
+                          Classe {{ classe.NomClasse}}.
+                        </p>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-5 col-xs-12 mr-2">
+                                        <div class="card o-hidden border-0 shadow-lg my-5">
+                                            <div class="card-body p-1">
+                                                <div class="row">
+                                                    <div class="col-lg-10 col-xs-12 mx-auto">
+                                                        <div class="p-1">
+                                                            <ul class="list-group">
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Id</strong>: {{ classe.id }}</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Classe</strong>: {{ classe.NomClasse }}</p>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <p><strong>Niveau</strong>: {{ classe.niveauEtude.NomNiveauEtude }}</p>
+                                                                </li>
+                                                            </ul>                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                        <ul class="list-group">
-                                            <li class="list-group-item">
-                                                <p><strong>Id</strong>: {{ classe.id }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p><strong>Classe</strong>: {{ classe.NomClasse }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p><strong>Niveau</strong>: {{ classe.niveauEtude.NomNiveauEtude }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p> <strong>Dernière modification</strong> : {{ classe.updatedAt ? classe.updatedAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                            </li>
-                                            <li class="list-group-item">
-                                                <p> <strong>Création</strong> : {{ classe.createdAt ? classe.createdAt|date('Y-m-d à H:i:s') : '' }}</p>
-                                            </li>
-                                            <li class="list-group-item">  
-                                                <a href="{{ path('app_classe_liste_eleve', {'id':classe.id}) }}" class="text-decoration-none float-right" title="Liste Eleve"><i class="fas fa-user-graduate text-info"></i> </a>
-                                            </li>
-                                        </ul>                            
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 {% endblock %}

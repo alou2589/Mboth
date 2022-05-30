@@ -142,8 +142,8 @@ class __TwigTemplate_c4b1a676282fff143cfed9bd8f9918d0a748e1e082bad064e9dfb951840
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: ";
@@ -156,12 +156,6 @@ class __TwigTemplate_c4b1a676282fff143cfed9bd8f9918d0a748e1e082bad064e9dfb951840
         // line 54
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["niveau_etude"]) || array_key_exists("niveau_etude", $context) ? $context["niveau_etude"] : (function () { throw new RuntimeError('Variable "niveau_etude" does not exist.', 54, $this->source); })()), "NomNiveauEtude", [], "any", false, false, false, 54), "html", null, true);
         echo "</p>
-                                                                </li>
-                                                                <li class=\"list-group-item\">  
-                                                                    <a href=\"";
-        // line 57
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_niveau_etude_liste_ecole", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["niveau_etude"]) || array_key_exists("niveau_etude", $context) ? $context["niveau_etude"] : (function () { throw new RuntimeError('Variable "niveau_etude" does not exist.', 57, $this->source); })()), "id", [], "any", false, false, false, 57)]), "html", null, true);
-        echo "\" class=\"text-decoration-none\" title=\"Liste Ecole\"><i class=\"fas fa-list text-info float-right\"></i> </a>
                                                                 </li>
                                                             </ul>                            
                                                         </div>
@@ -202,7 +196,7 @@ class __TwigTemplate_c4b1a676282fff143cfed9bd8f9918d0a748e1e082bad064e9dfb951840
 
     public function getDebugInfo()
     {
-        return array (  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -253,17 +247,14 @@ class __TwigTemplate_c4b1a676282fff143cfed9bd8f9918d0a748e1e082bad064e9dfb951840
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: {{ niveau_etude.id }}</p>
                                                                 </li>
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Niveau Etude</strong>: {{ niveau_etude.NomNiveauEtude }}</p>
-                                                                </li>
-                                                                <li class=\"list-group-item\">  
-                                                                    <a href=\"{{ path('app_niveau_etude_liste_ecole', {'id':niveau_etude.id}) }}\" class=\"text-decoration-none\" title=\"Liste Ecole\"><i class=\"fas fa-list text-info float-right\"></i> </a>
                                                                 </li>
                                                             </ul>                            
                                                         </div>
@@ -285,6 +276,6 @@ class __TwigTemplate_c4b1a676282fff143cfed9bd8f9918d0a748e1e082bad064e9dfb951840
 
 {% endblock %}
 
-", "niveau_etude/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\niveau_etude\\show.html.twig");
+", "niveau_etude/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\niveau_etude\\show.html.twig");
     }
 }

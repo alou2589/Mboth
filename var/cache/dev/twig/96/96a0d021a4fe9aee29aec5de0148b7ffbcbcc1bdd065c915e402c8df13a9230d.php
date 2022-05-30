@@ -86,21 +86,35 @@ class __TwigTemplate_4e4ede5b258beb92a713c4f9bec1e6e308d907c6024a3b3279127ab7ead
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Utilisateurs</h1>
-    <p class=\"mb-4\">Les utilisateurs de l'application</p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"";
-        // line 12
+        echo "    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Utilisateur</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"";
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_new");
-        echo "\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+        echo "\" title=\"Ajout Utilisateur\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des cellules existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
@@ -114,109 +128,112 @@ class __TwigTemplate_4e4ede5b258beb92a713c4f9bec1e6e308d907c6024a3b3279127ab7ead
                     </thead>
                     <tbody>
                     ";
-        // line 30
+        // line 44
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 30, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 44, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["user"]) {
-            // line 31
+            // line 45
             echo "                        ";
-            if ((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 31, $this->source); })())) {
+            if ((isset($context["users"]) || array_key_exists("users", $context) ? $context["users"] : (function () { throw new RuntimeError('Variable "users" does not exist.', 45, $this->source); })())) {
                 echo "                        
                             <tr>
                                 <td class=\"text-center\">";
-                // line 33
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 33), "html", null, true);
+                // line 47
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 47), "html", null, true);
                 echo "</td>
                                 <td class=\"text-center\">";
-                // line 34
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 34), "html", null, true);
+                // line 48
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "email", [], "any", false, false, false, 48), "html", null, true);
                 echo "</td>
                                 <td class=\"text-center\">
                                 ";
-                // line 36
+                // line 50
                 $context['_parent'] = $context;
-                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 36));
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["user"], "roles", [], "any", false, false, false, 50));
                 foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-                    // line 37
+                    // line 51
                     echo "                                    ";
                     if (($context["role"] == "ROLE_ADMIN")) {
-                        // line 38
+                        // line 52
                         echo "                                        Administrateur
                                     ";
-                    } elseif ((                    // line 39
+                    } elseif ((                    // line 53
 $context["role"] == "ROLE_POINT_FOCAL")) {
-                        // line 40
+                        // line 54
                         echo "                                        Point Focal
                                     ";
-                    } elseif ((                    // line 41
+                    } elseif ((                    // line 55
 $context["role"] == "ROLE_SUPER_ADMIN")) {
-                        // line 42
+                        // line 56
                         echo "                                        Super Administrateur
                                     ";
                     }
-                    // line 43
+                    // line 57
                     echo "                                    
                                 ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 45
+                // line 59
                 echo "                                </td>
                                 <td class=\"text-center\">";
-                // line 46
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 46), "html", null, true);
+                // line 60
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["user"], "username", [], "any", false, false, false, 60), "html", null, true);
                 echo "</td>
                                 <td class=\"text-center\">";
-                // line 47
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "personne", [], "any", false, false, false, 47), "Prenom", [], "any", false, false, false, 47), "html", null, true);
+                // line 61
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "personne", [], "any", false, false, false, 61), "Prenom", [], "any", false, false, false, 61), "html", null, true);
                 echo " ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "personne", [], "any", false, false, false, 47), "Nom", [], "any", false, false, false, 47), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "personne", [], "any", false, false, false, 61), "Nom", [], "any", false, false, false, 61), "html", null, true);
                 echo "</td>
                                 <td class=\"form-check form-switch text-center\">
                                     ";
-                // line 49
-                if ((twig_get_attribute($this->env, $this->source, $context["user"], "active", [], "any", false, false, false, 49) == true)) {
-                    // line 50
+                // line 63
+                if ((twig_get_attribute($this->env, $this->source, $context["user"], "active", [], "any", false, false, false, 63) == true)) {
+                    // line 64
                     echo "                                        <input class=\"form-check-input text-success\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" checked>
                                     ";
                 } else {
-                    // line 52
+                    // line 66
                     echo "                                        <input class=\"form-check-input text-danger\" type=\"checkbox\" id=\"flexSwitchCheckDefault\">
                                     ";
                 }
-                // line 54
+                // line 68
                 echo "                                </td>
                                 <td class=\"text-center\">
                                     <a href=\"";
-                // line 56
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 56)]), "html", null, true);
+                // line 70
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_show", ["id" => twig_get_attribute($this->env, $this->source, $context["user"], "id", [], "any", false, false, false, 70)]), "html", null, true);
                 echo "\"><i class=\"fas fa-fw fa-eye text-info\"></i></a>
                                     ";
-                // line 59
+                // line 73
                 echo "                                </td>
                             </tr>
                         ";
             } else {
-                // line 62
+                // line 76
                 echo "                        <tr>
                             <td colspan=\"7\">no records found</td>
                         </tr>
                     ";
             }
-            // line 66
+            // line 80
             echo "                    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['user'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 67
+        // line 81
         echo "                    </tbody>
                 </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 ";
         
@@ -239,7 +256,7 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
 
     public function getDebugInfo()
     {
-        return array (  214 => 67,  208 => 66,  202 => 62,  197 => 59,  193 => 56,  189 => 54,  185 => 52,  181 => 50,  179 => 49,  172 => 47,  168 => 46,  165 => 45,  158 => 43,  154 => 42,  152 => 41,  149 => 40,  147 => 39,  144 => 38,  141 => 37,  137 => 36,  132 => 34,  128 => 33,  122 => 31,  118 => 30,  97 => 12,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  228 => 81,  222 => 80,  216 => 76,  211 => 73,  207 => 70,  203 => 68,  199 => 66,  195 => 64,  193 => 63,  186 => 61,  182 => 60,  179 => 59,  172 => 57,  168 => 56,  166 => 55,  163 => 54,  161 => 53,  158 => 52,  155 => 51,  151 => 50,  146 => 48,  142 => 47,  136 => 45,  132 => 44,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -249,18 +266,32 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
 {% block title %}Utilisateur| {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class=\"row\">    
-    <h1 class=\"h3 mb-2 text-gray-800\">Utilisateurs</h1>
-    <p class=\"mb-4\">Les utilisateurs de l'application</p>
-    <div class=\"card shadow mb-4\">
-        <div class=\"card-header py-3\">
-            <h6 class=\"m-0 font-weight-bold text-primary\">
-                <a class=\"btn btn-success\" href=\"{{ path('app_user_new') }}\">Ajout <i class=\"fas fa-fw fa-plus\"></i></a>
-            </h6>
-        </div>
-        <div class=\"card-body\">
-            <div class=\"table-responsive\">
-                <table class=\"table table-hovered\" id=\"dataTable\" width=\"100%\" cellspacing=\"0\">
+    <div class=\"row\">
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Utilisateur</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+              <li>
+                  <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+              </li>
+              <li>
+                  <a href=\"{{ path('app_user_new') }}\" title=\"Ajout Utilisateur\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+              </li>
+              <li>
+                  <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+              </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+              <div class=\"col-sm-12\">
+                <div class=\"card-box table-responsive\">
+                  <p class=\"text-muted font-13 m-b-30\">
+                    La liste des cellules existant à Mboth et l'ensemble des informations.
+                  </p>
+                  <table id=\"datatable-buttons\" class=\"table table-striped table-bordered\" style=\"width:100%\">
                     <thead>
                         <tr>
                             <th class=\"text-center\">Id</th>
@@ -312,12 +343,15 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
                     {% endfor %}
                     </tbody>
                 </table>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 {% endblock %}
-", "user/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\user\\index.html.twig");
+", "user/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\user\\index.html.twig");
     }
 }

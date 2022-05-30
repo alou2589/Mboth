@@ -133,12 +133,18 @@ class __TwigTemplate_3e07dd2eb2e2d3454691b4ab42aa52a38831c91bb4bfa5813491314c171
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "nom_quartier", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Quartier", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
                                     </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "localisation", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Localisation"]]);
+        echo "
+                                        </div>
                                     <div class=\"form-group\">
                                         <button type=\"submit\" class=\"btn btn-warning\">Modifier <i class=\"fas fa-edit\"></i></button>
                                     </div>
                                 ";
-        // line 47
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 47, $this->source); })()), 'form_end');
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
                                 </div>
                             </div>
@@ -178,7 +184,7 @@ class __TwigTemplate_3e07dd2eb2e2d3454691b4ab42aa52a38831c91bb4bfa5813491314c171
 
     public function getDebugInfo()
     {
-        return array (  141 => 47,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 50,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -226,6 +232,9 @@ class __TwigTemplate_3e07dd2eb2e2d3454691b4ab42aa52a38831c91bb4bfa5813491314c171
                                     <div class=\"form-floating mb-3\">
                                         {{form_row(form.nom_quartier, {'attr':{'class':\"form-control\", 'placeholder':\"Quartier\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
                                     </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.localisation, {'attr':{'class':\"form-control\", 'placeholder':\"Localisation\"}})}}
+                                        </div>
                                     <div class=\"form-group\">
                                         <button type=\"submit\" class=\"btn btn-warning\">Modifier <i class=\"fas fa-edit\"></i></button>
                                     </div>
@@ -248,6 +257,6 @@ class __TwigTemplate_3e07dd2eb2e2d3454691b4ab42aa52a38831c91bb4bfa5813491314c171
 </div>
 
 {% endblock %}
-", "quartier/edit.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\edit.html.twig");
+", "quartier/edit.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\quartier\\edit.html.twig");
     }
 }

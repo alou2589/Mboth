@@ -6,6 +6,7 @@ use App\Entity\Maison;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class SecteurMaisonType extends AbstractType
 {
@@ -13,6 +14,11 @@ class SecteurMaisonType extends AbstractType
     {
         $builder
             ->add('nom_maison')
+            ->add('localisation', TextareaType::class, [
+                'attr'=> [
+                    'class'=>'tinymce'
+                ]
+            ])
         ;
     }
 

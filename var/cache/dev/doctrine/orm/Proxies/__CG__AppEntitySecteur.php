@@ -67,10 +67,10 @@ class Secteur extends \App\Entity\Secteur implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'nom_secteur', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'cellule', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'maisons'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'nom_secteur', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'cellule', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'maisons', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'localisation'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'nom_secteur', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'cellule', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'maisons'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'nom_secteur', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'cellule', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'maisons', '' . "\0" . 'App\\Entity\\Secteur' . "\0" . 'localisation'];
     }
 
     /**
@@ -311,6 +311,28 @@ class Secteur extends \App\Entity\Secteur implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeMaison', [$maison]);
 
         return parent::removeMaison($maison);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getLocalisation(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getLocalisation', []);
+
+        return parent::getLocalisation();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setLocalisation(string $localisation): \App\Entity\Secteur
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocalisation', [$localisation]);
+
+        return parent::setLocalisation($localisation);
     }
 
 }

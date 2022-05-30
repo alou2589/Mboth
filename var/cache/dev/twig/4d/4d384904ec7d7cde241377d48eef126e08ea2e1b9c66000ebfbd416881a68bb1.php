@@ -133,12 +133,18 @@ class __TwigTemplate_d4c975dacbd9e02b5bbf429f4723da59aa86a178c0a6036419f7938917c
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "nom_cellule", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Cellule", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
                                         </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 45
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "localisation", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Localisation"]]);
+        echo "
+                                        </div>
                                         <div class=\"form-group\">
                                             <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i></button>
                                         </div>
                                     ";
-        // line 47
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 47, $this->source); })()), 'form_end');
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
                                 </div>
                             </div>
@@ -177,7 +183,7 @@ class __TwigTemplate_d4c975dacbd9e02b5bbf429f4723da59aa86a178c0a6036419f7938917c
 
     public function getDebugInfo()
     {
-        return array (  141 => 47,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 50,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -225,6 +231,9 @@ class __TwigTemplate_d4c975dacbd9e02b5bbf429f4723da59aa86a178c0a6036419f7938917c
                                         <div class=\"form-floating mb-3\">
                                             {{form_row(form.nom_cellule, {'attr':{'class':\"form-control\", 'placeholder':\"Cellule\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
                                         </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.localisation, {'attr':{'class':\"form-control\", 'placeholder':\"Localisation\"}})}}
+                                        </div>
                                         <div class=\"form-group\">
                                             <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i></button>
                                         </div>
@@ -246,6 +255,6 @@ class __TwigTemplate_d4c975dacbd9e02b5bbf429f4723da59aa86a178c0a6036419f7938917c
   </div>
 </div>
 {% endblock %}
-", "quartier/newcellule.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\newcellule.html.twig");
+", "quartier/newcellule.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\quartier\\newcellule.html.twig");
     }
 }

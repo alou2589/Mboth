@@ -79,7 +79,7 @@ class EcoleController extends AbstractController
             return $this->redirectToRoute('app_ecole_index', [], Response::HTTP_SEE_OTHER);
         }
         return $this->render('ecole/delete.html.twig',[
-            
+            'ecole'=>$ecole,
         ]);
     }
 

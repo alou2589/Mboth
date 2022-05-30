@@ -259,6 +259,6 @@ class __TwigTemplate_771bb68c1f066763e97fba5cf6032ded4174579b4f303b2e31e23f18a89
                 </ul>
               </nav>
             </div>
-          </div>", "partials/_navbar.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\partials\\_navbar.html.twig");
+          </div>", "partials/_navbar.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\partials\\_navbar.html.twig");
     }
 }

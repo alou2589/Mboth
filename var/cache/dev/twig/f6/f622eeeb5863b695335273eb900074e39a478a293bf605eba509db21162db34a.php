@@ -135,14 +135,10 @@ class __TwigTemplate_4331d306ab10714368a4a9fa8fdd7628f1bd04eb9ade2cb488d2280bbaf
                                             </div>
                                             <div class=\"form-group\">
                                                 <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i> </button>
-                                                <a href=\"";
-        // line 46
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_niveau_etude_index");
-        echo "\" class=\"btn btn-secondary\">Accueil <i class=\"fas fa-home\"></i></a>
                                             </div>
                                         ";
-        // line 48
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), 'form_end');
+        // line 47
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 47, $this->source); })()), 'form_end');
         echo "
                                     </div>
                                 </div>
@@ -182,7 +178,7 @@ class __TwigTemplate_4331d306ab10714368a4a9fa8fdd7628f1bd04eb9ade2cb488d2280bbaf
 
     public function getDebugInfo()
     {
-        return array (  145 => 48,  140 => 46,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  141 => 47,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -232,7 +228,6 @@ class __TwigTemplate_4331d306ab10714368a4a9fa8fdd7628f1bd04eb9ade2cb488d2280bbaf
                                             </div>
                                             <div class=\"form-group\">
                                                 <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i> </button>
-                                                <a href=\"{{ path('app_niveau_etude_index') }}\" class=\"btn btn-secondary\">Accueil <i class=\"fas fa-home\"></i></a>
                                             </div>
                                         {{ form_end(form) }}
                                     </div>
@@ -253,6 +248,6 @@ class __TwigTemplate_4331d306ab10714368a4a9fa8fdd7628f1bd04eb9ade2cb488d2280bbaf
     </div>
 
 {% endblock %}
-", "niveau_etude/new.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\niveau_etude\\new.html.twig");
+", "niveau_etude/new.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\niveau_etude\\new.html.twig");
     }
 }

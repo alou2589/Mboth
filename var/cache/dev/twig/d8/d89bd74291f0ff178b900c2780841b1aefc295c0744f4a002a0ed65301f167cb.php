@@ -130,7 +130,7 @@ class __TwigTemplate_38545fd240e1c3785ede5c3a07323dadb3ba1c6398fe9c77f9372e816e1
                                             <div class=\"form-floating mb-3\">
                                                 ";
         // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "nom_niveeau_etude", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Niveau Etude", "required" => "required", "autofocus" => "autofocus"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "nom_niveau_etude", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Niveau Etude", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
                                             </div>
                                             <div class=\"form-group\">
@@ -224,7 +224,7 @@ class __TwigTemplate_38545fd240e1c3785ede5c3a07323dadb3ba1c6398fe9c77f9372e816e1
                                     <div class=\"p-5\">
                                         {{form_start(form, {'attr':{'class':'form'}})}}
                                             <div class=\"form-floating mb-3\">
-                                                {{form_row(form.nom_niveeau_etude, {'attr':{'class':\"form-control\", 'placeholder':\"Niveau Etude\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                                {{form_row(form.nom_niveau_etude, {'attr':{'class':\"form-control\", 'placeholder':\"Niveau Etude\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
                                             </div>
                                             <div class=\"form-group\">
                                                 <button type=\"submit\" class=\"btn btn-warning\">Modifier <i class=\"fas fa-edit\"></i> </button>
@@ -248,6 +248,6 @@ class __TwigTemplate_38545fd240e1c3785ede5c3a07323dadb3ba1c6398fe9c77f9372e816e1
     </div>
 
 {% endblock %}
-", "niveau_etude/edit.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\niveau_etude\\edit.html.twig");
+", "niveau_etude/edit.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\niveau_etude\\edit.html.twig");
     }
 }

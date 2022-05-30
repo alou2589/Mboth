@@ -142,7 +142,7 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
                                                         <div class=\"p-5\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
@@ -186,8 +186,11 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
                                                                 </li>
-                                                                <li class=\"list-group-item\">  
-
+                                                                <li class=\"list-group-item\">
+                                                                    ";
+        // line 74
+        echo twig_get_attribute($this->env, $this->source, (isset($context["maison"]) || array_key_exists("maison", $context) ? $context["maison"] : (function () { throw new RuntimeError('Variable "maison" does not exist.', 74, $this->source); })()), "Localisation", [], "any", false, false, false, 74);
+        echo "                                                               
                                                                 </li>
                                                             </ul>
 
@@ -229,7 +232,7 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
 
     public function getDebugInfo()
     {
-        return array (  182 => 67,  178 => 66,  169 => 60,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  192 => 74,  182 => 67,  178 => 66,  169 => 60,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -280,7 +283,7 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
                                                         <div class=\"p-5\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
@@ -306,8 +309,8 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
                                                                 </li>
-                                                                <li class=\"list-group-item\">  
-
+                                                                <li class=\"list-group-item\">
+                                                                    {{ maison.Localisation|raw|raw }}                                                               
                                                                 </li>
                                                             </ul>
 
@@ -330,6 +333,6 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
 
 {% endblock %}
 
-", "maison/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\maison\\show.html.twig");
+", "maison/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\maison\\show.html.twig");
     }
 }

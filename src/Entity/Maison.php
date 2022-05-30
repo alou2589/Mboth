@@ -37,6 +37,9 @@ class Maison
     #[ORM\OneToMany(mappedBy: 'maison', targetEntity: Personne::class, orphanRemoval: true)]
     private $personnes;
 
+    #[ORM\Column(type: 'text')]
+    private $localisation;
+
     public function __construct()
     {
         $this->personnes = new ArrayCollection();
@@ -133,6 +136,18 @@ class Maison
                 $personne->setMaison(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getLocalisation(): ?string
+    {
+        return $this->localisation;
+    }
+
+    public function setLocalisation(string $localisation): self
+    {
+        $this->localisation = $localisation;
 
         return $this;
     }
