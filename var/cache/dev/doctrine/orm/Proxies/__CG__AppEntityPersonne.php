@@ -67,10 +67,10 @@ class Personne extends \App\Entity\Personne implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'date_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'lieu_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'sexe', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'situation_matrimoniale', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'maison', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'users', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'eleves'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'date_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'lieu_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'sexe', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'situation_matrimoniale', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'maison', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'users', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'eleves', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'existence_maladie'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'date_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'lieu_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'sexe', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'situation_matrimoniale', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'maison', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'users', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'eleves'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'prenom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'nom', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'date_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'lieu_naissance', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'sexe', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'situation_matrimoniale', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'maison', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'users', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'eleves', '' . "\0" . 'App\\Entity\\Personne' . "\0" . 'existence_maladie'];
     }
 
     /**
@@ -454,6 +454,28 @@ class Personne extends \App\Entity\Personne implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeElefe', [$elefe]);
 
         return parent::removeElefe($elefe);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isExistenceMaladie(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExistenceMaladie', []);
+
+        return parent::isExistenceMaladie();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExistenceMaladie(bool $existence_maladie): \App\Entity\Personne
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExistenceMaladie', [$existence_maladie]);
+
+        return parent::setExistenceMaladie($existence_maladie);
     }
 
 }

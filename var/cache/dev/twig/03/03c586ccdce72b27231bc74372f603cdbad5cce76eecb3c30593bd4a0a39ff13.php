@@ -242,6 +242,6 @@ class __TwigTemplate_82364019ee84e79a548ed3cd2709f01799a421e37318e094ebbc90f55ef
       </div>
     </div>
 {% endblock %}
-", "personne/delete.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\personne\\delete.html.twig");
+", "personne/delete.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\personne\\delete.html.twig");
     }
 }

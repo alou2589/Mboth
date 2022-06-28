@@ -20,7 +20,7 @@ class EleveType extends AbstractType
                 'class'=>Personne::class,
                 'placeholder'=>'Choisissez un élève',
                 'choice_label'=>function(Personne $personne) {
-                    return $personne->getPrenom().' '.$personne->getNom();
+                    return $personne->getPrenom().' '.$personne->getNom().'-'.$personne->getMaison()->getNomMaison();
                 }
             ])
             ->add('ecole', EntityType::class, [

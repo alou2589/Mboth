@@ -96,6 +96,6 @@ class __TwigTemplate_60cbbad310f740739e3f01e94599eb30f070b5155ca1b9817efe5739682
         }
 </script>
 
-", "@FMElfinder/Elfinder/helper/_summernote.html.twig", "C:\\Users\\Alou\\Mboth\\vendor\\helios-ag\\fm-elfinder-bundle\\src\\Resources\\views\\Elfinder\\helper\\_summernote.html.twig");
+", "@FMElfinder/Elfinder/helper/_summernote.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\vendor\\helios-ag\\fm-elfinder-bundle\\src\\Resources\\views\\Elfinder\\helper\\_summernote.html.twig");
     }
 }

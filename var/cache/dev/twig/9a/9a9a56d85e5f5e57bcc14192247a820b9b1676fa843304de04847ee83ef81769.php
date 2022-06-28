@@ -65,7 +65,7 @@ class __TwigTemplate_59e2983499c5f55f3ac5fc6251540c1275a8a61060af6e9fe1bc1c0958a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Utilisateur | ";
+        echo "Point Focal | ";
         $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -87,110 +87,165 @@ class __TwigTemplate_59e2983499c5f55f3ac5fc6251540c1275a8a61060af6e9fe1bc1c0958a
 
         // line 6
         echo "<div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-12 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <h6 class=\"h6 text-gray-900 mb-4\">Andeu Defar <strong>Mboth</strong></h6>
-                            </div>
-                                <ul class=\"list-group\">
-                                    <li class=\"list-group-item\">
-                                        <p><strong>Id</strong>: ";
-        // line 18
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 18, $this->source); })()), "id", [], "any", false, false, false, 18), "html", null, true);
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Cellule</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+                <li>
+                    <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 16, $this->source); })()), "id", [], "any", false, false, false, 16)]), "html", null, true);
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 19, $this->source); })()), "id", [], "any", false, false, false, 19)]), "html", null, true);
+        echo "\"  class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"";
+        // line 22
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
+        echo "\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+                </li>
+                <li>
+                    <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+                <div class=\"col-sm-12\">
+                    <div class=\"card-box table-responsive\">
+                        <p class=\"text-muted font-13 m-b-30\">
+                          Information <strong class=\"text-primary\">";
+        // line 35
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 35, $this->source); })()), "Username", [], "any", false, false, false, 35), "html", null, true);
+        echo "</strong>.
+                        </p>
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"row\">
+                                    <div class=\"col-md-5 col-xs-12 mr-2\">
+                                        <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                            <div class=\"card-body p-1\">
+                                                <div class=\"row\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
+                                                            <ul class=\"list-group\">
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Id</strong>: ";
+        // line 48
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 48, $this->source); })()), "id", [], "any", false, false, false, 48), "html", null, true);
         echo "</p>
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <p><strong>Email</strong>: ";
-        // line 21
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 21, $this->source); })()), "email", [], "any", false, false, false, 21), "html", null, true);
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Email</strong>: ";
+        // line 51
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 51, $this->source); })()), "email", [], "any", false, false, false, 51), "html", null, true);
         echo "</p>
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <p><strong>Roles</strong>:  
-                                            ";
-        // line 25
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Roles</strong>:  
+                                                                        ";
+        // line 55
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 25, $this->source); })()), "roles", [], "any", false, false, false, 25));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 55, $this->source); })()), "roles", [], "any", false, false, false, 55));
         foreach ($context['_seq'] as $context["_key"] => $context["role"]) {
-            // line 26
-            echo "                                                ";
+            // line 56
+            echo "                                                                            ";
             if (($context["role"] == "ROLE_SUPER_ADMIN")) {
-                // line 27
-                echo "                                                    Super Administrateur 
-                                                ";
-            } elseif ((            // line 28
+                // line 57
+                echo "                                                                                Super Administrateur 
+                                                                            ";
+            } elseif ((            // line 58
 $context["role"] == "ROLE_POINT_FOCAL")) {
-                // line 29
-                echo "                                                    Point Focal
-                                                ";
-            } elseif ((            // line 30
+                // line 59
+                echo "                                                                                Point Focal
+                                                                            ";
+            } elseif ((            // line 60
 $context["role"] == "ROLE_ADMIN")) {
-                // line 31
-                echo "                                                    Administrateur
-                                                ";
+                // line 61
+                echo "                                                                                Administrateur
+                                                                            ";
             }
-            // line 32
+            // line 62
             echo "                                            
-                                            ";
+                                                                        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['role'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 33
+        // line 63
         echo "  
-                                        </p>                                     
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <p> <strong>Nom d'Utilisteur</strong> : ";
-        // line 37
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 37, $this->source); })()), "username", [], "any", false, false, false, 37), "html", null, true);
+                                                                    </p>                                     
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p> <strong>Nom d'Utilisteur</strong> : ";
+        // line 67
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 67, $this->source); })()), "username", [], "any", false, false, false, 67), "html", null, true);
         echo "</p>
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <div class=\"form-check form-switch\">                                            
-                                            ";
-        // line 41
-        if ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 41, $this->source); })()), "active", [], "any", false, false, false, 41) == false)) {
-            // line 42
-            echo "                                                <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckDefault\">
-                                                <label class=\"form-check-label\" for=\"flexSwitchCheckDefault\">Statut:</label>
-                                            ";
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <div class=\"form-check form-switch\">                                            
+                                                                        ";
+        // line 71
+        if ((twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 71, $this->source); })()), "active", [], "any", false, false, false, 71) == false)) {
+            // line 72
+            echo "                                                                            <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckDefault\">
+                                                                            <label class=\"form-check-label\" for=\"flexSwitchCheckDefault\">Statut:</label>
+                                                                        ";
         } else {
-            // line 44
+            // line 74
             echo "                               
-                                                <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" checked>
-                                                <label class=\"form-check-label\" for=\"flexSwitchCheckChecked\">Statut</label>
-                                            ";
+                                                                            <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" checked>
+                                                                            <label class=\"form-check-label\" for=\"flexSwitchCheckChecked\">Statut</label>
+                                                                        ";
         }
-        // line 48
-        echo "                                        </div>
-                                    </li>
-                                    <li class=\"list-group-item\">  
-                                        <a href=\"";
-        // line 51
+        // line 78
+        echo "                                                                    </div>
+                                                                </li>
+                                                                <li class=\"list-group-item\">  
+                                                                    <a href=\"";
+        // line 81
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_show", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 81, $this->source); })()), "personne", [], "any", false, false, false, 81), "id", [], "any", false, false, false, 81)]), "html", null, true);
+        echo "\" class=\"text-decoration-none\"><i class=\"fa fa-info-circle text-info\"></i></a>
+                                                                    <a href=\"";
+        // line 82
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
         echo "\" class=\"text-decoration-none\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
-                                        <a href=\"";
-        // line 52
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 52, $this->source); })()), "id", [], "any", false, false, false, 52)]), "html", null, true);
+                                                                    <a href=\"";
+        // line 83
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 83, $this->source); })()), "id", [], "any", false, false, false, 83)]), "html", null, true);
         echo "\"  class=\"text-decoration-none\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
-                                        <a href=\"";
-        // line 53
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 53, $this->source); })()), "id", [], "any", false, false, false, 53)]), "html", null, true);
+                                                                    <a href=\"";
+        // line 84
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["user"]) || array_key_exists("user", $context) ? $context["user"] : (function () { throw new RuntimeError('Variable "user" does not exist.', 84, $this->source); })()), "id", [], "any", false, false, false, 84)]), "html", null, true);
         echo "\" class=\"text-decoration-none\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
-                                    </li>
-                                </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 ";
         
@@ -213,75 +268,115 @@ $context["role"] == "ROLE_ADMIN")) {
 
     public function getDebugInfo()
     {
-        return array (  183 => 53,  179 => 52,  175 => 51,  170 => 48,  164 => 44,  159 => 42,  157 => 41,  150 => 37,  144 => 33,  137 => 32,  133 => 31,  131 => 30,  128 => 29,  126 => 28,  123 => 27,  120 => 26,  116 => 25,  109 => 21,  103 => 18,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  229 => 84,  225 => 83,  221 => 82,  217 => 81,  212 => 78,  206 => 74,  201 => 72,  199 => 71,  192 => 67,  186 => 63,  179 => 62,  175 => 61,  173 => 60,  170 => 59,  168 => 58,  165 => 57,  162 => 56,  158 => 55,  151 => 51,  145 => 48,  129 => 35,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Utilisateur | {{ parent() }}{% endblock %}
+{% block title %}Point Focal | {{ parent() }}{% endblock %}
 
 {% block body %}
 <div class=\"row\">
-    <div class=\"col-md-8 col-xs-12 mx-auto\">
-        <div class=\"card o-hidden border-0 shadow-lg my-5\">
-            <div class=\"card-body p-0\">
-                <div class=\"row\">
-                    <div class=\"col-lg-12 mx-auto\">
-                        <div class=\"p-5\">
-                            <div class=\"text-center\">
-                                <h6 class=\"h6 text-gray-900 mb-4\">Andeu Defar <strong>Mboth</strong></h6>
-                            </div>
-                                <ul class=\"list-group\">
-                                    <li class=\"list-group-item\">
-                                        <p><strong>Id</strong>: {{ user.id }}</p>
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <p><strong>Email</strong>: {{ user.email }}</p>
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <p><strong>Roles</strong>:  
-                                            {% for role in user.roles %}
-                                                {% if role== \"ROLE_SUPER_ADMIN\" %}
-                                                    Super Administrateur 
-                                                {% elseif role==\"ROLE_POINT_FOCAL\" %}
-                                                    Point Focal
-                                                {% elseif role== \"ROLE_ADMIN\" %}
-                                                    Administrateur
-                                                {% endif %}                                            
-                                            {% endfor %}  
-                                        </p>                                     
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <p> <strong>Nom d'Utilisteur</strong> : {{ user.username }}</p>
-                                    </li>
-                                    <li class=\"list-group-item\">
-                                        <div class=\"form-check form-switch\">                                            
-                                            {% if user.active == false %}
-                                                <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckDefault\">
-                                                <label class=\"form-check-label\" for=\"flexSwitchCheckDefault\">Statut:</label>
-                                            {% else %}                               
-                                                <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" checked>
-                                                <label class=\"form-check-label\" for=\"flexSwitchCheckChecked\">Statut</label>
-                                            {% endif %}
+      <div class=\"col-md-12 col-sm-12 \">
+        <div class=\"x_panel\">
+          <div class=\"x_title\">
+            <h2>Cellule</h2>
+            <ul class=\"nav navbar-right panel_toolbox\">
+                <li>
+                    <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_user_delete', {'id': user.id}) }}\" class=\"text-decoration-none float-left m-1\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_user_edit', {'id': user.id}) }}\"  class=\"text-decoration-none float-left m-1\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                </li>
+                <li>
+                    <a class=\"collapse-link\" href=\"{{ path('app_user_index') }}\" class=\"text-decoration-none float-left m-1\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+                </li>
+                <li>
+                    <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                </li>
+            </ul>
+            <div class=\"clearfix\"></div>
+          </div>
+          <div class=\"x_content\">
+            <div class=\"row\">
+                <div class=\"col-sm-12\">
+                    <div class=\"card-box table-responsive\">
+                        <p class=\"text-muted font-13 m-b-30\">
+                          Information <strong class=\"text-primary\">{{ user.Username}}</strong>.
+                        </p>
+                        <div class=\"card\">
+                            <div class=\"card-body\">
+                                <div class=\"row\">
+                                    <div class=\"col-md-5 col-xs-12 mr-2\">
+                                        <div class=\"card o-hidden border-0 shadow-lg my-5\">
+                                            <div class=\"card-body p-1\">
+                                                <div class=\"row\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
+                                                            <ul class=\"list-group\">
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Id</strong>: {{ user.id }}</p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Email</strong>: {{ user.email }}</p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p><strong>Roles</strong>:  
+                                                                        {% for role in user.roles %}
+                                                                            {% if role== \"ROLE_SUPER_ADMIN\" %}
+                                                                                Super Administrateur 
+                                                                            {% elseif role==\"ROLE_POINT_FOCAL\" %}
+                                                                                Point Focal
+                                                                            {% elseif role== \"ROLE_ADMIN\" %}
+                                                                                Administrateur
+                                                                            {% endif %}                                            
+                                                                        {% endfor %}  
+                                                                    </p>                                     
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <p> <strong>Nom d'Utilisteur</strong> : {{ user.username }}</p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    <div class=\"form-check form-switch\">                                            
+                                                                        {% if user.active == false %}
+                                                                            <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckDefault\">
+                                                                            <label class=\"form-check-label\" for=\"flexSwitchCheckDefault\">Statut:</label>
+                                                                        {% else %}                               
+                                                                            <input class=\"form-check-input\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" checked>
+                                                                            <label class=\"form-check-label\" for=\"flexSwitchCheckChecked\">Statut</label>
+                                                                        {% endif %}
+                                                                    </div>
+                                                                </li>
+                                                                <li class=\"list-group-item\">  
+                                                                    <a href=\"{{path('app_personne_show', {'id':user.personne.id})}}\" class=\"text-decoration-none\"><i class=\"fa fa-info-circle text-info\"></i></a>
+                                                                    <a href=\"{{ path('app_user_index') }}\" class=\"text-decoration-none\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
+                                                                    <a href=\"{{ path('app_user_edit', {'id': user.id}) }}\"  class=\"text-decoration-none\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
+                                                                    <a href=\"{{ path('app_user_delete', {'id': user.id}) }}\" class=\"text-decoration-none\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </li>
-                                    <li class=\"list-group-item\">  
-                                        <a href=\"{{ path('app_user_index') }}\" class=\"text-decoration-none\" title=\"Accueil\"><i class=\"fas fa-home text-primary\"></i></a>
-                                        <a href=\"{{ path('app_user_edit', {'id': user.id}) }}\"  class=\"text-decoration-none\" title=\"Modifier\"> <i class=\"fas fa-edit text-warning\"></i> </a>
-                                        <a href=\"{{ path('app_user_delete', {'id': user.id}) }}\" class=\"text-decoration-none\" title=\"Supprimer\"> <i class=\"fas fa-trash-alt text-danger\"></i> </a>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-</div>
 
 {% endblock %}
-", "user/show.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\user\\show.html.twig");
+", "user/show.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\user\\show.html.twig");
     }
 }

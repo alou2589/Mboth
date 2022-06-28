@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Type Maladie | {{ parent() }}{% endblock %}
+
+{% block body %}
+    <div class="row">
+      <div class="col-md-12 col-sm-12 ">
+        <div class="x_panel">
+          <div class="x_title">
+            <h2>Type Maladie</h2>
+            <ul class="nav navbar-right panel_toolbox">
+              <li>
+                  <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+              </li>
+              <li>
+                  <a href="{{ path('app_type_maladie_show', {'id':type_maladie.id}) }}" title="Accueil Type Maladie" ><i class="fas fa-fw fa-home"></i></a>
+              </li>
+              <li>
+                  <a class="close-link"><i class="fa fa-close"></i></a>
+              </li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+          <div class="x_content">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card-box table-responsive">
+                  <p class="text-muted font-13 m-b-30">
+                    Suppression Type Maladie
+                  </p>
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-5 col-xs-12 mr-2">
+                          <div class="card o-hidden border-0 shadow-lg my-5">
+                            <div class="card-body p-1">
+                              <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                  <div class="p-5">
+                                    <p>Supprimer les maladies de type <strong class="text-danger">{{ type_maladie.NomTypeMaladie }}</strong>  ?</p>
+                                    <form method="post" action="{{ path('app_type_maladie_delete', {'id': type_maladie.id}) }}" onsubmit="return confirm(Êtes-vous sûr de vouloir effectuer cette action ?');">
+                                        <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ type_maladie.id) }}">
+                                        <button class="btn btn-danger">Supprimer <i class="fas fa-trash-alt"></i></button>
+                                    </form>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
+

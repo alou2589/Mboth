@@ -35,7 +35,7 @@ class CelluleController extends AbstractController
             $cellule->setUpdatedAt(new \DateTimeImmutable());
             $cellule->setCreatedAt(new \DateTimeImmutable());
             $celluleRepository->add($cellule);
-            return $this->redirectToRoute('app_cellule_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_cellule_show', ['id'=>$cellule->getId()], Response::HTTP_SEE_OTHER);
         }
 
         return $this->renderForm('cellule/new.html.twig', [

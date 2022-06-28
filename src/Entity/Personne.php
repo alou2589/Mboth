@@ -49,6 +49,9 @@ class Personne
     #[ORM\OneToMany(mappedBy: 'personne', targetEntity: Eleve::class, orphanRemoval: true)]
     private $eleves;
 
+    #[ORM\Column(type: 'boolean')]
+    private $existence_maladie;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -224,6 +227,18 @@ class Personne
                 $elefe->setPersonne(null);
             }
         }
+
+        return $this;
+    }
+
+    public function isExistenceMaladie(): ?bool
+    {
+        return $this->existence_maladie;
+    }
+
+    public function setExistenceMaladie(bool $existence_maladie): self
+    {
+        $this->existence_maladie = $existence_maladie;
 
         return $this;
     }

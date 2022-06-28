@@ -241,6 +241,6 @@ class __TwigTemplate_f6cced52872648ab25e156160d9baf94c92c3ddb92c0b7962becd305bd1
       </div>
     </div>
 {% endblock %}
-", "ecole/delete.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\ecole\\delete.html.twig");
+", "ecole/delete.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\ecole\\delete.html.twig");
     }
 }

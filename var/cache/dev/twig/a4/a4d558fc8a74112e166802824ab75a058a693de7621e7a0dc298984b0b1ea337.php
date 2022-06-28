@@ -121,39 +121,34 @@ class __TwigTemplate_65213e90ea7a464b8c8a271766e3509f1ad5d85d2c95e21508acbe95b9b
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Maison</th>
                             <th class=\"text-center\">Code maison</th>
-                            <th class=\"text-center\">Secteur</th>
-                            <th class=\"text-center\">Action</th>
+                            <th class=\"text-center\">Information</th>
                         </tr>
                     </thead>
                     <tbody>
                     ";
-        // line 43
+        // line 42
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["maisons"]) || array_key_exists("maisons", $context) ? $context["maisons"] : (function () { throw new RuntimeError('Variable "maisons" does not exist.', 43, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["maisons"]) || array_key_exists("maisons", $context) ? $context["maisons"] : (function () { throw new RuntimeError('Variable "maisons" does not exist.', 42, $this->source); })()));
         $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["maison"]) {
-            // line 44
+            // line 43
             echo "                        <tr>
                             <td class=\"text-center\">";
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 44), "html", null, true);
+            echo "</td>
+                            <td class=\"text-center\">";
             // line 45
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 45), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "nomMaison", [], "any", false, false, false, 45), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">";
             // line 46
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "nomMaison", [], "any", false, false, false, 46), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 47
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "codeMaison", [], "any", false, false, false, 47), "html", null, true);
-            echo "</td>
-                            <td class=\"text-center\">";
-            // line 48
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["maison"], "secteur", [], "any", false, false, false, 48), "NomSecteur", [], "any", false, false, false, 48), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["maison"], "codeMaison", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
                             <td class=\"text-center\">
                                 <a href=\"";
-            // line 50
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_show", ["id" => twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 50)]), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_show", ["id" => twig_get_attribute($this->env, $this->source, $context["maison"], "id", [], "any", false, false, false, 48)]), "html", null, true);
             echo "\"><i class=\"fas fa-eye text-info\"></i></a>
                             </td>
                         </tr>
@@ -161,7 +156,7 @@ class __TwigTemplate_65213e90ea7a464b8c8a271766e3509f1ad5d85d2c95e21508acbe95b9b
             $context['_iterated'] = true;
         }
         if (!$context['_iterated']) {
-            // line 54
+            // line 52
             echo "                        <tr>
                             <td class=\"text-center\" colspan=\"5\">no records found</td>
                         </tr>
@@ -170,7 +165,7 @@ class __TwigTemplate_65213e90ea7a464b8c8a271766e3509f1ad5d85d2c95e21508acbe95b9b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['maison'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 58
+        // line 56
         echo "                    </tbody>
                   </table>
                 </div>
@@ -201,7 +196,7 @@ class __TwigTemplate_65213e90ea7a464b8c8a271766e3509f1ad5d85d2c95e21508acbe95b9b
 
     public function getDebugInfo()
     {
-        return array (  174 => 58,  165 => 54,  156 => 50,  151 => 48,  147 => 47,  143 => 46,  139 => 45,  136 => 44,  131 => 43,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  169 => 56,  160 => 52,  151 => 48,  146 => 46,  142 => 45,  138 => 44,  135 => 43,  130 => 42,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -243,8 +238,7 @@ class __TwigTemplate_65213e90ea7a464b8c8a271766e3509f1ad5d85d2c95e21508acbe95b9b
                             <th class=\"text-center\">Id</th>
                             <th class=\"text-center\">Maison</th>
                             <th class=\"text-center\">Code maison</th>
-                            <th class=\"text-center\">Secteur</th>
-                            <th class=\"text-center\">Action</th>
+                            <th class=\"text-center\">Information</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -253,7 +247,6 @@ class __TwigTemplate_65213e90ea7a464b8c8a271766e3509f1ad5d85d2c95e21508acbe95b9b
                             <td class=\"text-center\">{{ maison.id }}</td>
                             <td class=\"text-center\">{{ maison.nomMaison }}</td>
                             <td class=\"text-center\">{{ maison.codeMaison }}</td>
-                            <td class=\"text-center\">{{ maison.secteur.NomSecteur }}</td>
                             <td class=\"text-center\">
                                 <a href=\"{{ path('app_maison_show', {'id': maison.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
                             </td>

@@ -3,46 +3,117 @@
 {% block title %}Tableau de Bord | {{ parent() }}{% endblock %}
 
 {% block body %}
-<div class="page-title">
-  <div class="title_left">
-    <h3>Tableau de Bord</h3>
-  </div>
-  <div class="title_right">
-    <div class="col-md-5 col-sm-5   form-group pull-right top_search">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
-        </span>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="clearfix"></div>
-<div class="row">
-  <div class="col-md-12 col-sm-12  ">
-    <div class="x_panel">
-      <div class="x_title">
-        <h2>Plain Page</h2>
-        <ul class="nav navbar-right panel_toolbox">
-          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Settings 1</a>
-                <a class="dropdown-item" href="#">Settings 2</a>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="">
+                  <div class="x_content">
+                    <div class="row">
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-city text-dark"></i>
+                          </div>
+                          <div class="count">{{quartiers|length}}</div>
+
+                          <h3>Quartiers</h3>
+                          <p>Nombre de quartiers.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fas fa-tree-city text-dark"></i>
+                          </div>
+                          <div class="count">{{cellules|length}}</div>
+
+                          <h3>Cellules</h3>
+                          <p>Nombre de cellules.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="p-1 icon"><i class="fas fa-building text-dark"></i>
+                          </div>
+                          <div class="count">{{secteurs|length}}</div>
+
+                          <h3>Secteurs</h3>
+                          <p>Nombre de secteurs.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="p-1 icon"><i class="fas fa-house-chimney text-dark"></i>
+                          </div>
+                          <div class="count">{{maisons|length}}</div>
+
+                          <h3>Maisons</h3>
+                          <p>Nombre de Maisons.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fas fa-people-group text-dark"></i>
+                          </div>
+                          <div class="count">{{personnes|length}}</div>
+
+                          <h3>Personnes</h3>
+                          <p>Nombre d'habitants.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-male text-dark"></i>
+                          </div>
+                          <div class="count">{{hommes|length}}</div>
+
+                          <h3>Hommes</h3>
+                          <p>Nombre d'Hommes.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-female text-dark"></i>
+                          </div>
+                          <div class="count">{{femmes|length}}</div>
+
+                          <h3>Femmes</h3>
+                          <p>Nombre de femmes.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fas fa-restroom text-dark"></i>
+                          </div>
+                          <div class="count">{{celibataires|length}}</div>
+                          <h3>Célibataires</h3>
+                          <p>Nombre de Célibataires.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fa fa-user-friends text-dark"></i></i>
+                          </div>
+                          <div class="count">{{mariés|length}}</div>
+
+                          <h3>Mariés</h3>
+                          <p>Nombre de mariés.</p>
+                        </div>
+                      </div>
+                      <div class="animated flipInY col-lg-3 col-md-3 col-sm-6  ">
+                        <div class="tile-stats">
+                          <div class="icon"><i class="fas fa-users-slash text-dark"></i></i>
+                          </div>
+                          <div class="count">{{divorcés|length}}</div>
+
+                          <h3>Divorcés</h3>
+                          <p>Nombre de divorcés.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-          </li>
-          <li><a class="close-link"><i class="fa fa-close"></i></a>
-          </li>
-        </ul>
-        <div class="clearfix"></div>
-      </div>
-      <div class="x_content">
-          Add content to the page ...
-      </div>
-    </div>
-  </div>
-</div>
+            </div>
 {% endblock %}

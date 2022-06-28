@@ -88,6 +88,9 @@ return array(
     'Laminas\\Code\\' => array($vendorDir . '/laminas/laminas-code/src'),
     'FOS\\CKEditorBundle\\' => array($vendorDir . '/friendsofsymfony/ckeditor-bundle/src'),
     'FM\\ElfinderBundle\\' => array($vendorDir . '/helios-ag/fm-elfinder-bundle/src'),
+    'Endroid\\QrCode\\' => array($vendorDir . '/endroid/qr-code/src'),
+    'Endroid\\QrCodeBundle\\' => array($vendorDir . '/endroid/qr-code-bundle/src'),
+    'Endroid\\Installer\\' => array($vendorDir . '/endroid/installer/src'),
     'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),
     'Doctrine\\SqlFormatter\\' => array($vendorDir . '/doctrine/sql-formatter/src'),
     'Doctrine\\Persistence\\' => array($vendorDir . '/doctrine/persistence/src/Persistence'),
@@ -104,6 +107,8 @@ return array(
     'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib/Doctrine/Common', $vendorDir . '/doctrine/event-manager/lib/Doctrine/Common'),
     'Doctrine\\Bundle\\MigrationsBundle\\' => array($vendorDir . '/doctrine/doctrine-migrations-bundle'),
     'Doctrine\\Bundle\\DoctrineBundle\\' => array($vendorDir . '/doctrine/doctrine-bundle'),
+    'DASPRiD\\Enum\\' => array($vendorDir . '/dasprid/enum/src'),
+    'BaconQrCode\\' => array($vendorDir . '/bacon/bacon-qr-code/src'),
     'App\\Tests\\' => array($baseDir . '/tests'),
     'App\\' => array($baseDir . '/src'),
 );

@@ -255,6 +255,6 @@ class __TwigTemplate_d4c975dacbd9e02b5bbf429f4723da59aa86a178c0a6036419f7938917c
   </div>
 </div>
 {% endblock %}
-", "quartier/newcellule.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\quartier\\newcellule.html.twig");
+", "quartier/newcellule.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\quartier\\newcellule.html.twig");
     }
 }

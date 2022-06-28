@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Utilisateur| {{ parent() }}{% endblock %}
+{% block title %}Point Focal| {{ parent() }}{% endblock %}
 
 {% block body %}
     <div class="row">
       <div class="col-md-12 col-sm-12 ">
         <div class="x_panel">
           <div class="x_title">
-            <h2>Utilisateur</h2>
+            <h2>Point Focal</h2>
             <ul class="nav navbar-right panel_toolbox">
               <li>
                   <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
               </li>
               <li>
-                  <a href="{{ path('app_user_new') }}" title="Ajout Utilisateur" ><i class="fas fa-fw fa-plus-circle"></i></a>
+                  <a href="{{ path('app_user_new') }}" title="Ajout Point Focal" ><i class="fas fa-fw fa-plus-circle"></i></a>
               </li>
               <li>
                   <a class="close-link"><i class="fa fa-close"></i></a>
@@ -35,7 +35,7 @@
                             <th class="text-center">Email</th>
                             <th class="text-center">Roles</th>
                             <th class="text-center">Pseudo</th>
-                            <th class="text-center">Utilisateur</th>
+                            <th class="text-center">Point Focal</th>
                             <th class="text-center">Active</th>
                             <th class="text-center">Action</th>
                         </tr>
@@ -59,11 +59,11 @@
                                 </td>
                                 <td class="text-center">{{ user.username }}</td>
                                 <td class="text-center">{{user.personne.Prenom}} {{user.personne.Nom}}</td>
-                                <td class="form-check form-switch text-center">
+                                <td class="text-center">
                                     {% if user.active == true %}
-                                        <input class="form-check-input text-success" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                        <input type="checkbox" class="js-switch" disabled="disabled" checked="checked" />
                                     {% else %}
-                                        <input class="form-check-input text-danger" type="checkbox" id="flexSwitchCheckDefault">
+                                        <input type="checkbox" class="js-switch" disabled="disabled" />
                                     {% endif %}
                                 </td>
                                 <td class="text-center">

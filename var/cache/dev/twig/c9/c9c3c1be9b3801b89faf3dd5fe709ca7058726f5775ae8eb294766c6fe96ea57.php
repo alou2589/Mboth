@@ -81,6 +81,6 @@ class __TwigTemplate_abc15ad5dc58de3c253a500094247d1d0538be82a06cd54477cb476e35a
     public function getSourceContext()
     {
         return new Source("{% block panel '' %}
-", "@WebProfiler/Profiler/ajax_layout.html.twig", "C:\\Users\\Alou\\Mboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\ajax_layout.html.twig");
+", "@WebProfiler/Profiler/ajax_layout.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Profiler\\ajax_layout.html.twig");
     }
 }

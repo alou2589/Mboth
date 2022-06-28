@@ -258,6 +258,6 @@ class __TwigTemplate_33651b2df244ae9684237f62a01182d2c9a358c620166ef5de0bafed2cd
 
 {% endblock %}
 
-", "classe/new.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\classe\\new.html.twig");
+", "classe/new.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\classe\\new.html.twig");
     }
 }

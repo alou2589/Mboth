@@ -40,6 +40,12 @@ class PersonneType extends AbstractType
                 'class'=>Maison::class,
                 'choice_label'=> function(Maison $maison) { return $maison->getNomMaison().'-'.$maison->getCodeMaison();}
             ])
+            ->add('existence_maladie', ChoiceType::class, [
+                'choices'=> [
+                    'Oui'=>'Oui',
+                    'Non'=>'Non'
+                ]
+            ])
         ;
     }
 

@@ -52,7 +52,9 @@ class __TwigTemplate_771bb68c1f066763e97fba5cf6032ded4174579b4f303b2e31e23f18a89
                       <img src=\"";
         // line 10
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/img.jpg"), "html", null, true);
-        echo "\" alt=\"\">John Doe
+        echo "\" alt=\"\">";
+        echo twig_escape_filter($this->env, twig_lower_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 10, $this->source); })()), "user", [], "any", false, false, false, 10), "Username", [], "any", false, false, false, 10)), "html", null, true);
+        echo "
                     </a>
                     <div class=\"dropdown-menu dropdown-usermenu pull-right\" aria-labelledby=\"navbarDropdown\">
                       <a class=\"dropdown-item\"  href=\"javascript:;\"> Profile</a>
@@ -61,7 +63,10 @@ class __TwigTemplate_771bb68c1f066763e97fba5cf6032ded4174579b4f303b2e31e23f18a89
                           <span>Settings</span>
                         </a>
                     <a class=\"dropdown-item\"  href=\"javascript:;\">Help</a>
-                      <a class=\"dropdown-item\"  href=\"login.html\"><i class=\"fa fa-sign-out pull-right\"></i> Log Out</a>
+                      <a class=\"dropdown-item\"  href=\"";
+        // line 19
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
+        echo "\"><i class=\"fa fa-sign-out pull-right\"></i> Log Out</a>
                     </div>
                   </li>
   
@@ -165,7 +170,7 @@ class __TwigTemplate_771bb68c1f066763e97fba5cf6032ded4174579b4f303b2e31e23f18a89
 
     public function getDebugInfo()
     {
-        return array (  123 => 67,  108 => 55,  93 => 43,  78 => 31,  54 => 10,  43 => 1,);
+        return array (  128 => 67,  113 => 55,  98 => 43,  83 => 31,  68 => 19,  54 => 10,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -179,7 +184,7 @@ class __TwigTemplate_771bb68c1f066763e97fba5cf6032ded4174579b4f303b2e31e23f18a89
                 <ul class=\" navbar-right\">
                   <li class=\"nav-item dropdown open\" style=\"padding-left: 15px;\">
                     <a href=\"javascript:;\" class=\"user-profile dropdown-toggle\" aria-haspopup=\"true\" id=\"navbarDropdown\" data-toggle=\"dropdown\" aria-expanded=\"false\">
-                      <img src=\"{{asset('assets/images/img.jpg')}}\" alt=\"\">John Doe
+                      <img src=\"{{asset('assets/images/img.jpg')}}\" alt=\"\">{{ app.user.Username|lower}}
                     </a>
                     <div class=\"dropdown-menu dropdown-usermenu pull-right\" aria-labelledby=\"navbarDropdown\">
                       <a class=\"dropdown-item\"  href=\"javascript:;\"> Profile</a>
@@ -188,7 +193,7 @@ class __TwigTemplate_771bb68c1f066763e97fba5cf6032ded4174579b4f303b2e31e23f18a89
                           <span>Settings</span>
                         </a>
                     <a class=\"dropdown-item\"  href=\"javascript:;\">Help</a>
-                      <a class=\"dropdown-item\"  href=\"login.html\"><i class=\"fa fa-sign-out pull-right\"></i> Log Out</a>
+                      <a class=\"dropdown-item\"  href=\"{{ path('app_logout') }}\"><i class=\"fa fa-sign-out pull-right\"></i> Log Out</a>
                     </div>
                   </li>
   

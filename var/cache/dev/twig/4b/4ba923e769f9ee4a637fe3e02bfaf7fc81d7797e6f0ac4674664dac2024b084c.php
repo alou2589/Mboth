@@ -324,6 +324,6 @@ class __TwigTemplate_66441a8509d678f9233938d5ee8cb27e815c33020837a0a6cd1e8573994
       </div>
     </div>
 {% endblock %}
-", "secteur/education.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\secteur\\education.html.twig");
+", "secteur/education.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\secteur\\education.html.twig");
     }
 }

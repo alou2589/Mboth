@@ -164,10 +164,10 @@ class __TwigTemplate_c09d27beca8c61c4c81035fd686cb895444fc1e8539fc985fb6ffb38848
         echo "</p>
                                                                 </li>
                                                                 <li class=\"list-group-item\">
-                                                                    ";
+                                                                    Description: <a href=\"";
         // line 60
-        echo twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 60, $this->source); })()), "Description", [], "any", false, false, false, 60);
-        echo "                                                               
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["ecole"]) || array_key_exists("ecole", $context) ? $context["ecole"] : (function () { throw new RuntimeError('Variable "ecole" does not exist.', 60, $this->source); })()), "Description", [], "any", false, false, false, 60), "html", null, true);
+        echo "\" class=\"text-decoration-none\" title=\"Localisation\" target=\"_blank\"><i class=\"fa fa-location-dot text-danger\"></i> </a>                                                             
                                                                 </li>
                                                             </ul>                            
                                                         </div>
@@ -271,7 +271,7 @@ class __TwigTemplate_c09d27beca8c61c4c81035fd686cb895444fc1e8539fc985fb6ffb38848
                                                                     <p><strong>Ecole</strong>: {{ ecole.NomEcole }}</p>
                                                                 </li>
                                                                 <li class=\"list-group-item\">
-                                                                    {{ ecole.Description|raw|raw }}                                                               
+                                                                    Description: <a href=\"{{ ecole.Description}}\" class=\"text-decoration-none\" title=\"Localisation\" target=\"_blank\"><i class=\"fa fa-location-dot text-danger\"></i> </a>                                                             
                                                                 </li>
                                                             </ul>                            
                                                         </div>

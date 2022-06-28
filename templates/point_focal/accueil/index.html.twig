@@ -1,0 +1,32 @@
+{% extends 'point_focal/basepf.html.twig' %}
+
+{% block title %}Accueil | {{ parent() }}{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="col-xl-3 col-md-6">
+        <div class="card">
+            <div class="card-block">
+                <div class="row align-items-center">
+                    <div class="col-8">
+                        <h3 class="text-c-purple">{{secteurs|length}}</h3>
+                    </div>
+                    <div class="col-4 text-right">
+                        <i class="fa fa-building"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer bg-c-purple">
+                <div class="row align-items-center">
+                    <div class="col-9">
+                        <p class="text-white m-b-0">Secteurs</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <i class="fa fa-line-chart text-white f-16"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

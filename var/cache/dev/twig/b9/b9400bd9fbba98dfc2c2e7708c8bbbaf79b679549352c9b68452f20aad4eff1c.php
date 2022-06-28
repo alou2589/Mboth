@@ -122,6 +122,6 @@ class __TwigTemplate_f9e8762a93c1478703c8c77a2a1306dddf918262b2c59e7209632a0240c
 {% block body %}
 <h1>Hello {{controller_name}}</h1>
 {% endblock %}
-", "home/index.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\home\\index.html.twig");
+", "home/index.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\home\\index.html.twig");
     }
 }

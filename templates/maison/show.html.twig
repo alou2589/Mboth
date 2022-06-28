@@ -22,6 +22,9 @@
                     <a class="collapse-link" href="{{ path('app_maison_edit', {'id': maison.id}) }}"  class="text-decoration-none float-left m-1" title="Modifier"> <i class="fas fa-edit text-warning"></i> </a>
                 </li>
                 <li>
+                    <a class="collapse-link" href="{{ path('app_maison_new') }}" class="text-decoration-none float-left m-1" title="Ajout Maison"><i class="fas fa-plus-circle text-success"></i></a>
+                </li>
+                <li>
                     <a class="collapse-link" href="{{ path('app_maison_index') }}" class="text-decoration-none float-left m-1" title="Accueil"><i class="fas fa-home text-primary"></i></a>
                 </li>
                 <li>
@@ -62,16 +65,13 @@
                                                                 <li class="list-group-item">
                                                                     <p>
                                                                         <strong>Fiche Information:</strong> :
-
+                                                                        <a href="{{ maison.Localisation}}" class="text-decoration-none" title="Localisation" target="_blank"><i class="fas fa-location-dot text-danger"></i> </a>
                                                                         <a href="{{ path('app_maison_liste_personne', {'id':maison.id}) }}" class="text-decoration-none" title="Liste Personne"><i class="fas fa-users text-info"></i> </a>
                                                                         <a href="{{ path('app_maison_education', {'id':maison.id}) }}" class="text-decoration-none" title="Education"><i class="fas fa-user-graduate text-primary"></i> </a>
                                                                         <a href="#" class="text-decoration-none" title="Santé"><i class="fas fa-heartbeat text-danger"></i> </a>
                                                                         <a href="#" class="text-decoration-none" title="Environnement"><i class="fas fa-leaf text-success"></i> </a>
                                                                         <a href="#" class="text-decoration-none" title="Economie"><i class="fas fa-hand-holding-usd text-secondary"></i> </a>
                                                                     </p>
-                                                                </li>
-                                                                <li class="list-group-item">
-                                                                    {{ maison.Localisation|raw|raw }}                                                               
                                                                 </li>
                                                             </ul>
 

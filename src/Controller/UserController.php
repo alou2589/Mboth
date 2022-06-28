@@ -37,7 +37,7 @@ class UserController extends AbstractController
                         $password
                     )
                 );
-            $user->setActive(true);
+            $user->setActive(false);
             $userRepository->add($user);
             return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
         }

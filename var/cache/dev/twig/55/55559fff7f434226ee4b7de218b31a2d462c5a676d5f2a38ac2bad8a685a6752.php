@@ -42,8 +42,10 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
         // line 1
         echo "          <div class=\"left_col scroll-view\">
             <div class=\"navbar nav_title\" style=\"border: 0;\">
-              <a href=\"index.html\" class=\"site_title\"><img src=\"";
+              <a href=\"";
         // line 3
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_dashboard");
+        echo "\" class=\"site_title\"><img src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/images/logo-mini.png"), "html", null, true);
         echo "\" alt=\"\" width=\"25\" > <span>A.D.M</span></a>
             </div>
@@ -59,8 +61,11 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
         echo "\" alt=\"...\" class=\"img-circle profile_img\">
               </div>
               <div class=\"profile_info\">
-                <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <span>Bienvenu,</span>
+                <h2>";
+        // line 15
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "Username", [], "any", false, false, false, 15), "html", null, true);
+        echo "</h2>
               </div>
               <div class=\"clearfix\"></div>
             </div>
@@ -130,22 +135,28 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
         echo "\">Eleve</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-heartbeat\"></i> Santé <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-leaf\"></i> Hygiène & Environ... <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"chartjs.html\">Chart JS</a></li>
-                      <li><a href=\"chartjs2.html\">Chart JS2</a></li>
-                      <li><a href=\"morisjs.html\">Moris JS</a></li>
-                      <li><a href=\"echarts.html\">ECharts</a></li>
-                      <li><a href=\"other_charts.html\">Other Charts</a></li>
+                      <li><a href=\"";
+        // line 57
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_type_arbre_index");
+        echo "\">Type d'arbre</a></li>
+                      <li><a href=\"";
+        // line 58
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_arbre_index");
+        echo "\">Arbre</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-leaf\"></i> Environnement <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-heartbeat\"></i> Santé <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"chartjs.html\">Chart JS</a></li>
-                      <li><a href=\"chartjs2.html\">Chart JS2</a></li>
-                      <li><a href=\"morisjs.html\">Moris JS</a></li>
-                      <li><a href=\"echarts.html\">ECharts</a></li>
-                      <li><a href=\"other_charts.html\">Other Charts</a></li>
+                      <li><a href=\"";
+        // line 63
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_type_maladie_index");
+        echo "\">Type Maladie</a></li>
+                      <li><a href=\"";
+        // line 64
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maladie_index");
+        echo "\">Maladie</a></li>
                     </ul>
                   </li>
                   <li><a><i class=\"fa fa-hand-holding-usd\"></i>Economie <span class=\"fa fa-chevron-down\"></span></a>
@@ -156,12 +167,14 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
                   </li>
                   <li><a><i class=\"fa fa-chart-bar\"></i> Statistiques <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"chartjs.html\">Global</a></li>
-                      <li><a href=\"chartjs2.html\">Education</a></li>
-                      <li><a href=\"morisjs.html\">Santé</a></li>
-                      <li><a href=\"echarts.html\">Economie</a></li>
-                      <li><a href=\"other_charts.html\">Environnement</a></li>
-                      <li><a href=\"other_charts.html\">Environnement</a></li>
+                      <li><a href=\"";
+        // line 75
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_statistique");
+        echo "\">Global</a></li>
+                      <li><a href=\"#\">Education</a></li>
+                      <li><a href=\"#\">Santé</a></li>
+                      <li><a href=\"#\">Economie</a></li>
+                      <li><a href=\"#\">Environnement</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -169,12 +182,12 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
               <div class=\"menu_section\">
                 <h3>Live On</h3>
                 <ul class=\"nav side-menu\">
-                  <li><a><i class=\"fa fa-bug\"></i> Utilisateurs <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-bug\"></i> Points Focaux <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
                       <li><a href=\"";
-        // line 96
+        // line 89
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
-        echo "\">Utilisateurs</a></li>
+        echo "\">Points Focaux</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -220,14 +233,14 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
 
     public function getDebugInfo()
     {
-        return array (  176 => 96,  129 => 52,  125 => 51,  121 => 50,  117 => 49,  109 => 44,  105 => 43,  97 => 38,  93 => 37,  89 => 36,  80 => 30,  58 => 11,  47 => 3,  43 => 1,);
+        return array (  189 => 89,  172 => 75,  158 => 64,  154 => 63,  146 => 58,  142 => 57,  134 => 52,  130 => 51,  126 => 50,  122 => 49,  114 => 44,  110 => 43,  102 => 38,  98 => 37,  94 => 36,  85 => 30,  67 => 15,  60 => 11,  47 => 3,  43 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("          <div class=\"left_col scroll-view\">
             <div class=\"navbar nav_title\" style=\"border: 0;\">
-              <a href=\"index.html\" class=\"site_title\"><img src=\"{{asset('assets/images/logo-mini.png')}}\" alt=\"\" width=\"25\" > <span>A.D.M</span></a>
+              <a href=\"{{ path('app_dashboard') }}\" class=\"site_title\"><img src=\"{{asset('assets/images/logo-mini.png')}}\" alt=\"\" width=\"25\" > <span>A.D.M</span></a>
             </div>
 
             <div class=\"clearfix\"></div>
@@ -238,8 +251,8 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
                 <img src=\"{{asset('assets/images/img.jpg')}}\" alt=\"...\" class=\"img-circle profile_img\">
               </div>
               <div class=\"profile_info\">
-                <span>Welcome,</span>
-                <h2>John Doe</h2>
+                <span>Bienvenu,</span>
+                <h2>{{app.user.Username}}</h2>
               </div>
               <div class=\"clearfix\"></div>
             </div>
@@ -279,22 +292,16 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
                       <li><a href=\"{{ path('app_eleve_index') }}\">Eleve</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-heartbeat\"></i> Santé <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-leaf\"></i> Hygiène & Environ... <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"chartjs.html\">Chart JS</a></li>
-                      <li><a href=\"chartjs2.html\">Chart JS2</a></li>
-                      <li><a href=\"morisjs.html\">Moris JS</a></li>
-                      <li><a href=\"echarts.html\">ECharts</a></li>
-                      <li><a href=\"other_charts.html\">Other Charts</a></li>
+                      <li><a href=\"{{ path('app_type_arbre_index') }}\">Type d'arbre</a></li>
+                      <li><a href=\"{{ path('app_arbre_index') }}\">Arbre</a></li>
                     </ul>
                   </li>
-                  <li><a><i class=\"fa fa-leaf\"></i> Environnement <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-heartbeat\"></i> Santé <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"chartjs.html\">Chart JS</a></li>
-                      <li><a href=\"chartjs2.html\">Chart JS2</a></li>
-                      <li><a href=\"morisjs.html\">Moris JS</a></li>
-                      <li><a href=\"echarts.html\">ECharts</a></li>
-                      <li><a href=\"other_charts.html\">Other Charts</a></li>
+                      <li><a href=\"{{ path('app_type_maladie_index') }}\">Type Maladie</a></li>
+                      <li><a href=\"{{ path('app_maladie_index') }}\">Maladie</a></li>
                     </ul>
                   </li>
                   <li><a><i class=\"fa fa-hand-holding-usd\"></i>Economie <span class=\"fa fa-chevron-down\"></span></a>
@@ -305,12 +312,11 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
                   </li>
                   <li><a><i class=\"fa fa-chart-bar\"></i> Statistiques <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"chartjs.html\">Global</a></li>
-                      <li><a href=\"chartjs2.html\">Education</a></li>
-                      <li><a href=\"morisjs.html\">Santé</a></li>
-                      <li><a href=\"echarts.html\">Economie</a></li>
-                      <li><a href=\"other_charts.html\">Environnement</a></li>
-                      <li><a href=\"other_charts.html\">Environnement</a></li>
+                      <li><a href=\"{{ path('app_statistique') }}\">Global</a></li>
+                      <li><a href=\"#\">Education</a></li>
+                      <li><a href=\"#\">Santé</a></li>
+                      <li><a href=\"#\">Economie</a></li>
+                      <li><a href=\"#\">Environnement</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -318,9 +324,9 @@ class __TwigTemplate_8fbffa07eca451aa6814fa9f88fe0d359641591be1cba1c390ba44cea2e
               <div class=\"menu_section\">
                 <h3>Live On</h3>
                 <ul class=\"nav side-menu\">
-                  <li><a><i class=\"fa fa-bug\"></i> Utilisateurs <span class=\"fa fa-chevron-down\"></span></a>
+                  <li><a><i class=\"fa fa-bug\"></i> Points Focaux <span class=\"fa fa-chevron-down\"></span></a>
                     <ul class=\"nav child_menu\">
-                      <li><a href=\"{{path('app_user_index')}}\">Utilisateurs</a></li>
+                      <li><a href=\"{{path('app_user_index')}}\">Points Focaux</a></li>
                     </ul>
                   </li>
                 </ul>

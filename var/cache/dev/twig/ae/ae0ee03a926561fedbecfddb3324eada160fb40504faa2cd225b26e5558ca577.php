@@ -142,8 +142,8 @@ class __TwigTemplate_262655a5dcd15c9b405ff9139fe915e43b509a3bcdfef145660ab0ce70c
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: ";
@@ -165,7 +165,7 @@ class __TwigTemplate_262655a5dcd15c9b405ff9139fe915e43b509a3bcdfef145660ab0ce70c
                                                                 </li>
                                                                 <li class=\"list-group-item\">
                                                                     <p>
-                                                                        <strong>Fiche Information:</strong> :                                                                                            
+                                                                        <strong>Fiche Info:</strong> :                                                                                            
                                                                         <a href=\"";
         // line 62
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_personnes", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["secteur"]) || array_key_exists("secteur", $context) ? $context["secteur"] : (function () { throw new RuntimeError('Variable "secteur" does not exist.', 62, $this->source); })()), "id", [], "any", false, false, false, 62)]), "html", null, true);
@@ -178,6 +178,12 @@ class __TwigTemplate_262655a5dcd15c9b405ff9139fe915e43b509a3bcdfef145660ab0ce70c
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    ";
+        // line 70
+        echo twig_get_attribute($this->env, $this->source, (isset($context["secteur"]) || array_key_exists("secteur", $context) ? $context["secteur"] : (function () { throw new RuntimeError('Variable "secteur" does not exist.', 70, $this->source); })()), "Localisation", [], "any", false, false, false, 70);
+        echo "                                                               
                                                                 </li>
                                                             </ul>
 
@@ -220,7 +226,7 @@ class __TwigTemplate_262655a5dcd15c9b405ff9139fe915e43b509a3bcdfef145660ab0ce70c
 
     public function getDebugInfo()
     {
-        return array (  175 => 63,  171 => 62,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  185 => 70,  175 => 63,  171 => 62,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -271,8 +277,8 @@ class __TwigTemplate_262655a5dcd15c9b405ff9139fe915e43b509a3bcdfef145660ab0ce70c
                                         <div class=\"card o-hidden border-0 shadow-lg my-5\">
                                             <div class=\"card-body p-1\">
                                                 <div class=\"row\">
-                                                    <div class=\"col-lg-10 mx-auto\">
-                                                        <div class=\"p-5\">
+                                                    <div class=\"col-lg-10 col-xs-12 mx-auto\">
+                                                        <div class=\"p-1\">
                                                             <ul class=\"list-group\">
                                                                 <li class=\"list-group-item\">
                                                                     <p><strong>Id</strong>: {{ secteur.id }}</p>
@@ -285,13 +291,16 @@ class __TwigTemplate_262655a5dcd15c9b405ff9139fe915e43b509a3bcdfef145660ab0ce70c
                                                                 </li>
                                                                 <li class=\"list-group-item\">
                                                                     <p>
-                                                                        <strong>Fiche Information:</strong> :                                                                                            
+                                                                        <strong>Fiche Info:</strong> :                                                                                            
                                                                         <a href=\"{{ path('app_secteur_personnes', {'id':secteur.id}) }}\" class=\"text-decoration-none\" title=\"Liste Personnes\"><i class=\"fas fa-users text-info\"></i> </a>
                                                                         <a href=\"{{ path('app_secteur_education', {'id':secteur.id}) }}\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    {{ secteur.Localisation|raw|raw }}                                                               
                                                                 </li>
                                                             </ul>
 

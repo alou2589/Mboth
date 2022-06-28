@@ -40,9 +40,30 @@ class Maison
     #[ORM\Column(type: 'text')]
     private $localisation;
 
+    #[ORM\Column(type: 'boolean')]
+    private $existence_arbre;
+
+    #[ORM\OneToMany(mappedBy: 'maison', targetEntity: Arbre::class)]
+    private $arbres;
+
+    #[ORM\Column(type: 'boolean')]
+    private $existence_eau;
+
+    #[ORM\Column(type: 'boolean')]
+    private $existence_electricite;
+
+    #[ORM\Column(type: 'boolean')]
+    private $existence_internet;
+
+    #[ORM\Column(type: 'boolean')]
+    private $existence_fosse_septique;
+
+    #[ORM\Column(type: 'text')]
+    private $qr_maison;
+
     public function __construct()
     {
-        $this->personnes = new ArrayCollection();
+        $this->arbres = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -151,4 +172,108 @@ class Maison
 
         return $this;
     }
+
+    public function isExistenceArbre(): ?bool
+    {
+        return $this->existence_arbre;
+    }
+
+    public function setExistenceArbre(bool $existence_arbre): self
+    {
+        $this->existence_arbre = $existence_arbre;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Arbre>
+     */
+    public function getArbres(): Collection
+    {
+        return $this->arbres;
+    }
+
+    public function addArbre(Arbre $arbre): self
+    {
+        if (!$this->arbres->contains($arbre)) {
+            $this->arbres[] = $arbre;
+            $arbre->setMaison($this);
+        }
+
+        return $this;
+    }
+
+    public function removeArbre(Arbre $arbre): self
+    {
+        if ($this->arbres->removeElement($arbre)) {
+            // set the owning side to null (unless already changed)
+            if ($arbre->getMaison() === $this) {
+                $arbre->setMaison(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function isExistenceEau(): ?bool
+    {
+        return $this->existence_eau;
+    }
+
+    public function setExistenceEau(bool $existence_eau): self
+    {
+        $this->existence_eau = $existence_eau;
+
+        return $this;
+    }
+
+    public function isExistenceElectricite(): ?bool
+    {
+        return $this->existence_electricite;
+    }
+
+    public function setExistenceElectricite(bool $existence_electricite): self
+    {
+        $this->existence_electricite = $existence_electricite;
+
+        return $this;
+    }
+
+    public function isExistenceInternet(): ?bool
+    {
+        return $this->existence_internet;
+    }
+
+    public function setExistenceInternet(bool $existence_internet): self
+    {
+        $this->existence_internet = $existence_internet;
+
+        return $this;
+    }
+
+    public function isExistenceFosseSeptique(): ?bool
+    {
+        return $this->existence_fosse_septique;
+    }
+
+    public function setExistenceFosseSeptique(bool $existence_fosse_septique): self
+    {
+        $this->existence_fosse_septique = $existence_fosse_septique;
+
+        return $this;
+    }
+
+    public function getQrMaison(): ?string
+    {
+        return $this->qr_maison;
+    }
+
+    public function setQrMaison(string $qr_maison): self
+    {
+        $this->qr_maison = $qr_maison;
+
+        return $this;
+    }
+
+
 }

@@ -27,7 +27,7 @@ class UserType extends AbstractType
             ->add('username')
             ->add('password', PasswordType::class)
             ->add('active', CheckboxType::class, [
-                'label'=>false
+                'label'=>false,
             ])
         ;
         $builder->get('active')

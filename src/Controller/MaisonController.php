@@ -5,6 +5,8 @@ namespace App\Controller;
 use App\Entity\Maison;
 use App\Entity\Personne;
 use App\Form\MaisonType;
+use App\Form\CodeMaisonType;
+use App\Service\QrCodeService;
 use App\Form\MaisonPersonneType;
 use App\Repository\EleveRepository;
 use App\Repository\MaisonRepository;
@@ -26,9 +28,10 @@ class MaisonController extends AbstractController
     }
 
     #[Route('/new', name: 'app_maison_new', methods: ['GET', 'POST'])]
-    public function new(Request $request, MaisonRepository $maisonRepository): Response
+    public function new(Request $request, MaisonRepository $maisonRepository, QrCodeService $qrcodeservice): Response
     {
-        $maison = new Maison();
+        $maison = new Maison();        
+        $qr_code=null;
         $form = $this->createForm(MaisonType::class, $maison);
         $form->handleRequest($request);
         $code_maison="";
@@ -39,11 +42,14 @@ class MaisonController extends AbstractController
             $house=$quartier." ".$cellule;
             $code_maison= implode('', array_map(function($p) { return strtoupper($p[0]); }, explode(' ', $house)));
             $code=strtoupper(substr($code_maison.''.$secteur.''.md5(random_int(0,9999)),0,10));
-
+            $maison->setQrMaison((string)$qr_code);
             $maison->setUpdatedAt(new \DateTimeImmutable());
             $maison->setCreatedAt(new \DateTimeImmutable());
             $maison->setCodeMaison($code);
-            $maisonRepository->add($maison);
+            $maisonRepository->add($maison);            
+            $qr_code=$qrcodeservice->qrcode($maison->getId().'/codevalidationmaison',$maison->getId());
+            $maison->setQrMaison((string)$qr_code);
+            $maisonRepository->add($maison);    
             return $this->redirectToRoute('app_maison_index', [], Response::HTTP_SEE_OTHER);
         }
 
@@ -57,6 +63,13 @@ class MaisonController extends AbstractController
     public function show(Maison $maison): Response
     {
         return $this->render('maison/show.html.twig', [
+            'maison' => $maison,
+        ]);
+    }
+    #[Route('/{id}/showcode', name: 'app_maison_show_code', methods: ['GET'])]
+    public function showcode(Maison $maison): Response
+    {
+        return $this->render('maison/showcode.html.twig', [
             'maison' => $maison,
         ]);
     }
@@ -133,6 +146,34 @@ class MaisonController extends AbstractController
             'personnes'=>$personnes,
             'maison'=>$maison
         ]);
+    }
 
+    
+    #[Route('/{id}/codevalidationmaison', name: 'app_maison_codevalidation', methods: ['GET', 'POST'])]
+    public function codevalidation(Request $request,Maison $maison): Response
+    {
+        $codemaison=$maison->getCodeMaison();
+        $form = $this->createForm(CodeMaisonType::class, null);
+        $form->handleRequest($request);
+        
+        if ($form->isSubmitted() && $form->isValid()) { 
+            $data=$form->getData();
+            if (strtolower($data['code'])==strtolower($codemaison)) {
+                # code...
+                return $this->redirectToRoute('app_maison_information', ['id'=>$maison->getId()], Response::HTTP_SEE_OTHER);
+            }
+        }
+        return $this->renderForm('maison/codevalidationmaison.html.twig', [
+            'maison' => $maison,
+            'form' => $form
+        ]);
+    }
+
+    #[Route('/{id}',name:'app_maison_information',methods:['GET'])]
+    public function infomaison(Maison $maison)
+    {
+        return $this->render('maison/infomaison.html.twig', [
+            'maison' => $maison,
+        ]);        
     }
 }

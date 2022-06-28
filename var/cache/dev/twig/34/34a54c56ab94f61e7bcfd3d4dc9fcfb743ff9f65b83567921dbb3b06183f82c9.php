@@ -179,6 +179,12 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
                                                                 </li>
+                                                                <li class=\"list-group-item\">
+                                                                    ";
+        // line 70
+        echo twig_get_attribute($this->env, $this->source, (isset($context["cellule"]) || array_key_exists("cellule", $context) ? $context["cellule"] : (function () { throw new RuntimeError('Variable "cellule" does not exist.', 70, $this->source); })()), "Localisation", [], "any", false, false, false, 70);
+        echo "                                                               
+                                                                </li>
                                                             </ul>  
 
                                                         </div>
@@ -219,7 +225,7 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
 
     public function getDebugInfo()
     {
-        return array (  175 => 63,  171 => 62,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  185 => 70,  175 => 63,  171 => 62,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -291,6 +297,9 @@ class __TwigTemplate_96ea2767f77ba75ba7122dc323bc9713f94fbdbd46d52f487f5e6ba4ddf
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
+                                                                </li>
+                                                                <li class=\"list-group-item\">
+                                                                    {{ cellule.Localisation|raw|raw }}                                                               
                                                                 </li>
                                                             </ul>  
 

@@ -139,12 +139,42 @@ class __TwigTemplate_794f352e9edc735ba6810fd41d3790528ab4cb6de29adca8ba8b18a1db6
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "secteur", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
                                         </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 48
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), "existence_eau", [], "any", false, false, false, 48), 'row', ["attr" => ["class" => "form-control", "required" => "required", "autofocus" => "autofocus"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 51
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 51, $this->source); })()), "existence_electricite", [], "any", false, false, false, 51), 'row', ["attr" => ["class" => "form-control", "required" => "required", "autofocus" => "autofocus"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 54
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 54, $this->source); })()), "existence_fosse_septique", [], "any", false, false, false, 54), 'row', ["attr" => ["class" => "form-control", "required" => "required", "autofocus" => "autofocus"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 57
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 57, $this->source); })()), "existence_arbre", [], "any", false, false, false, 57), 'row', ["attr" => ["class" => "form-control", "required" => "required", "autofocus" => "autofocus"]]);
+        echo "
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 60
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 60, $this->source); })()), "localisation", [], "any", false, false, false, 60), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Localisation"]]);
+        echo "
+                                        </div>
                                         <div class=\"form-group\">
                                             <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i></button>
                                         </div>
                                     ";
-        // line 50
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
+        // line 65
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 65, $this->source); })()), 'form_end');
         echo "
                                   </div>
                                 </div>
@@ -183,7 +213,7 @@ class __TwigTemplate_794f352e9edc735ba6810fd41d3790528ab4cb6de29adca8ba8b18a1db6
 
     public function getDebugInfo()
     {
-        return array (  147 => 50,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  177 => 65,  169 => 60,  163 => 57,  157 => 54,  151 => 51,  145 => 48,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -233,6 +263,21 @@ class __TwigTemplate_794f352e9edc735ba6810fd41d3790528ab4cb6de29adca8ba8b18a1db6
                                         </div>
                                         <div class=\"form-floating mb-3\">
                                             {{form_row(form.secteur, {'attr':{'class':\"form-control js-example-basic-single\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.existence_eau, {'attr':{'class':\"form-control\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.existence_electricite, {'attr':{'class':\"form-control\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.existence_fosse_septique, {'attr':{'class':\"form-control\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.existence_arbre, {'attr':{'class':\"form-control\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                        </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.localisation, {'attr':{'class':\"form-control\", 'placeholder':\"Localisation\"}})}}
                                         </div>
                                         <div class=\"form-group\">
                                             <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i></button>

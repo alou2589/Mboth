@@ -65,7 +65,7 @@ class __TwigTemplate_4e4ede5b258beb92a713c4f9bec1e6e308d907c6024a3b3279127ab7ead
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Utilisateur| ";
+        echo "Point Focal| ";
         $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -90,7 +90,7 @@ class __TwigTemplate_4e4ede5b258beb92a713c4f9bec1e6e308d907c6024a3b3279127ab7ead
       <div class=\"col-md-12 col-sm-12 \">
         <div class=\"x_panel\">
           <div class=\"x_title\">
-            <h2>Utilisateur</h2>
+            <h2>Point Focal</h2>
             <ul class=\"nav navbar-right panel_toolbox\">
               <li>
                   <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
@@ -99,7 +99,7 @@ class __TwigTemplate_4e4ede5b258beb92a713c4f9bec1e6e308d907c6024a3b3279127ab7ead
                   <a href=\"";
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_new");
-        echo "\" title=\"Ajout Utilisateur\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+        echo "\" title=\"Ajout Point Focal\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
               </li>
               <li>
                   <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -121,7 +121,7 @@ class __TwigTemplate_4e4ede5b258beb92a713c4f9bec1e6e308d907c6024a3b3279127ab7ead
                             <th class=\"text-center\">Email</th>
                             <th class=\"text-center\">Roles</th>
                             <th class=\"text-center\">Pseudo</th>
-                            <th class=\"text-center\">Utilisateur</th>
+                            <th class=\"text-center\">Point Focal</th>
                             <th class=\"text-center\">Active</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
@@ -187,16 +187,16 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
                 echo " ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["user"], "personne", [], "any", false, false, false, 61), "Nom", [], "any", false, false, false, 61), "html", null, true);
                 echo "</td>
-                                <td class=\"form-check form-switch text-center\">
+                                <td class=\"text-center\">
                                     ";
                 // line 63
                 if ((twig_get_attribute($this->env, $this->source, $context["user"], "active", [], "any", false, false, false, 63) == true)) {
                     // line 64
-                    echo "                                        <input class=\"form-check-input text-success\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" checked>
+                    echo "                                        <input type=\"checkbox\" class=\"js-switch\" disabled=\"disabled\" checked=\"checked\" />
                                     ";
                 } else {
                     // line 66
-                    echo "                                        <input class=\"form-check-input text-danger\" type=\"checkbox\" id=\"flexSwitchCheckDefault\">
+                    echo "                                        <input type=\"checkbox\" class=\"js-switch\" disabled=\"disabled\" />
                                     ";
                 }
                 // line 68
@@ -263,20 +263,20 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Utilisateur| {{ parent() }}{% endblock %}
+{% block title %}Point Focal| {{ parent() }}{% endblock %}
 
 {% block body %}
     <div class=\"row\">
       <div class=\"col-md-12 col-sm-12 \">
         <div class=\"x_panel\">
           <div class=\"x_title\">
-            <h2>Utilisateur</h2>
+            <h2>Point Focal</h2>
             <ul class=\"nav navbar-right panel_toolbox\">
               <li>
                   <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
               </li>
               <li>
-                  <a href=\"{{ path('app_user_new') }}\" title=\"Ajout Utilisateur\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
+                  <a href=\"{{ path('app_user_new') }}\" title=\"Ajout Point Focal\" ><i class=\"fas fa-fw fa-plus-circle\"></i></a>
               </li>
               <li>
                   <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -298,7 +298,7 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
                             <th class=\"text-center\">Email</th>
                             <th class=\"text-center\">Roles</th>
                             <th class=\"text-center\">Pseudo</th>
-                            <th class=\"text-center\">Utilisateur</th>
+                            <th class=\"text-center\">Point Focal</th>
                             <th class=\"text-center\">Active</th>
                             <th class=\"text-center\">Action</th>
                         </tr>
@@ -322,11 +322,11 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
                                 </td>
                                 <td class=\"text-center\">{{ user.username }}</td>
                                 <td class=\"text-center\">{{user.personne.Prenom}} {{user.personne.Nom}}</td>
-                                <td class=\"form-check form-switch text-center\">
+                                <td class=\"text-center\">
                                     {% if user.active == true %}
-                                        <input class=\"form-check-input text-success\" type=\"checkbox\" id=\"flexSwitchCheckChecked\" checked>
+                                        <input type=\"checkbox\" class=\"js-switch\" disabled=\"disabled\" checked=\"checked\" />
                                     {% else %}
-                                        <input class=\"form-check-input text-danger\" type=\"checkbox\" id=\"flexSwitchCheckDefault\">
+                                        <input type=\"checkbox\" class=\"js-switch\" disabled=\"disabled\" />
                                     {% endif %}
                                 </td>
                                 <td class=\"text-center\">
@@ -352,6 +352,6 @@ $context["role"] == "ROLE_SUPER_ADMIN")) {
     </div>
 
 {% endblock %}
-", "user/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\user\\index.html.twig");
+", "user/index.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\user\\index.html.twig");
     }
 }

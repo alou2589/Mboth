@@ -172,7 +172,10 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
                                                                 <li class=\"list-group-item\">
                                                                     <p>
                                                                         <strong>Fiche Information:</strong> :
-
+                                                                        <a href=\"";
+        // line 65
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["maison"]) || array_key_exists("maison", $context) ? $context["maison"] : (function () { throw new RuntimeError('Variable "maison" does not exist.', 65, $this->source); })()), "Localisation", [], "any", false, false, false, 65), "html", null, true);
+        echo "\" class=\"text-decoration-none\" title=\"Localisation\" target=\"_blank\"><i class=\"fas fa-location-dot text-danger\"></i> </a>
                                                                         <a href=\"";
         // line 66
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_liste_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["maison"]) || array_key_exists("maison", $context) ? $context["maison"] : (function () { throw new RuntimeError('Variable "maison" does not exist.', 66, $this->source); })()), "id", [], "any", false, false, false, 66)]), "html", null, true);
@@ -232,7 +235,7 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
 
     public function getDebugInfo()
     {
-        return array (  192 => 74,  182 => 67,  178 => 66,  169 => 60,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  195 => 74,  185 => 67,  181 => 66,  177 => 65,  169 => 60,  163 => 57,  157 => 54,  151 => 51,  135 => 38,  119 => 25,  113 => 22,  107 => 19,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -301,7 +304,7 @@ class __TwigTemplate_1141b28a006e4ad27986a174928d0740897b5edb84bcbd1b7829e8166b5
                                                                 <li class=\"list-group-item\">
                                                                     <p>
                                                                         <strong>Fiche Information:</strong> :
-
+                                                                        <a href=\"{{ maison.Localisation}}\" class=\"text-decoration-none\" title=\"Localisation\" target=\"_blank\"><i class=\"fas fa-location-dot text-danger\"></i> </a>
                                                                         <a href=\"{{ path('app_maison_liste_personne', {'id':maison.id}) }}\" class=\"text-decoration-none\" title=\"Liste Personne\"><i class=\"fas fa-users text-info\"></i> </a>
                                                                         <a href=\"{{ path('app_maison_education', {'id':maison.id}) }}\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>

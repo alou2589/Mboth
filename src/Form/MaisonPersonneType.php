@@ -34,6 +34,12 @@ class MaisonPersonneType extends AbstractType
                     'Célibataire'=>'Célibataire',
                 ]
             ])
+            ->add('existence_maladie', ChoiceType::class, [
+                'choices'=> [
+                    'Oui'=>'Oui',
+                    'Non'=>'Non'
+                ]
+            ])
         ;
     }
 

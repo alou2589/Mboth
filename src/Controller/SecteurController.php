@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Maison;
 use App\Entity\Secteur;
 use App\Form\SecteurType;
+use App\Service\QrCodeService;
 use App\Form\SecteurMaisonType;
 use App\Repository\MaisonRepository;
 use App\Repository\SecteurRepository;
@@ -94,9 +95,10 @@ class SecteurController extends AbstractController
     }
 
     #[Route('/{id}/newmaison', name: 'app_secteur_new_maison', methods: ['GET', 'POST'])]
-    public function newmaison(Request $request, Secteur $secteur, MaisonRepository $maisonRepository): Response
+    public function newmaison(Request $request, Secteur $secteur, MaisonRepository $maisonRepository, QrCodeService $qrcodeservice): Response
     {
-        $maison=new Maison();
+        $maison=new Maison();  
+        $qr_code=null;
         $form = $this->createForm(SecteurMaisonType::class, $maison);
         $form->handleRequest($request);
         $code_maison="";
@@ -107,12 +109,15 @@ class SecteurController extends AbstractController
             $house=$quartier." ".$cellule;
             $code_maison= implode('', array_map(function($p) { return strtoupper($p[0]); }, explode(' ', $house)));
             $code=strtoupper(substr($code_maison.''.$mysecteur.''.md5(random_int(0,9999)),0,10));
-
+            $maison->setQrMaison((string)$qr_code);
             $maison->setUpdatedAt(new \DateTimeImmutable());
             $maison->setCreatedAt(new \DateTimeImmutable());
             $maison->setCodeMaison($code);
             $maison->setSecteur($secteur);
-            $maisonRepository->add($maison);
+            $maisonRepository->add($maison);            
+            $qr_code=$qrcodeservice->qrcode($maison->getId().'/codevalidationmaison',$maison->getId());
+            $maison->setQrMaison((string)$qr_code);
+            $maisonRepository->add($maison);   
             return $this->redirectToRoute('app_secteur_liste_maison', ['id'=>$secteur->getId()], Response::HTTP_SEE_OTHER);
         }
 

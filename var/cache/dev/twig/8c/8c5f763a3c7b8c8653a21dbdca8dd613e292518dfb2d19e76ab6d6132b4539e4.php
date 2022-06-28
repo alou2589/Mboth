@@ -327,6 +327,6 @@ class __TwigTemplate_6ce1cd5a280b765337967f87d9a6396903ed6a7839164ce11bea5ff6be3
       </div>
     </div>
 {% endblock %}
-", "quartier/education.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\quartier\\education.html.twig");
+", "quartier/education.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\quartier\\education.html.twig");
     }
 }

@@ -139,12 +139,18 @@ class __TwigTemplate_a0129c295bd372b141635e19654c811d6239fbe9406268c25a643c2f397
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "secteur", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
                                         </div>
+                                        <div class=\"form-floating mb-3\">
+                                            ";
+        // line 48
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), "localisation", [], "any", false, false, false, 48), 'row', ["attr" => ["class" => "form-control", "placeholder" => "Localisation"]]);
+        echo "
+                                        </div>
                                         <div class=\"form-group\">
                                             <button type=\"submit\" class=\"btn btn-warning\">Modifier <i class=\"fas fa-edit\"></i></button>
                                         </div>
                                     ";
-        // line 50
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
+        // line 53
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 53, $this->source); })()), 'form_end');
         echo "
                                   </div>
                                 </div>
@@ -183,7 +189,7 @@ class __TwigTemplate_a0129c295bd372b141635e19654c811d6239fbe9406268c25a643c2f397
 
     public function getDebugInfo()
     {
-        return array (  147 => 50,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  153 => 53,  145 => 48,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -234,6 +240,9 @@ class __TwigTemplate_a0129c295bd372b141635e19654c811d6239fbe9406268c25a643c2f397
                                         <div class=\"form-floating mb-3\">
                                             {{form_row(form.secteur, {'attr':{'class':\"form-control js-example-basic-single\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
                                         </div>
+                                        <div class=\"form-floating mb-3\">
+                                            {{form_row(form.localisation, {'attr':{'class':\"form-control\", 'placeholder':\"Localisation\"}})}}
+                                        </div>
                                         <div class=\"form-group\">
                                             <button type=\"submit\" class=\"btn btn-warning\">Modifier <i class=\"fas fa-edit\"></i></button>
                                         </div>
@@ -256,6 +265,6 @@ class __TwigTemplate_a0129c295bd372b141635e19654c811d6239fbe9406268c25a643c2f397
     </div>
 {% endblock %}
 
-", "maison/edit.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\maison\\edit.html.twig");
+", "maison/edit.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\maison\\edit.html.twig");
     }
 }

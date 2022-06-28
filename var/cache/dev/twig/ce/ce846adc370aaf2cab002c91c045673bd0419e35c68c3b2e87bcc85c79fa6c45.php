@@ -163,22 +163,20 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                                                                         <strong>Fiche Info:</strong> :    
                                                                         <a href=\"";
         // line 60
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 60, $this->source); })()), "id", [], "any", false, false, false, 60)]), "html", null, true);
-        echo "\" class=\"text-decoration-none\" title=\"Population\"><i class=\"fas fa-users text-info\"></i> </a>
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 60, $this->source); })()), "Localisation", [], "any", false, false, false, 60), "html", null, true);
+        echo "\" class=\"text-decoration-none\" title=\"Localisation\" target=\"_blank\"><i class=\"fas fa-location-dot text-danger\"></i> </a>
                                                                         <a href=\"";
         // line 61
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_education", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 61, $this->source); })()), "id", [], "any", false, false, false, 61)]), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_personne", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 61, $this->source); })()), "id", [], "any", false, false, false, 61)]), "html", null, true);
+        echo "\" class=\"text-decoration-none\" title=\"Population\"><i class=\"fas fa-users text-info\"></i> </a>
+                                                                        <a href=\"";
+        // line 62
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_education", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 62, $this->source); })()), "id", [], "any", false, false, false, 62)]), "html", null, true);
         echo "\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
-                                                                </li>
-                                                                <li class=\"list-group-item\">
-                                                                    ";
-        // line 68
-        echo twig_get_attribute($this->env, $this->source, (isset($context["quartier"]) || array_key_exists("quartier", $context) ? $context["quartier"] : (function () { throw new RuntimeError('Variable "quartier" does not exist.', 68, $this->source); })()), "Localisation", [], "any", false, false, false, 68);
-        echo "                                                               
                                                                 </li>
                                                             </ul>                            
                                                         </div>
@@ -219,7 +217,7 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
 
     public function getDebugInfo()
     {
-        return array (  180 => 68,  170 => 61,  166 => 60,  158 => 55,  152 => 52,  136 => 39,  120 => 26,  114 => 23,  108 => 20,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  174 => 62,  170 => 61,  166 => 60,  158 => 55,  152 => 52,  136 => 39,  120 => 26,  114 => 23,  108 => 20,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -283,15 +281,13 @@ class __TwigTemplate_0fcc46819e7e9ef18e2d7be0f33533c1517883252889930b5406c4bf439
                                                                 <li class=\"list-group-item\">
                                                                     <p>
                                                                         <strong>Fiche Info:</strong> :    
+                                                                        <a href=\"{{ quartier.Localisation}}\" class=\"text-decoration-none\" title=\"Localisation\" target=\"_blank\"><i class=\"fas fa-location-dot text-danger\"></i> </a>
                                                                         <a href=\"{{ path('app_quartier_personne', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Population\"><i class=\"fas fa-users text-info\"></i> </a>
                                                                         <a href=\"{{ path('app_quartier_education', {'id':quartier.id}) }}\" class=\"text-decoration-none\" title=\"Education\"><i class=\"fas fa-user-graduate text-primary\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Santé\"><i class=\"fas fa-heartbeat text-danger\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Environnement\"><i class=\"fas fa-leaf text-success\"></i> </a>
                                                                         <a href=\"#\" class=\"text-decoration-none\" title=\"Economie\"><i class=\"fas fa-hand-holding-usd text-secondary\"></i> </a>
                                                                     </p>
-                                                                </li>
-                                                                <li class=\"list-group-item\">
-                                                                    {{ quartier.Localisation|raw|raw }}                                                               
                                                                 </li>
                                                             </ul>                            
                                                         </div>

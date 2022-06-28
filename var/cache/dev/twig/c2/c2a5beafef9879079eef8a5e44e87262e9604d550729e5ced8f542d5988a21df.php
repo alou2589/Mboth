@@ -99,6 +99,6 @@ class __TwigTemplate_ecfb81fdd17a727377bfebbf5b9c5cc0b91691fe9dbb69f2c19c98de398
 .container.body_default {
     border-top: 8px solid #aaaaaa;
 }
-", "@email/zurb_2/notification/local.css", "C:\\Users\\Alou\\Mboth\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\zurb_2\\notification\\local.css");
+", "@email/zurb_2/notification/local.css", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\zurb_2\\notification\\local.css");
     }
 }

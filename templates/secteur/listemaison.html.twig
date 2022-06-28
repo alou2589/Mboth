@@ -38,6 +38,7 @@
                             <th class="text-center">Maison</th>
                             <th class="text-center">Code maison</th>
                             <th class="text-center">Secteur</th>
+                            <th class="text-center">Code QR</th>
                             <th class="text-center">Action</th>
                         </tr>
                     </thead>
@@ -48,6 +49,7 @@
                             <td class="text-center">{{ maison.nomMaison }}</td>
                             <td class="text-center">{{ maison.codeMaison }}</td>
                             <td class="text-center">{{ maison.secteur.NomSecteur }}</td>
+                            <td class="text-center"><a href="{{ path('app_maison_show_code', {'id': maison.id}) }}"><i class="fas fa-qrcode text-success"></i></a></td>
                             <td class="text-center">
                                 <a href="{{ path('app_maison_show', {'id': maison.id}) }}"><i class="fas fa-eye text-info"></i></a>
                             </td>

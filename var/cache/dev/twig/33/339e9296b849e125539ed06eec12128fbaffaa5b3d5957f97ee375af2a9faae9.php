@@ -283,6 +283,6 @@ class __TwigTemplate_ca2bbde05edba90586112c4c6471e3e05afddf9ab660a8204881f8e645f
       </div>
     </div>
 
-{% endblock %}", "classe/show.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\classe\\show.html.twig");
+{% endblock %}", "classe/show.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\classe\\show.html.twig");
     }
 }

@@ -67,10 +67,10 @@ class Maison extends \App\Entity\Maison implements \Doctrine\ORM\Proxy\Proxy
     public function __sleep()
     {
         if ($this->__isInitialized__) {
-            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'nom_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'code_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'secteur', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'personnes', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'localisation'];
+            return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'nom_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'code_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'secteur', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'personnes', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'localisation', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_arbre', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'arbres', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_eau', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_electricite', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_internet', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_fosse_septique', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'qr_maison'];
         }
 
-        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'nom_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'code_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'secteur', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'personnes', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'localisation'];
+        return ['__isInitialized__', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'id', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'nom_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'code_maison', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'secteur', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'updatedAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'createdAt', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'personnes', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'localisation', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_arbre', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'arbres', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_eau', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_electricite', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_internet', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'existence_fosse_septique', '' . "\0" . 'App\\Entity\\Maison' . "\0" . 'qr_maison'];
     }
 
     /**
@@ -355,6 +355,171 @@ class Maison extends \App\Entity\Maison implements \Doctrine\ORM\Proxy\Proxy
         $this->__initializer__ && $this->__initializer__->__invoke($this, 'setLocalisation', [$localisation]);
 
         return parent::setLocalisation($localisation);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isExistenceArbre(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExistenceArbre', []);
+
+        return parent::isExistenceArbre();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExistenceArbre(bool $existence_arbre): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExistenceArbre', [$existence_arbre]);
+
+        return parent::setExistenceArbre($existence_arbre);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getArbres(): \Doctrine\Common\Collections\Collection
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getArbres', []);
+
+        return parent::getArbres();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function addArbre(\App\Entity\Arbre $arbre): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'addArbre', [$arbre]);
+
+        return parent::addArbre($arbre);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function removeArbre(\App\Entity\Arbre $arbre): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'removeArbre', [$arbre]);
+
+        return parent::removeArbre($arbre);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isExistenceEau(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExistenceEau', []);
+
+        return parent::isExistenceEau();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExistenceEau(bool $existence_eau): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExistenceEau', [$existence_eau]);
+
+        return parent::setExistenceEau($existence_eau);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isExistenceElectricite(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExistenceElectricite', []);
+
+        return parent::isExistenceElectricite();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExistenceElectricite(bool $existence_electricite): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExistenceElectricite', [$existence_electricite]);
+
+        return parent::setExistenceElectricite($existence_electricite);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isExistenceInternet(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExistenceInternet', []);
+
+        return parent::isExistenceInternet();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExistenceInternet(bool $existence_internet): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExistenceInternet', [$existence_internet]);
+
+        return parent::setExistenceInternet($existence_internet);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isExistenceFosseSeptique(): ?bool
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'isExistenceFosseSeptique', []);
+
+        return parent::isExistenceFosseSeptique();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setExistenceFosseSeptique(bool $existence_fosse_septique): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setExistenceFosseSeptique', [$existence_fosse_septique]);
+
+        return parent::setExistenceFosseSeptique($existence_fosse_septique);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getQrMaison(): ?string
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getQrMaison', []);
+
+        return parent::getQrMaison();
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function setQrMaison(string $qr_maison): \App\Entity\Maison
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'setQrMaison', [$qr_maison]);
+
+        return parent::setQrMaison($qr_maison);
     }
 
 }

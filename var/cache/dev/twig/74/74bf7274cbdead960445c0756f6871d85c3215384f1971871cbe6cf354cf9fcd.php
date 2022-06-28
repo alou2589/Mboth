@@ -307,6 +307,6 @@ class __TwigTemplate_b4c6c480823e049be63a3a1d62db00c56a97e85e95ef93303d9e3851901
       </div>
     </div>
 {% endblock %}
-", "maison/education.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\maison\\education.html.twig");
+", "maison/education.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\maison\\education.html.twig");
     }
 }

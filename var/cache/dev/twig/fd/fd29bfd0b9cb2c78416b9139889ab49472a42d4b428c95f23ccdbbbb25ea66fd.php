@@ -141,14 +141,10 @@ class __TwigTemplate_c1af344156a049b93f1e1318a27d31ceb3243015bb45e6908afa500e9ce
                                             </div>
                                             <div class=\"form-group\">
                                                 <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i> </button>
-                                                <a href=\"";
-        // line 49
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_niveau_etude_liste_ecole", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["niveau_etude"]) || array_key_exists("niveau_etude", $context) ? $context["niveau_etude"] : (function () { throw new RuntimeError('Variable "niveau_etude" does not exist.', 49, $this->source); })()), "id", [], "any", false, false, false, 49)]), "html", null, true);
-        echo "\" class=\"btn btn-secondary\">Accueil <i class=\"fas fa-home\"></i></a>
                                             </div>
                                         ";
-        // line 51
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 51, $this->source); })()), 'form_end');
+        // line 50
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 50, $this->source); })()), 'form_end');
         echo "
                                     </div>
                                 </div>
@@ -188,7 +184,7 @@ class __TwigTemplate_c1af344156a049b93f1e1318a27d31ceb3243015bb45e6908afa500e9ce
 
     public function getDebugInfo()
     {
-        return array (  151 => 51,  146 => 49,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  147 => 50,  139 => 45,  133 => 42,  128 => 40,  101 => 16,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -241,7 +237,6 @@ class __TwigTemplate_c1af344156a049b93f1e1318a27d31ceb3243015bb45e6908afa500e9ce
                                             </div>
                                             <div class=\"form-group\">
                                                 <button type=\"submit\" class=\"btn btn-success\">Valider <i class=\"fas fa-save\"></i> </button>
-                                                <a href=\"{{ path('app_niveau_etude_liste_ecole', {'id':niveau_etude.id}) }}\" class=\"btn btn-secondary\">Accueil <i class=\"fas fa-home\"></i></a>
                                             </div>
                                         {{ form_end(form) }}
                                     </div>
@@ -263,6 +258,6 @@ class __TwigTemplate_c1af344156a049b93f1e1318a27d31ceb3243015bb45e6908afa500e9ce
 
 {% endblock %}
 
-", "niveau_etude/newecole.html.twig", "C:\\Users\\Alou\\Mboth\\templates\\niveau_etude\\newecole.html.twig");
+", "niveau_etude/newecole.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\niveau_etude\\newecole.html.twig");
     }
 }

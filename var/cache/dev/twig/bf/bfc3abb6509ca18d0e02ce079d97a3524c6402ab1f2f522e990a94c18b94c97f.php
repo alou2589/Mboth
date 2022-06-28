@@ -65,7 +65,7 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Utilisateur | ";
+        echo "Point Focal | ";
         $this->displayParentBlock("title", $context, $blocks);
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -90,7 +90,7 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
       <div class=\"col-md-12 col-sm-12 \">
         <div class=\"x_panel\">
           <div class=\"x_title\">
-            <h2>Utilisateur</h2>
+            <h2>Point Focal</h2>
             <ul class=\"nav navbar-right panel_toolbox\">
               <li>
                   <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
@@ -99,7 +99,7 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
                   <a href=\"";
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_user_index");
-        echo "\" title=\"Accueil Utilisateur\" ><i class=\"fas fa-fw fa-home\"></i></a>
+        echo "\" title=\"Accueil Point Focal\" ><i class=\"fas fa-fw fa-home\"></i></a>
               </li>
               <li>
                   <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -112,7 +112,7 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
               <div class=\"col-sm-12\">
                 <div class=\"card-box table-responsive\">
                   <p class=\"text-muted font-13 m-b-30\">
-                    Ajout Utilisateur
+                    Ajout Point Focal
                   </p>
                   <div class=\"card\">
                     <div class=\"card-body\">
@@ -127,22 +127,22 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
         // line 40
         echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 40, $this->source); })()), 'form_start', ["attr" => ["class" => "form"]]);
         echo "
-                                        <div class=\"form-check form-switch\">
+                                        <div class=\"\">
                                             ";
         // line 42
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "active", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "form-check-input", "role" => "switch", "id" => "flexSwitchCheckDefault", "required" => "required"]]);
-        echo "
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 42, $this->source); })()), "active", [], "any", false, false, false, 42), 'row', ["attr" => ["class" => "js-switch", "type" => "checkbox", "readonly" => "readonly"]]);
+        echo "                                    
                                         </div>
                                             <div class=\"form-floating mb-3\">
                                                 ";
         // line 45
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "personne", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "placeholder" => "Utilisateur", "required" => "required", "autofocus" => "autofocus"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 45, $this->source); })()), "personne", [], "any", false, false, false, 45), 'row', ["attr" => ["class" => "form-control js-example-basic-single", "placeholder" => "Point Focal", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
                                             </div>
                                         <div class=\"form-floating mb-3\">
                                             ";
         // line 48
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), "username", [], "any", false, false, false, 48), 'row', ["attr" => ["class" => "form-control", "id" => "floatingInput", "placeholder" => "Nom d'utilisateur", "autocomplete" => "email", "required" => "required", "autofocus" => "autofocus"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 48, $this->source); })()), "username", [], "any", false, false, false, 48), 'row', ["attr" => ["class" => "form-control", "id" => "floatingInput", "placeholder" => "Pseudo du Point Focal", "autocomplete" => "email", "required" => "required", "autofocus" => "autofocus"]]);
         echo "
                                         </div>
                                         <div class=\"form-floating mb-3\">
@@ -209,20 +209,20 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
     {
         return new Source("{% extends 'base.html.twig' %}
 
-{% block title %}Utilisateur | {{ parent() }}{% endblock %}
+{% block title %}Point Focal | {{ parent() }}{% endblock %}
 
 {% block body %}
     <div class=\"row\">
       <div class=\"col-md-12 col-sm-12 \">
         <div class=\"x_panel\">
           <div class=\"x_title\">
-            <h2>Utilisateur</h2>
+            <h2>Point Focal</h2>
             <ul class=\"nav navbar-right panel_toolbox\">
               <li>
                   <a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
               </li>
               <li>
-                  <a href=\"{{ path('app_user_index') }}\" title=\"Accueil Utilisateur\" ><i class=\"fas fa-fw fa-home\"></i></a>
+                  <a href=\"{{ path('app_user_index') }}\" title=\"Accueil Point Focal\" ><i class=\"fas fa-fw fa-home\"></i></a>
               </li>
               <li>
                   <a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -235,7 +235,7 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
               <div class=\"col-sm-12\">
                 <div class=\"card-box table-responsive\">
                   <p class=\"text-muted font-13 m-b-30\">
-                    Ajout Utilisateur
+                    Ajout Point Focal
                   </p>
                   <div class=\"card\">
                     <div class=\"card-body\">
@@ -247,14 +247,14 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
                                 <div class=\"col-lg-10 mx-auto\">
                                   <div class=\"p-5\">
                                     {{form_start(form, {'attr':{'class':'form'}})}}
-                                        <div class=\"form-check form-switch\">
-                                            {{form_row(form.active, {'attr':{'class':\"form-check-input\",'role':\"switch\", 'id':\"flexSwitchCheckDefault\",'required':\"required\"}})}}
+                                        <div class=\"\">
+                                            {{form_row(form.active, {'attr':{'class':\"js-switch\",'type':\"checkbox\", 'readonly':\"readonly\"}})}}                                    
                                         </div>
                                             <div class=\"form-floating mb-3\">
-                                                {{form_row(form.personne, {'attr':{'class':\"form-control js-example-basic-single\", 'placeholder':\"Utilisateur\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                                {{form_row(form.personne, {'attr':{'class':\"form-control js-example-basic-single\", 'placeholder':\"Point Focal\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
                                             </div>
                                         <div class=\"form-floating mb-3\">
-                                            {{form_row(form.username, {'attr':{'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Nom d'utilisateur\", 'autocomplete':\"email\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
+                                            {{form_row(form.username, {'attr':{'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Pseudo du Point Focal\", 'autocomplete':\"email\", 'required':\"required\", 'autofocus':\"autofocus\"}})}}
                                         </div>
                                         <div class=\"form-floating mb-3\">
                                             {{form_row(form.email, {'attr':{'class':\"form-control\", 'id':\"floatingInput\", 'placeholder':\"Adresse email\", 'autocomplete':\"email\", 'required':\"required\"}})}}
@@ -284,6 +284,6 @@ class __TwigTemplate_d1ac3cd29ea303f2c4d3c75e1a4f0b484295151d954511e340b0677d425
     </div>
 
 {% endblock %}
-", "user/new.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\user\\new.html.twig");
+", "user/new.html.twig", "C:\\Users\\Alou\\Desktop\\projets\\Mboth\\templates\\user\\new.html.twig");
     }
 }
