@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\MaisonRepository;
 use App\Repository\CelluleRepository;
 use App\Repository\SecteurRepository;
 use App\Repository\PersonneRepository;
@@ -12,73 +13,93 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class StatistiqueController extends AbstractController
 {
-    #[Route('/statistique', name: 'app_statistique')]
-    public function index(QuartierRepository $quartierRepository, CelluleRepository $celluleRepository, SecteurRepository $secteurRepository, PersonneRepository $personneRepository): Response
+    #[Route('/admin/statistique', name: 'app_statistique')]
+    public function index(QuartierRepository $quartierRepository, CelluleRepository $celluleRepository, SecteurRepository $secteurRepository, MaisonRepository $maisonRepository, PersonneRepository $personneRepository): Response
     {       
-        //Nbre de cellules par quartier
-        $quartiers= $quartierRepository->findAll();
-        $nb_quartier=count($quartiers);        
-        foreach($quartiers as $quartier ) {
-            $quartier_name[]=$quartier->getNomQuartier();
-            $cellule_count[]=count($quartier->getCellules());
-        }
-
-
-        //Nbre de secteurs par quartier
-        $cellules= $celluleRepository->findAll();
-        $nb_cellule=count($cellules);
-        foreach ($cellules as $cellule) {
-            # code...
-            $cellule_name[]=$cellule->getNomCellule();
-            $secteur_count[]=count($cellule->getSecteurs());
-            //Nbre de maisons par cellule
-            $secteurs_cellule=$cellule->getSecteurs();
-            foreach ($secteurs_cellule as $secteur_cellule) {
-                $nb_maison[]=count($secteur_cellule->getMaisons());
-                //Nbre d'habitants par cellule
-                $secteur_maisons=$secteur_cellule->getMaisons();
+        //Statistiques Maisons et Habitants
+            //Secteur
+            $secteurs = $secteurRepository->findAll(); 
+            foreach ($secteurs as $secteur) {
+                # code...
+                $name_secteur[]=$secteur->getNomSecteur();
+                $name_quartier[]=$secteur->getCellule()->getQuartier()->getNomQuartier();
+                $maison_count[]=count($secteur->getMaisons());
+                $secteur_maisons=$secteur->getMaisons();
                 foreach ($secteur_maisons as $secteur_maison) {
                     # code...
-                    $populations[]=count($secteur_maison->getPersonnes());
+                    $secteur_name[]=$secteur_maison->getSecteur()->getNomSecteur();
+                    $population_count[]=count($secteur_maison->getPersonnes());
                 }
             }
-        }
+            //Cellule
+            $cellules=$celluleRepository->findAll(); 
+            foreach ($cellules as $cellule) {
+                # code...
+                $cellule_secteurs=$cellule->getSecteurs();
+                foreach ($cellule_secteurs as $cellule_secteur) {
+                    # code...
+                    $name_cellule[]=$cellule_secteur->getCellule()->getNomCellule();
+                    $cellule_maison_count[]=count($cellule_secteur->getMaisons());
+                    $cellule_maisons=$cellule_secteur->getMaisons();
+                    foreach ($cellule_maisons as $cellule_maison) {
+                        # code...
+                        $cellule_name[]=$cellule_maison->getSecteur()->getCellule()->getNomCellule();
+                        $cellule_population_count[]=count($cellule_maison->getPersonnes());
+                    }
 
-        //Nbre de maisons par secteur
-        $secteurs=$secteurRepository->findAll();
-        $nb_secteur=count($secteurs);
-        foreach ($secteurs as $secteur) {
-            # code...
-            $secteur_name[]=$secteur->getNomSecteur();
-            $maison_count[]=count($secteur->getMaisons());
-        }
-
-        //Nbre d'hommes
-        $hommes =$personneRepository->findBy(['sexe'=>'Homme']);
-        $femmes =$personneRepository->findBy(['sexe'=>'Femme']);
-        $celibataires =$personneRepository->findBy(['situation_matrimoniale'=>'Célibataire']);
-        $mariés =$personneRepository->findBy(['situation_matrimoniale'=>'Marié']);
-        $divorces =$personneRepository->findBy(['situation_matrimoniale'=>'Divorcé']);
+                }
+            }
+            //Quartier
+            $quartiers=$quartierRepository->findAll(); 
+            foreach ($quartiers as $quartier) {
+                # code...
+                $quartier_cellules=$quartier->getCellules();
+                foreach ($quartier_cellules as $quartier_cellule) {
+                    # code...
+                    $quartier_secteurs=$quartier_cellule->getSecteurs();
+                    foreach ($quartier_secteurs as $quartier_secteur) {
+                        # code...
+                        $name_quartier[]=$quartier_secteur->getCellule()->getQuartier()->getNomQuartier();
+                        $quartier_maison_count[]=count($quartier_secteur->getMaisons());
+                        $quartier_maisons=$quartier_secteur->getMaisons();
+                        foreach ($quartier_maisons as $quartier_maison) {
+                            # code...
+                            $quartier_name[]=$quartier_maison->getSecteur()->getCellule()->getQuartier()->getNomQuartier();
+                            $quartier_population_count[]=count($quartier_maison->getPersonnes());
+                        }
+                    }
+                }
+            }
+            
+            $cellule_element=count($cellule_name);
+            $cellule_elements=count($name_cellule);
+            $quartier_elements=count($name_quartier);
+            $quartier_element=count($quartier_name);
+            //dd($cellule_elements);
         
         
 
         return $this->render('statistique/index.html.twig', [
-            'quartier_name' => json_encode($quartier_name),
-            'cellule_name' => json_encode($cellule_name),
-            'secteur_name' => json_encode($secteur_name),
-            'cellule_count'=>json_encode($cellule_count),
-            'secteur_count'=>json_encode($secteur_count),
+            'name_secteur'=>json_encode($name_secteur),
+            'name_cellule'=>json_encode($name_cellule),
+            'name_quartier'=>json_encode($name_quartier),
+            'secteur_name'=>json_encode($secteur_name),
+            'cellule_name'=>json_encode($cellule_name),
+            'cellule_element'=>$cellule_element,
+            'cellule_elements'=>$cellule_elements,
+            'quartier_elements'=>$quartier_elements,
+            'quartier_element'=>$quartier_element,
+            'name_quartier'=>json_encode($name_quartier),
+            'quartier_name'=>json_encode($quartier_name),
+            'secteurs'=>$secteurs,
+            'cellules'=>$cellules,
+            'quartiers'=>$quartiers,
             'maison_count'=>json_encode($maison_count),
-            'populations'=>json_encode($populations),
-            'nb_maison'=>json_encode($nb_maison),
-            'nb_quartier'=>json_encode($nb_quartier),
-            'nb_cellule'=>json_encode($nb_cellule),
-            'nb_secteur'=>json_encode($nb_secteur),
-            'hommes'=>count($hommes),
-            'femmes'=>count($femmes),
-            'celibataires'=>count($celibataires),
-            'mariés'=>count($mariés),
-            'divorces'=>count($divorces),
+            'cellule_maison_count'=>json_encode($cellule_maison_count),
+            'quartier_maison_count'=>json_encode($quartier_maison_count),
+            'population_count'=>json_encode($population_count),
+            'cellule_population_count'=>json_encode($cellule_population_count),
+            'quartier_population_count'=>json_encode($quartier_population_count),
         ]);
     }
 }

@@ -145,6 +145,10 @@ class __TwigTemplate_2fcc9261f5f733ff5088d663bff2187086650ee743339f3c361273827e6
             echo "</td>
                                 <td class=\"text-center\">";
             // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["personne"], "maison", [], "any", false, false, false, 46), "secteur", [], "any", false, false, false, 46), "cellule", [], "any", false, false, false, 46), "NomCellule", [], "any", false, false, false, 46), "html", null, true);
+            echo " - ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["personne"], "maison", [], "any", false, false, false, 46), "secteur", [], "any", false, false, false, 46), "NomSecteur", [], "any", false, false, false, 46), "html", null, true);
+            echo " - ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["personne"], "maison", [], "any", false, false, false, 46), "NomMaison", [], "any", false, false, false, 46), "html", null, true);
             echo "</td>
                                 <td class=\"text-center\">
@@ -198,7 +202,7 @@ class __TwigTemplate_2fcc9261f5f733ff5088d663bff2187086650ee743339f3c361273827e6
 
     public function getDebugInfo()
     {
-        return array (  171 => 56,  162 => 52,  153 => 48,  148 => 46,  142 => 45,  138 => 44,  135 => 43,  130 => 42,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
+        return array (  175 => 56,  166 => 52,  157 => 48,  148 => 46,  142 => 45,  138 => 44,  135 => 43,  130 => 42,  102 => 17,  89 => 6,  79 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -248,7 +252,7 @@ class __TwigTemplate_2fcc9261f5f733ff5088d663bff2187086650ee743339f3c361273827e6
                             <tr>
                                 <td class=\"text-center\">{{ personne.id }}</td>
                                 <td class=\"text-center\">{{ personne.prenom }} {{ personne.nom }}</td>
-                                <td class=\"text-center\">{{ personne.maison.NomMaison }}</td>
+                                <td class=\"text-center\">{{personne.maison.secteur.cellule.NomCellule}} - {{personne.maison.secteur.NomSecteur}} - {{ personne.maison.NomMaison }}</td>
                                 <td class=\"text-center\">
                                     <a href=\"{{ path('app_personne_show', {'id': personne.id}) }}\"><i class=\"fas fa-eye text-info\"></i></a>
                                 </td>

@@ -78,18 +78,18 @@
             </div>
             <div class="clearfix"></div>
               <div class="row">
-                <div class="col-md-4 col-sm-4  ">
+                <div class="col-md-6 col-sm-12  ">
                   <div class="x_panel">
                     <div class="x_title">
-                      <h2>Cellules / Quartier</h2>
+                      <h2>Maisons / Secteur</h2>
                       <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="{{ path('app_quartier_index') }}">Quartier</a>
-                              <a class="dropdown-item" href="{{ path('app_cellule_index') }}">Cellule</a>
+                              <a class="dropdown-item" href="{{ path('app_secteur_index') }}">Quartier</a>
+                              <a class="dropdown-item" href="{{ path('app_personne_index') }}">Cellule</a>
                             </div>
                         </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
@@ -100,24 +100,24 @@
                     <div class="x_content">
                       <div class="row">
                         <div class="col-8 mx-auto">
-                          <canvas id="CellulesChart"></canvas> 
+                          <canvas id="MaisonsSecteur"></canvas> 
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div class="col-md-4 col-sm-4 ">
+                <div class="col-md-6 col-sm-12  ">
+                  <div class="x_panel">
                     <div class="x_title">
-                      <h2>Secteurs / Cellule</h2>
+                      <h2>Populations / Secteur</h2>
                       <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="{{ path('app_cellule_index') }}">Cellule</a>
-                              <a class="dropdown-item" href="{{ path('app_secteur_index') }}">Secteur</a>
+                              <a class="dropdown-item" href="{{ path('app_secteur_index') }}">Quartier</a>
+                              <a class="dropdown-item" href="{{ path('app_personne_index') }}">Cellule</a>
                             </div>
                         </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
@@ -128,7 +128,7 @@
                     <div class="x_content">
                       <div class="row">
                         <div class="col-8 mx-auto">
-                          <canvas id="SecteursChart"></canvas> 
+                          <canvas id="PopulationsSecteur"></canvas> 
                         </div>
                       </div>
                     </div>
@@ -136,65 +136,7 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4 col-sm-4  ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Maisons / Quartier</h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="{{ path('app_quartier_index') }}">Quartier</a>
-                              <a class="dropdown-item" href="{{ path('app_maison_index') }}">Maisons</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      <div class="row">
-                        <div class="col-8 mx-auto">
-                          <canvas id="MaisonsQuartierChart"></canvas> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-4  ">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Populations / Quartier</h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
-                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="{{ path('app_quartier_index') }}">Quartier</a>
-                              <a class="dropdown-item" href="{{ path('app_personne_index') }}">Population</a>
-                            </div>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      <div class="row">
-                        <div class="col-8 mx-auto">
-                          <canvas id="PopulationsQuartierChart"></canvas> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4 col-sm-4  ">
+                <div class="col-md-6 col-sm-12  ">
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Maisons / Cellule</h2>
@@ -215,15 +157,14 @@
                     </div>
                     <div class="x_content">
                       <div class="row">
-                        <div class="col-10 mx-auto">
-                          <canvas id="MaisonsCelluleChart"></canvas>
+                        <div class="col-8 mx-auto">
+                          <canvas id="MaisonsCellule"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-4  ">
+                <div class="col-md-6 col-sm-12  ">
                   <div class="x_panel">
                     <div class="x_title">
                       <h2>Populations / Cellule</h2>
@@ -234,7 +175,7 @@
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                               <a class="dropdown-item" href="{{ path('app_cellule_index') }}">Cellule</a>
-                              <a class="dropdown-item" href="{{ path('app_personne_index') }}">Population</a>
+                              <a class="dropdown-item" href="{{ path('app_personne_index') }}">Personne</a>
                             </div>
                         </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
@@ -244,27 +185,26 @@
                     </div>
                     <div class="x_content">
                       <div class="row">
-                        <div class="col-10 mx-auto">
-                          <canvas id="PopulationsCelluleChart"></canvas>
+                        <div class="col-8 mx-auto">
+                          <canvas id="PopulationsCellule"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4 col-sm-4  ">
+                <div class="col-md-6 col-sm-12  ">
                   <div class="x_panel">
                     <div class="x_title">
-                      <h2>Maisons / Secteur</h2>
+                      <h2>Maisons / Quartier</h2>
                       <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="{{ path('app_secteur_index') }}">Secteur</a>
+                              <a class="dropdown-item" href="{{ path('app_quartier_index') }}">Quartier</a>
                               <a class="dropdown-item" href="{{ path('app_maison_index') }}">Maison</a>
                             </div>
                         </li>
@@ -275,26 +215,25 @@
                     </div>
                     <div class="x_content">
                       <div class="row">
-                        <div class="col-10 mx-auto">
-                          <canvas id="MaisonsChart"></canvas>
+                        <div class="col-8 mx-auto">
+                          <canvas id="MaisonsQuartier"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4 col-sm-4  ">
+                <div class="col-md-6 col-sm-12  ">
                   <div class="x_panel">
                     <div class="x_title">
-                      <h2>Populations / Secteur</h2>
+                      <h2>Populations / Quartier</h2>
                       <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
                         <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                              <a class="dropdown-item" href="{{ path('app_secteur_index') }}">Secteur</a>
-                              <a class="dropdown-item" href="{{ path('app_personne_index') }}">Population</a>
+                              <a class="dropdown-item" href="{{ path('app_quartier_index') }}">Quartier</a>
+                              <a class="dropdown-item" href="{{ path('app_personne_index') }}">Personne</a>
                             </div>
                         </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
@@ -304,73 +243,14 @@
                     </div>
                     <div class="x_content">
                       <div class="row">
-                        <div class="col-10 mx-auto">
-                          <canvas id="PopulationsSecteurChart"></canvas>
+                        <div class="col-8 mx-auto">
+                          <canvas id="PopulationsQuartier"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
               </div>
-                <div class="row">
-                  <div class="col-md-4 col-sm-4  ">
-                    <div class="x_panel">
-                      <div class="x_title">
-                        <h2>Sexe</h2>
-                        <ul class="nav navbar-right panel_toolbox">
-                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ path('app_personne_index') }}">Population</a>
-                              </div>
-                          </li>
-                          <li><a class="close-link"><i class="fa fa-close"></i></a>
-                          </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                      </div>
-                      <div class="x_content">
-                        <div class="row">
-                          <div class="col-10 mx-auto">
-                            <canvas id="GenderChart"></canvas>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4 col-sm-4  ">
-                    <div class="x_panel">
-                      <div class="x_title">
-                        <h2>Situatin Matrimoniale</h2>
-                        <ul class="nav navbar-right panel_toolbox">
-                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                          </li>
-                          <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-info-circle"></i></a>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ path('app_personne_index') }}">Population</a>
-                              </div>
-                          </li>
-                          <li><a class="close-link"><i class="fa fa-close"></i></a>
-                          </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                      </div>
-                      <div class="x_content">
-                        <div class="row">
-                          <div class="col-10 mx-auto">
-                            <canvas id="MatrimonialeChart"></canvas>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
               
           </div>
         </div>
@@ -476,16 +356,12 @@
               });
           }
 
-          graph('pie',"CellulesChart",{{quartier_name|raw}},"Cellules par quartier",{{cellule_count|raw}},{{nb_quartier|raw}}); 
-          graph('pie',"SecteursChart",{{cellule_name|raw}},"Secteurs par cellule",{{secteur_count|raw}},{{nb_cellule|raw}}); 
-          graph('pie',"MaisonsChart",{{secteur_name|raw}},"Maisons par Secteur",{{maison_count|raw}},{{nb_secteur|raw}}); 
-          graph('pie',"PopulationsSecteurChart",{{secteur_name|raw}},"Populations par Secteur",{{populations|raw}},{{nb_secteur|raw}}); 
-          graph('pie',"MaisonsCelluleChart",{{cellule_name|raw}},"Maisons par Cellule",{{nb_maison|raw}},{{nb_cellule|raw}}); 
-          graph('pie',"MaisonsQuartierChart",{{quartier_name|raw}},"Maisons par Quartier",{{nb_maison|raw}},{{nb_quartier|raw}}); 
-          graph('pie',"PopulationsQuartierChart",{{quartier_name|raw}},"Populations par Quartier",{{populations|raw}},{{nb_quartier|raw}}); 
-          graph('pie',"PopulationsCelluleChart",{{cellule_name|raw}},"Maisons par Cellule",{{populations|raw}},{{nb_cellule|raw}}); 
-          graph('pie',"GenderChart",['Hommes', 'Femmes'],"Sexe",[{{hommes}}, {{femmes}}],2); 
-          graph('pie',"MatrimonialeChart",['Célibataire', 'Marié', 'Divorcé'],"Sexe",[{{celibataires}}, {{mariés}}, {{divorces}}],3); 
+          graph('pie',"MaisonsSecteur",{{name_secteur|raw}},"Maisons par Secteur",{{maison_count|raw}},{{secteurs|length}}); 
+          graph('pie',"PopulationsSecteur",{{secteur_name|raw}},"Habitants par Secteur",{{population_count|raw}},{{secteurs|length}}); 
+          graph('pie',"MaisonsCellule",{{name_cellule|raw}},"Maisons par Cellule",{{cellule_maison_count|raw}},{{cellule_elements}});  
+          graph('pie',"PopulationsCellule",{{cellule_name|raw}},"Habitants par Secteur",{{cellule_population_count|raw}},{{cellule_element}}); 
+          graph('pie',"MaisonsQuartier",{{name_quartier|raw}},"Maisons par Cellule",{{quartier_maison_count|raw}},{{quartiers|length}});  
+          graph('pie',"PopulationsQuartier",{{quartier_name|raw}},"Habitants par Secteur",{{quartier_population_count|raw}},{{quartiers|length}}); 
         </script>
   </body>
 </html>

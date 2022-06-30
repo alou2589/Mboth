@@ -104,7 +104,7 @@ return [
     'app_secteur_personnes' => [['id'], ['_controller' => 'App\\Controller\\SecteurController::societe'], [], [['text', '/listepersonnes'], ['variable', '/', '[^/]++', 'id', true], ['text', '/admin/secteur']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
-    'app_statistique' => [[], ['_controller' => 'App\\Controller\\StatistiqueController::index'], [], [['text', '/statistique']], [], [], []],
+    'app_statistique' => [[], ['_controller' => 'App\\Controller\\StatistiqueController::index'], [], [['text', '/admin/statistique']], [], [], []],
     'app_type_arbre_index' => [[], ['_controller' => 'App\\Controller\\TypeArbreController::index'], [], [['text', '/type/arbre/']], [], [], []],
     'app_type_arbre_new' => [[], ['_controller' => 'App\\Controller\\TypeArbreController::new'], [], [['text', '/type/arbre/new']], [], [], []],
     'app_type_arbre_show' => [['id'], ['_controller' => 'App\\Controller\\TypeArbreController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/type/arbre']], [], [], []],

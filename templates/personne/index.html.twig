@@ -43,7 +43,7 @@
                             <tr>
                                 <td class="text-center">{{ personne.id }}</td>
                                 <td class="text-center">{{ personne.prenom }} {{ personne.nom }}</td>
-                                <td class="text-center">{{ personne.maison.NomMaison }}</td>
+                                <td class="text-center">{{personne.maison.secteur.cellule.NomCellule}} - {{personne.maison.secteur.NomSecteur}} - {{ personne.maison.NomMaison }}</td>
                                 <td class="text-center">
                                     <a href="{{ path('app_personne_show', {'id': personne.id}) }}"><i class="fas fa-eye text-info"></i></a>
                                 </td>

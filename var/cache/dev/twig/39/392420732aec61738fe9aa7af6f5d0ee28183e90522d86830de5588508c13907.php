@@ -374,6 +374,6 @@ class __TwigTemplate_583c28ddfd37e86c94807e43762323eb68c17abe646298da452c0fb32c8
               </div>
             </div>
 {% endblock %}
-", "dashboard/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\MbothDataBase\\templates\\dashboard\\index.html.twig");
+", "dashboard/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\dashboard\\index.html.twig");
     }
 }

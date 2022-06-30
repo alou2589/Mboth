@@ -359,6 +359,6 @@ class __TwigTemplate_f64613c64436c341295944cdb0ae4cbea9c7215e5cc4f602251364842f4
               </a>
             </div>
             <!-- /menu footer buttons -->
-          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\MbothDataBase\\templates\\partials\\_sidebar.html.twig");
+          </div>", "partials/_sidebar.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\partials\\_sidebar.html.twig");
     }
 }

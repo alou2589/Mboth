@@ -40,7 +40,7 @@ return [
         '/admin/secteur/new' => [[['_route' => 'app_secteur_new', '_controller' => 'App\\Controller\\SecteurController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
-        '/statistique' => [[['_route' => 'app_statistique', '_controller' => 'App\\Controller\\StatistiqueController::index'], null, null, null, false, false, null]],
+        '/admin/statistique' => [[['_route' => 'app_statistique', '_controller' => 'App\\Controller\\StatistiqueController::index'], null, null, null, false, false, null]],
         '/type/arbre' => [[['_route' => 'app_type_arbre_index', '_controller' => 'App\\Controller\\TypeArbreController::index'], null, ['GET' => 0], null, true, false, null]],
         '/type/arbre/new' => [[['_route' => 'app_type_arbre_new', '_controller' => 'App\\Controller\\TypeArbreController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/type/maladie' => [[['_route' => 'app_type_maladie_index', '_controller' => 'App\\Controller\\TypeMaladieController::index'], null, ['GET' => 0], null, true, false, null]],

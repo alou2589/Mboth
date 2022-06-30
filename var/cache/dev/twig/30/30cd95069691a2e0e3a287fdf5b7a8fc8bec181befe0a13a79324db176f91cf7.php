@@ -301,6 +301,6 @@ class __TwigTemplate_5c24675849679c037a905b263d62bde5b8e91d879415726bfaedeb860d7
     </div>
 {% endblock %}
 
-", "secteur/newmaison.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\MbothDataBase\\templates\\secteur\\newmaison.html.twig");
+", "secteur/newmaison.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\secteur\\newmaison.html.twig");
     }
 }

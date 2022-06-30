@@ -21,12 +21,15 @@ class AccueilController extends AbstractController
     public function index(User $user,QuartierRepository $quartierRepository,CelluleRepository $celluleRepository, SecteurRepository $secteurRepository,MaisonRepository $maisonRepository, PersonneRepository $personneRepository): Response
     {
         $cellule_pf=$user->getPersonne()->getMaison()->getSecteur()->getCellule();
+        $secteur_pf=$user->getPersonne()->getMaison()->getSecteur();
         $controller_name='Accueil';
         $secteurs=$cellule_pf->getSecteurs();
+        $maisons=$secteur_pf->getMaisons();
         return $this->render('point_focal/accueil/index.html.twig', [
             'controller_name' => $controller_name,
             'cellule_pf' => $cellule_pf,
             'secteurs' => $secteurs,
+            'maisons' => $maisons,
         ]);
     }
 }

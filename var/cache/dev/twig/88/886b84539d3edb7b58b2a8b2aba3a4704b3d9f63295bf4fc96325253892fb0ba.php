@@ -196,10 +196,10 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
             </div>
             <div class=\"clearfix\"></div>
               <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
-                      <h2>Cellules / Quartier</h2>
+                      <h2>Maisons / Secteur</h2>
                       <ul class=\"nav navbar-right panel_toolbox\">
                         <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
                         </li>
@@ -208,11 +208,11 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
                               <a class=\"dropdown-item\" href=\"";
         // line 91
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_index");
         echo "\">Quartier</a>
                               <a class=\"dropdown-item\" href=\"";
         // line 92
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_index");
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
         echo "\">Cellule</a>
                             </div>
                         </li>
@@ -224,16 +224,16 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     <div class=\"x_content\">
                       <div class=\"row\">
                         <div class=\"col-8 mx-auto\">
-                          <canvas id=\"CellulesChart\"></canvas> 
+                          <canvas id=\"MaisonsSecteur\"></canvas> 
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div class=\"col-md-4 col-sm-4 \">
+                <div class=\"col-md-6 col-sm-12  \">
+                  <div class=\"x_panel\">
                     <div class=\"x_title\">
-                      <h2>Secteurs / Cellule</h2>
+                      <h2>Populations / Secteur</h2>
                       <ul class=\"nav navbar-right panel_toolbox\">
                         <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
                         </li>
@@ -242,82 +242,12 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
                               <a class=\"dropdown-item\" href=\"";
         // line 119
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_index");
-        echo "\">Cellule</a>
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_index");
+        echo "\">Quartier</a>
                               <a class=\"dropdown-item\" href=\"";
         // line 120
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_index");
-        echo "\">Secteur</a>
-                            </div>
-                        </li>
-                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                        </li>
-                      </ul>
-                      <div class=\"clearfix\"></div>
-                    </div>
-                    <div class=\"x_content\">
-                      <div class=\"row\">
-                        <div class=\"col-8 mx-auto\">
-                          <canvas id=\"SecteursChart\"></canvas> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
-                  <div class=\"x_panel\">
-                    <div class=\"x_title\">
-                      <h2>Maisons / Quartier</h2>
-                      <ul class=\"nav navbar-right panel_toolbox\">
-                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                        <li class=\"dropdown\">
-                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"";
-        // line 149
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
-        echo "\">Quartier</a>
-                              <a class=\"dropdown-item\" href=\"";
-        // line 150
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_index");
-        echo "\">Maisons</a>
-                            </div>
-                        </li>
-                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                        </li>
-                      </ul>
-                      <div class=\"clearfix\"></div>
-                    </div>
-                    <div class=\"x_content\">
-                      <div class=\"row\">
-                        <div class=\"col-8 mx-auto\">
-                          <canvas id=\"MaisonsQuartierChart\"></canvas> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class=\"col-md-4 col-sm-4  \">
-                  <div class=\"x_panel\">
-                    <div class=\"x_title\">
-                      <h2>Populations / Quartier</h2>
-                      <ul class=\"nav navbar-right panel_toolbox\">
-                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                        <li class=\"dropdown\">
-                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"";
-        // line 177
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
-        echo "\">Quartier</a>
-                              <a class=\"dropdown-item\" href=\"";
-        // line 178
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
-        echo "\">Population</a>
+        echo "\">Cellule</a>
                             </div>
                         </li>
                         <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -328,7 +258,7 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     <div class=\"x_content\">
                       <div class=\"row\">
                         <div class=\"col-8 mx-auto\">
-                          <canvas id=\"PopulationsQuartierChart\"></canvas> 
+                          <canvas id=\"PopulationsSecteur\"></canvas> 
                         </div>
                       </div>
                     </div>
@@ -336,7 +266,7 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                 </div>
               </div>
               <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
                       <h2>Maisons / Cellule</h2>
@@ -347,9 +277,79 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
                               <a class=\"dropdown-item\" href=\"";
-        // line 207
+        // line 149
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_index");
         echo "\">Cellule</a>
+                              <a class=\"dropdown-item\" href=\"";
+        // line 150
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_index");
+        echo "\">Maison</a>
+                            </div>
+                        </li>
+                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                        </li>
+                      </ul>
+                      <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                      <div class=\"row\">
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"MaisonsCellule\"></canvas> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class=\"col-md-6 col-sm-12  \">
+                  <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                      <h2>Populations / Cellule</h2>
+                      <ul class=\"nav navbar-right panel_toolbox\">
+                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                        </li>
+                        <li class=\"dropdown\">
+                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
+                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                              <a class=\"dropdown-item\" href=\"";
+        // line 177
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_index");
+        echo "\">Cellule</a>
+                              <a class=\"dropdown-item\" href=\"";
+        // line 178
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
+        echo "\">Personne</a>
+                            </div>
+                        </li>
+                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
+                        </li>
+                      </ul>
+                      <div class=\"clearfix\"></div>
+                    </div>
+                    <div class=\"x_content\">
+                      <div class=\"row\">
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"PopulationsCellule\"></canvas> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class=\"row\">
+                <div class=\"col-md-6 col-sm-12  \">
+                  <div class=\"x_panel\">
+                    <div class=\"x_title\">
+                      <h2>Maisons / Quartier</h2>
+                      <ul class=\"nav navbar-right panel_toolbox\">
+                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
+                        </li>
+                        <li class=\"dropdown\">
+                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
+                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                              <a class=\"dropdown-item\" href=\"";
+        // line 207
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
+        echo "\">Quartier</a>
                               <a class=\"dropdown-item\" href=\"";
         // line 208
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_index");
@@ -363,32 +363,31 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     </div>
                     <div class=\"x_content\">
                       <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"MaisonsCelluleChart\"></canvas>
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"MaisonsQuartier\"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
-                      <h2>Populations / Cellule</h2>
+                      <h2>Populations / Quartier</h2>
                       <ul class=\"nav navbar-right panel_toolbox\">
                         <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
                         </li>
                         <li class=\"dropdown\">
                           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
+                              <a class=\"dropdown-item\" href=\"";
+        // line 235
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_quartier_index");
+        echo "\">Quartier</a>
                               <a class=\"dropdown-item\" href=\"";
         // line 236
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_cellule_index");
-        echo "\">Cellule</a>
-                              <a class=\"dropdown-item\" href=\"";
-        // line 237
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
-        echo "\">Population</a>
+        echo "\">Personne</a>
                             </div>
                         </li>
                         <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -398,151 +397,14 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     </div>
                     <div class=\"x_content\">
                       <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"PopulationsCelluleChart\"></canvas>
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"PopulationsQuartier\"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
               </div>
-              <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
-                  <div class=\"x_panel\">
-                    <div class=\"x_title\">
-                      <h2>Maisons / Secteur</h2>
-                      <ul class=\"nav navbar-right panel_toolbox\">
-                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                        <li class=\"dropdown\">
-                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"";
-        // line 267
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_index");
-        echo "\">Secteur</a>
-                              <a class=\"dropdown-item\" href=\"";
-        // line 268
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_maison_index");
-        echo "\">Maison</a>
-                            </div>
-                        </li>
-                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                        </li>
-                      </ul>
-                      <div class=\"clearfix\"></div>
-                    </div>
-                    <div class=\"x_content\">
-                      <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"MaisonsChart\"></canvas>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-                <div class=\"col-md-4 col-sm-4  \">
-                  <div class=\"x_panel\">
-                    <div class=\"x_title\">
-                      <h2>Populations / Secteur</h2>
-                      <ul class=\"nav navbar-right panel_toolbox\">
-                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                        <li class=\"dropdown\">
-                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"";
-        // line 296
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_secteur_index");
-        echo "\">Secteur</a>
-                              <a class=\"dropdown-item\" href=\"";
-        // line 297
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
-        echo "\">Population</a>
-                            </div>
-                        </li>
-                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                        </li>
-                      </ul>
-                      <div class=\"clearfix\"></div>
-                    </div>
-                    <div class=\"x_content\">
-                      <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"PopulationsSecteurChart\"></canvas>
-                        </div>
-                      </div>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-                <div class=\"row\">
-                  <div class=\"col-md-4 col-sm-4  \">
-                    <div class=\"x_panel\">
-                      <div class=\"x_title\">
-                        <h2>Sexe</h2>
-                        <ul class=\"nav navbar-right panel_toolbox\">
-                          <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                          </li>
-                          <li class=\"dropdown\">
-                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                                <a class=\"dropdown-item\" href=\"";
-        // line 327
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
-        echo "\">Population</a>
-                              </div>
-                          </li>
-                          <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                          </li>
-                        </ul>
-                        <div class=\"clearfix\"></div>
-                      </div>
-                      <div class=\"x_content\">
-                        <div class=\"row\">
-                          <div class=\"col-10 mx-auto\">
-                            <canvas id=\"GenderChart\"></canvas>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class=\"col-md-4 col-sm-4  \">
-                    <div class=\"x_panel\">
-                      <div class=\"x_title\">
-                        <h2>Situatin Matrimoniale</h2>
-                        <ul class=\"nav navbar-right panel_toolbox\">
-                          <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                          </li>
-                          <li class=\"dropdown\">
-                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                                <a class=\"dropdown-item\" href=\"";
-        // line 355
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_personne_index");
-        echo "\">Population</a>
-                              </div>
-                          </li>
-                          <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                          </li>
-                        </ul>
-                        <div class=\"clearfix\"></div>
-                      </div>
-                      <div class=\"x_content\">
-                        <div class=\"row\">
-                          <div class=\"col-10 mx-auto\">
-                            <canvas id=\"MatrimonialeChart\"></canvas>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
               
           </div>
         </div>
@@ -550,192 +412,192 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
 
         <!-- footer content -->
         ";
-        // line 380
-        $this->loadTemplate("partials/_footer.html.twig", "statistique/index.html.twig", 380)->display($context);
-        // line 381
+        // line 260
+        $this->loadTemplate("partials/_footer.html.twig", "statistique/index.html.twig", 260)->display($context);
+        // line 261
         echo "        <!-- /footer content -->
       </div>
     </div> 
         <script src=\"https://kit.fontawesome.com/112362d990.js\" crossorigin=\"anonymous\"></script>  
         <!-- jQuery -->
         <script src=\"";
-        // line 386
+        // line 266
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jquery/dist/jquery.min.js"), "html", null, true);
         echo "\"></script>
         <!-- Bootstrap -->
         <script src=\"";
-        // line 388
+        // line 268
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/bootstrap/dist/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
         <!-- FastClick -->
         <script src=\"";
-        // line 390
+        // line 270
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/fastclick/lib/fastclick.js"), "html", null, true);
         echo "\"></script>
         <!-- NProgress -->
         <script src=\"";
-        // line 392
+        // line 272
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/nprogress/nprogress.j"), "html", null, true);
         echo "s\"></script>
         <script src=\"";
-        // line 393
+        // line 273
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"), "html", null, true);
         echo "\"></script>
         <!-- Chart.js -->
         <script src=\"";
-        // line 395
+        // line 275
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/Chart.js/dist/Chart.min.js"), "html", null, true);
         echo "\"></script>
         <!-- gauge.js -->
         <script src=\"";
-        // line 397
+        // line 277
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/gauge.js/dist/gauge.min.js"), "html", null, true);
         echo "\"></script>
         <!-- bootstrap-progressbar -->
         <script src=\"";
-        // line 399
+        // line 279
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"), "html", null, true);
         echo "\"></script>
         <!-- iCheck -->
         <script src=\"";
-        // line 401
+        // line 281
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/iCheck/icheck.min.js"), "html", null, true);
         echo "\"></script>
         <!-- Skycons -->
         <script src=\"";
-        // line 403
+        // line 283
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/skycons/skycons.js"), "html", null, true);
         echo "\"></script>
         <!-- Flot -->
         <script src=\"";
-        // line 405
+        // line 285
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/Flot/jquery.flot.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 406
+        // line 286
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/Flot/jquery.flot.pie.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 407
+        // line 287
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/Flot/jquery.flot.time.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 408
+        // line 288
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/Flot/jquery.flot.stack.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 409
+        // line 289
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/Flot/jquery.flot.resize.js"), "html", null, true);
         echo "\"></script>
         <!-- Flot plugins -->
         <script src=\"";
-        // line 411
+        // line 291
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/flot.orderbars/js/jquery.flot.orderBars.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 412
+        // line 292
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/flot-spline/js/jquery.flot.spline.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 413
+        // line 293
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/flot.curvedlines/curvedLines.js"), "html", null, true);
         echo "\"></script>
         <!-- DateJS -->
         <script src=\"";
-        // line 415
+        // line 295
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/DateJS/build/date.js"), "html", null, true);
         echo "\"></script>
         <!-- JQVMap -->
         <script src=\"";
-        // line 417
+        // line 297
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jqvmap/dist/jquery.vmap.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 418
+        // line 298
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 419
+        // line 299
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"), "html", null, true);
         echo "\"></script>
         <!-- bootstrap-daterangepicker -->
         <script src=\"";
-        // line 421
+        // line 301
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/moment/min/moment.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 422
+        // line 302
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/bootstrap-daterangepicker/daterangepicker.js"), "html", null, true);
         echo "\"></script>
         <!-- Datatables -->
         <script src=\"";
-        // line 424
+        // line 304
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net/js/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 425
+        // line 305
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 426
+        // line 306
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 427
+        // line 307
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 428
+        // line 308
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-buttons/js/buttons.flash.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 429
+        // line 309
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-buttons/js/buttons.html5.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 430
+        // line 310
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-buttons/js/buttons.print.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 431
+        // line 311
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 432
+        // line 312
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 433
+        // line 313
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 434
+        // line 314
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 435
+        // line 315
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 436
+        // line 316
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/jszip/dist/jszip.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 437
+        // line 317
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/pdfmake/build/pdfmake.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 438
+        // line 318
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/vendors/pdfmake/build/vfs_fonts.js"), "html", null, true);
         echo "\"></script>
         <!-- Custom Theme Scripts -->
         <script src=\"";
-        // line 440
+        // line 320
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/build/js/custom.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js\"></script>
         <script src=\"";
-        // line 442
+        // line 322
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("assets/build/js/select2.js"), "html", null, true);
         echo "\"></script>
         <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.esm.min.js\" integrity=\"sha512-yPOQ2pPoQ9JtP0/jDKpXiKyWNCJWT5OI+6r1EqZmTg+afKQOBpy08VYboeq+Tt9kl9/FOCueEhH6cmHN3nAdJA==\" crossorigin=\"anonymous\" referrerpolicy=\"no-referrer\"></script>
@@ -774,84 +636,54 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
               });
           }
 
-          graph('pie',\"CellulesChart\",";
-        // line 479
-        echo (isset($context["quartier_name"]) || array_key_exists("quartier_name", $context) ? $context["quartier_name"] : (function () { throw new RuntimeError('Variable "quartier_name" does not exist.', 479, $this->source); })());
-        echo ",\"Cellules par quartier\",";
-        echo (isset($context["cellule_count"]) || array_key_exists("cellule_count", $context) ? $context["cellule_count"] : (function () { throw new RuntimeError('Variable "cellule_count" does not exist.', 479, $this->source); })());
-        echo ",";
-        echo (isset($context["nb_quartier"]) || array_key_exists("nb_quartier", $context) ? $context["nb_quartier"] : (function () { throw new RuntimeError('Variable "nb_quartier" does not exist.', 479, $this->source); })());
-        echo "); 
-          graph('pie',\"SecteursChart\",";
-        // line 480
-        echo (isset($context["cellule_name"]) || array_key_exists("cellule_name", $context) ? $context["cellule_name"] : (function () { throw new RuntimeError('Variable "cellule_name" does not exist.', 480, $this->source); })());
-        echo ",\"Secteurs par cellule\",";
-        echo (isset($context["secteur_count"]) || array_key_exists("secteur_count", $context) ? $context["secteur_count"] : (function () { throw new RuntimeError('Variable "secteur_count" does not exist.', 480, $this->source); })());
-        echo ",";
-        echo (isset($context["nb_cellule"]) || array_key_exists("nb_cellule", $context) ? $context["nb_cellule"] : (function () { throw new RuntimeError('Variable "nb_cellule" does not exist.', 480, $this->source); })());
-        echo "); 
-          graph('pie',\"MaisonsChart\",";
-        // line 481
-        echo (isset($context["secteur_name"]) || array_key_exists("secteur_name", $context) ? $context["secteur_name"] : (function () { throw new RuntimeError('Variable "secteur_name" does not exist.', 481, $this->source); })());
+          graph('pie',\"MaisonsSecteur\",";
+        // line 359
+        echo (isset($context["name_secteur"]) || array_key_exists("name_secteur", $context) ? $context["name_secteur"] : (function () { throw new RuntimeError('Variable "name_secteur" does not exist.', 359, $this->source); })());
         echo ",\"Maisons par Secteur\",";
-        echo (isset($context["maison_count"]) || array_key_exists("maison_count", $context) ? $context["maison_count"] : (function () { throw new RuntimeError('Variable "maison_count" does not exist.', 481, $this->source); })());
+        echo (isset($context["maison_count"]) || array_key_exists("maison_count", $context) ? $context["maison_count"] : (function () { throw new RuntimeError('Variable "maison_count" does not exist.', 359, $this->source); })());
         echo ",";
-        echo (isset($context["nb_secteur"]) || array_key_exists("nb_secteur", $context) ? $context["nb_secteur"] : (function () { throw new RuntimeError('Variable "nb_secteur" does not exist.', 481, $this->source); })());
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["secteurs"]) || array_key_exists("secteurs", $context) ? $context["secteurs"] : (function () { throw new RuntimeError('Variable "secteurs" does not exist.', 359, $this->source); })())), "html", null, true);
         echo "); 
-          graph('pie',\"PopulationsSecteurChart\",";
-        // line 482
-        echo (isset($context["secteur_name"]) || array_key_exists("secteur_name", $context) ? $context["secteur_name"] : (function () { throw new RuntimeError('Variable "secteur_name" does not exist.', 482, $this->source); })());
-        echo ",\"Populations par Secteur\",";
-        echo (isset($context["populations"]) || array_key_exists("populations", $context) ? $context["populations"] : (function () { throw new RuntimeError('Variable "populations" does not exist.', 482, $this->source); })());
+          graph('pie',\"PopulationsSecteur\",";
+        // line 360
+        echo (isset($context["secteur_name"]) || array_key_exists("secteur_name", $context) ? $context["secteur_name"] : (function () { throw new RuntimeError('Variable "secteur_name" does not exist.', 360, $this->source); })());
+        echo ",\"Habitants par Secteur\",";
+        echo (isset($context["population_count"]) || array_key_exists("population_count", $context) ? $context["population_count"] : (function () { throw new RuntimeError('Variable "population_count" does not exist.', 360, $this->source); })());
         echo ",";
-        echo (isset($context["nb_secteur"]) || array_key_exists("nb_secteur", $context) ? $context["nb_secteur"] : (function () { throw new RuntimeError('Variable "nb_secteur" does not exist.', 482, $this->source); })());
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["secteurs"]) || array_key_exists("secteurs", $context) ? $context["secteurs"] : (function () { throw new RuntimeError('Variable "secteurs" does not exist.', 360, $this->source); })())), "html", null, true);
         echo "); 
-          graph('pie',\"MaisonsCelluleChart\",";
-        // line 483
-        echo (isset($context["cellule_name"]) || array_key_exists("cellule_name", $context) ? $context["cellule_name"] : (function () { throw new RuntimeError('Variable "cellule_name" does not exist.', 483, $this->source); })());
+          graph('pie',\"MaisonsCellule\",";
+        // line 361
+        echo (isset($context["name_cellule"]) || array_key_exists("name_cellule", $context) ? $context["name_cellule"] : (function () { throw new RuntimeError('Variable "name_cellule" does not exist.', 361, $this->source); })());
         echo ",\"Maisons par Cellule\",";
-        echo (isset($context["nb_maison"]) || array_key_exists("nb_maison", $context) ? $context["nb_maison"] : (function () { throw new RuntimeError('Variable "nb_maison" does not exist.', 483, $this->source); })());
+        echo (isset($context["cellule_maison_count"]) || array_key_exists("cellule_maison_count", $context) ? $context["cellule_maison_count"] : (function () { throw new RuntimeError('Variable "cellule_maison_count" does not exist.', 361, $this->source); })());
         echo ",";
-        echo (isset($context["nb_cellule"]) || array_key_exists("nb_cellule", $context) ? $context["nb_cellule"] : (function () { throw new RuntimeError('Variable "nb_cellule" does not exist.', 483, $this->source); })());
-        echo "); 
-          graph('pie',\"MaisonsQuartierChart\",";
-        // line 484
-        echo (isset($context["quartier_name"]) || array_key_exists("quartier_name", $context) ? $context["quartier_name"] : (function () { throw new RuntimeError('Variable "quartier_name" does not exist.', 484, $this->source); })());
-        echo ",\"Maisons par Quartier\",";
-        echo (isset($context["nb_maison"]) || array_key_exists("nb_maison", $context) ? $context["nb_maison"] : (function () { throw new RuntimeError('Variable "nb_maison" does not exist.', 484, $this->source); })());
+        echo twig_escape_filter($this->env, (isset($context["cellule_elements"]) || array_key_exists("cellule_elements", $context) ? $context["cellule_elements"] : (function () { throw new RuntimeError('Variable "cellule_elements" does not exist.', 361, $this->source); })()), "html", null, true);
+        echo ");  
+          graph('pie',\"PopulationsCellule\",";
+        // line 362
+        echo (isset($context["cellule_name"]) || array_key_exists("cellule_name", $context) ? $context["cellule_name"] : (function () { throw new RuntimeError('Variable "cellule_name" does not exist.', 362, $this->source); })());
+        echo ",\"Habitants par Secteur\",";
+        echo (isset($context["cellule_population_count"]) || array_key_exists("cellule_population_count", $context) ? $context["cellule_population_count"] : (function () { throw new RuntimeError('Variable "cellule_population_count" does not exist.', 362, $this->source); })());
         echo ",";
-        echo (isset($context["nb_quartier"]) || array_key_exists("nb_quartier", $context) ? $context["nb_quartier"] : (function () { throw new RuntimeError('Variable "nb_quartier" does not exist.', 484, $this->source); })());
+        echo twig_escape_filter($this->env, (isset($context["cellule_element"]) || array_key_exists("cellule_element", $context) ? $context["cellule_element"] : (function () { throw new RuntimeError('Variable "cellule_element" does not exist.', 362, $this->source); })()), "html", null, true);
         echo "); 
-          graph('pie',\"PopulationsQuartierChart\",";
-        // line 485
-        echo (isset($context["quartier_name"]) || array_key_exists("quartier_name", $context) ? $context["quartier_name"] : (function () { throw new RuntimeError('Variable "quartier_name" does not exist.', 485, $this->source); })());
-        echo ",\"Populations par Quartier\",";
-        echo (isset($context["populations"]) || array_key_exists("populations", $context) ? $context["populations"] : (function () { throw new RuntimeError('Variable "populations" does not exist.', 485, $this->source); })());
-        echo ",";
-        echo (isset($context["nb_quartier"]) || array_key_exists("nb_quartier", $context) ? $context["nb_quartier"] : (function () { throw new RuntimeError('Variable "nb_quartier" does not exist.', 485, $this->source); })());
-        echo "); 
-          graph('pie',\"PopulationsCelluleChart\",";
-        // line 486
-        echo (isset($context["cellule_name"]) || array_key_exists("cellule_name", $context) ? $context["cellule_name"] : (function () { throw new RuntimeError('Variable "cellule_name" does not exist.', 486, $this->source); })());
+          graph('pie',\"MaisonsQuartier\",";
+        // line 363
+        echo (isset($context["name_quartier"]) || array_key_exists("name_quartier", $context) ? $context["name_quartier"] : (function () { throw new RuntimeError('Variable "name_quartier" does not exist.', 363, $this->source); })());
         echo ",\"Maisons par Cellule\",";
-        echo (isset($context["populations"]) || array_key_exists("populations", $context) ? $context["populations"] : (function () { throw new RuntimeError('Variable "populations" does not exist.', 486, $this->source); })());
+        echo (isset($context["quartier_maison_count"]) || array_key_exists("quartier_maison_count", $context) ? $context["quartier_maison_count"] : (function () { throw new RuntimeError('Variable "quartier_maison_count" does not exist.', 363, $this->source); })());
         echo ",";
-        echo (isset($context["nb_cellule"]) || array_key_exists("nb_cellule", $context) ? $context["nb_cellule"] : (function () { throw new RuntimeError('Variable "nb_cellule" does not exist.', 486, $this->source); })());
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["quartiers"]) || array_key_exists("quartiers", $context) ? $context["quartiers"] : (function () { throw new RuntimeError('Variable "quartiers" does not exist.', 363, $this->source); })())), "html", null, true);
+        echo ");  
+          graph('pie',\"PopulationsQuartier\",";
+        // line 364
+        echo (isset($context["quartier_name"]) || array_key_exists("quartier_name", $context) ? $context["quartier_name"] : (function () { throw new RuntimeError('Variable "quartier_name" does not exist.', 364, $this->source); })());
+        echo ",\"Habitants par Secteur\",";
+        echo (isset($context["quartier_population_count"]) || array_key_exists("quartier_population_count", $context) ? $context["quartier_population_count"] : (function () { throw new RuntimeError('Variable "quartier_population_count" does not exist.', 364, $this->source); })());
+        echo ",";
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["quartiers"]) || array_key_exists("quartiers", $context) ? $context["quartiers"] : (function () { throw new RuntimeError('Variable "quartiers" does not exist.', 364, $this->source); })())), "html", null, true);
         echo "); 
-          graph('pie',\"GenderChart\",['Hommes', 'Femmes'],\"Sexe\",[";
-        // line 487
-        echo twig_escape_filter($this->env, (isset($context["hommes"]) || array_key_exists("hommes", $context) ? $context["hommes"] : (function () { throw new RuntimeError('Variable "hommes" does not exist.', 487, $this->source); })()), "html", null, true);
-        echo ", ";
-        echo twig_escape_filter($this->env, (isset($context["femmes"]) || array_key_exists("femmes", $context) ? $context["femmes"] : (function () { throw new RuntimeError('Variable "femmes" does not exist.', 487, $this->source); })()), "html", null, true);
-        echo "],2); 
-          graph('pie',\"MatrimonialeChart\",['Célibataire', 'Marié', 'Divorcé'],\"Sexe\",[";
-        // line 488
-        echo twig_escape_filter($this->env, (isset($context["celibataires"]) || array_key_exists("celibataires", $context) ? $context["celibataires"] : (function () { throw new RuntimeError('Variable "celibataires" does not exist.', 488, $this->source); })()), "html", null, true);
-        echo ", ";
-        echo twig_escape_filter($this->env, (isset($context["mariés"]) || array_key_exists("mariés", $context) ? $context["mariés"] : (function () { throw new RuntimeError('Variable "mariés" does not exist.', 488, $this->source); })()), "html", null, true);
-        echo ", ";
-        echo twig_escape_filter($this->env, (isset($context["divorces"]) || array_key_exists("divorces", $context) ? $context["divorces"] : (function () { throw new RuntimeError('Variable "divorces" does not exist.', 488, $this->source); })()), "html", null, true);
-        echo "],3); 
         </script>
   </body>
 </html>
@@ -895,7 +727,7 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
 
     public function getDebugInfo()
     {
-        return array (  868 => 9,  849 => 488,  843 => 487,  835 => 486,  827 => 485,  819 => 484,  811 => 483,  803 => 482,  795 => 481,  787 => 480,  779 => 479,  739 => 442,  734 => 440,  729 => 438,  725 => 437,  721 => 436,  717 => 435,  713 => 434,  709 => 433,  705 => 432,  701 => 431,  697 => 430,  693 => 429,  689 => 428,  685 => 427,  681 => 426,  677 => 425,  673 => 424,  668 => 422,  664 => 421,  659 => 419,  655 => 418,  651 => 417,  646 => 415,  641 => 413,  637 => 412,  633 => 411,  628 => 409,  624 => 408,  620 => 407,  616 => 406,  612 => 405,  607 => 403,  602 => 401,  597 => 399,  592 => 397,  587 => 395,  582 => 393,  578 => 392,  573 => 390,  568 => 388,  563 => 386,  556 => 381,  554 => 380,  526 => 355,  495 => 327,  462 => 297,  458 => 296,  427 => 268,  423 => 267,  390 => 237,  386 => 236,  355 => 208,  351 => 207,  319 => 178,  315 => 177,  285 => 150,  281 => 149,  249 => 120,  245 => 119,  215 => 92,  211 => 91,  183 => 66,  174 => 59,  172 => 58,  167 => 55,  165 => 54,  154 => 46,  150 => 45,  145 => 43,  141 => 42,  137 => 41,  132 => 39,  128 => 38,  124 => 37,  119 => 35,  114 => 33,  109 => 31,  103 => 28,  99 => 27,  95 => 26,  91 => 25,  87 => 24,  81 => 21,  76 => 19,  72 => 18,  67 => 16,  62 => 14,  54 => 9,  44 => 1,);
+        return array (  700 => 9,  681 => 364,  673 => 363,  665 => 362,  657 => 361,  649 => 360,  641 => 359,  601 => 322,  596 => 320,  591 => 318,  587 => 317,  583 => 316,  579 => 315,  575 => 314,  571 => 313,  567 => 312,  563 => 311,  559 => 310,  555 => 309,  551 => 308,  547 => 307,  543 => 306,  539 => 305,  535 => 304,  530 => 302,  526 => 301,  521 => 299,  517 => 298,  513 => 297,  508 => 295,  503 => 293,  499 => 292,  495 => 291,  490 => 289,  486 => 288,  482 => 287,  478 => 286,  474 => 285,  469 => 283,  464 => 281,  459 => 279,  454 => 277,  449 => 275,  444 => 273,  440 => 272,  435 => 270,  430 => 268,  425 => 266,  418 => 261,  416 => 260,  389 => 236,  385 => 235,  355 => 208,  351 => 207,  319 => 178,  315 => 177,  285 => 150,  281 => 149,  249 => 120,  245 => 119,  215 => 92,  211 => 91,  183 => 66,  174 => 59,  172 => 58,  167 => 55,  165 => 54,  154 => 46,  150 => 45,  145 => 43,  141 => 42,  137 => 41,  132 => 39,  128 => 38,  124 => 37,  119 => 35,  114 => 33,  109 => 31,  103 => 28,  99 => 27,  95 => 26,  91 => 25,  87 => 24,  81 => 21,  76 => 19,  72 => 18,  67 => 16,  62 => 14,  54 => 9,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -980,18 +812,18 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
             </div>
             <div class=\"clearfix\"></div>
               <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
-                      <h2>Cellules / Quartier</h2>
+                      <h2>Maisons / Secteur</h2>
                       <ul class=\"nav navbar-right panel_toolbox\">
                         <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
                         </li>
                         <li class=\"dropdown\">
                           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"{{ path('app_quartier_index') }}\">Quartier</a>
-                              <a class=\"dropdown-item\" href=\"{{ path('app_cellule_index') }}\">Cellule</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_secteur_index') }}\">Quartier</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Cellule</a>
                             </div>
                         </li>
                         <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -1002,24 +834,24 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     <div class=\"x_content\">
                       <div class=\"row\">
                         <div class=\"col-8 mx-auto\">
-                          <canvas id=\"CellulesChart\"></canvas> 
+                          <canvas id=\"MaisonsSecteur\"></canvas> 
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <div class=\"col-md-4 col-sm-4 \">
+                <div class=\"col-md-6 col-sm-12  \">
+                  <div class=\"x_panel\">
                     <div class=\"x_title\">
-                      <h2>Secteurs / Cellule</h2>
+                      <h2>Populations / Secteur</h2>
                       <ul class=\"nav navbar-right panel_toolbox\">
                         <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
                         </li>
                         <li class=\"dropdown\">
                           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"{{ path('app_cellule_index') }}\">Cellule</a>
-                              <a class=\"dropdown-item\" href=\"{{ path('app_secteur_index') }}\">Secteur</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_secteur_index') }}\">Quartier</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Cellule</a>
                             </div>
                         </li>
                         <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -1030,7 +862,7 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     <div class=\"x_content\">
                       <div class=\"row\">
                         <div class=\"col-8 mx-auto\">
-                          <canvas id=\"SecteursChart\"></canvas> 
+                          <canvas id=\"PopulationsSecteur\"></canvas> 
                         </div>
                       </div>
                     </div>
@@ -1038,65 +870,7 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                 </div>
               </div>
               <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
-                  <div class=\"x_panel\">
-                    <div class=\"x_title\">
-                      <h2>Maisons / Quartier</h2>
-                      <ul class=\"nav navbar-right panel_toolbox\">
-                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                        <li class=\"dropdown\">
-                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"{{ path('app_quartier_index') }}\">Quartier</a>
-                              <a class=\"dropdown-item\" href=\"{{ path('app_maison_index') }}\">Maisons</a>
-                            </div>
-                        </li>
-                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                        </li>
-                      </ul>
-                      <div class=\"clearfix\"></div>
-                    </div>
-                    <div class=\"x_content\">
-                      <div class=\"row\">
-                        <div class=\"col-8 mx-auto\">
-                          <canvas id=\"MaisonsQuartierChart\"></canvas> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class=\"col-md-4 col-sm-4  \">
-                  <div class=\"x_panel\">
-                    <div class=\"x_title\">
-                      <h2>Populations / Quartier</h2>
-                      <ul class=\"nav navbar-right panel_toolbox\">
-                        <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                        </li>
-                        <li class=\"dropdown\">
-                          <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                          <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"{{ path('app_quartier_index') }}\">Quartier</a>
-                              <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Population</a>
-                            </div>
-                        </li>
-                        <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                        </li>
-                      </ul>
-                      <div class=\"clearfix\"></div>
-                    </div>
-                    <div class=\"x_content\">
-                      <div class=\"row\">
-                        <div class=\"col-8 mx-auto\">
-                          <canvas id=\"PopulationsQuartierChart\"></canvas> 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
                       <h2>Maisons / Cellule</h2>
@@ -1117,15 +891,14 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     </div>
                     <div class=\"x_content\">
                       <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"MaisonsCelluleChart\"></canvas>
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"MaisonsCellule\"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
                       <h2>Populations / Cellule</h2>
@@ -1136,7 +909,7 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
                               <a class=\"dropdown-item\" href=\"{{ path('app_cellule_index') }}\">Cellule</a>
-                              <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Population</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Personne</a>
                             </div>
                         </li>
                         <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -1146,27 +919,26 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     </div>
                     <div class=\"x_content\">
                       <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"PopulationsCelluleChart\"></canvas>
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"PopulationsCellule\"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
               </div>
               <div class=\"row\">
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
-                      <h2>Maisons / Secteur</h2>
+                      <h2>Maisons / Quartier</h2>
                       <ul class=\"nav navbar-right panel_toolbox\">
                         <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
                         </li>
                         <li class=\"dropdown\">
                           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"{{ path('app_secteur_index') }}\">Secteur</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_quartier_index') }}\">Quartier</a>
                               <a class=\"dropdown-item\" href=\"{{ path('app_maison_index') }}\">Maison</a>
                             </div>
                         </li>
@@ -1177,26 +949,25 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     </div>
                     <div class=\"x_content\">
                       <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"MaisonsChart\"></canvas>
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"MaisonsQuartier\"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
-                <div class=\"col-md-4 col-sm-4  \">
+                <div class=\"col-md-6 col-sm-12  \">
                   <div class=\"x_panel\">
                     <div class=\"x_title\">
-                      <h2>Populations / Secteur</h2>
+                      <h2>Populations / Quartier</h2>
                       <ul class=\"nav navbar-right panel_toolbox\">
                         <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
                         </li>
                         <li class=\"dropdown\">
                           <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
                           <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                              <a class=\"dropdown-item\" href=\"{{ path('app_secteur_index') }}\">Secteur</a>
-                              <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Population</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_quartier_index') }}\">Quartier</a>
+                              <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Personne</a>
                             </div>
                         </li>
                         <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
@@ -1206,73 +977,14 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
                     </div>
                     <div class=\"x_content\">
                       <div class=\"row\">
-                        <div class=\"col-10 mx-auto\">
-                          <canvas id=\"PopulationsSecteurChart\"></canvas>
+                        <div class=\"col-8 mx-auto\">
+                          <canvas id=\"PopulationsQuartier\"></canvas> 
                         </div>
                       </div>
-                      
                     </div>
                   </div>
                 </div>
               </div>
-                <div class=\"row\">
-                  <div class=\"col-md-4 col-sm-4  \">
-                    <div class=\"x_panel\">
-                      <div class=\"x_title\">
-                        <h2>Sexe</h2>
-                        <ul class=\"nav navbar-right panel_toolbox\">
-                          <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                          </li>
-                          <li class=\"dropdown\">
-                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                                <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Population</a>
-                              </div>
-                          </li>
-                          <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                          </li>
-                        </ul>
-                        <div class=\"clearfix\"></div>
-                      </div>
-                      <div class=\"x_content\">
-                        <div class=\"row\">
-                          <div class=\"col-10 mx-auto\">
-                            <canvas id=\"GenderChart\"></canvas>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                  <div class=\"col-md-4 col-sm-4  \">
-                    <div class=\"x_panel\">
-                      <div class=\"x_title\">
-                        <h2>Situatin Matrimoniale</h2>
-                        <ul class=\"nav navbar-right panel_toolbox\">
-                          <li><a class=\"collapse-link\"><i class=\"fa fa-chevron-up\"></i></a>
-                          </li>
-                          <li class=\"dropdown\">
-                            <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-expanded=\"false\"><i class=\"fa fa-info-circle\"></i></a>
-                            <div class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">
-                                <a class=\"dropdown-item\" href=\"{{ path('app_personne_index') }}\">Population</a>
-                              </div>
-                          </li>
-                          <li><a class=\"close-link\"><i class=\"fa fa-close\"></i></a>
-                          </li>
-                        </ul>
-                        <div class=\"clearfix\"></div>
-                      </div>
-                      <div class=\"x_content\">
-                        <div class=\"row\">
-                          <div class=\"col-10 mx-auto\">
-                            <canvas id=\"MatrimonialeChart\"></canvas>
-                          </div>
-                        </div>
-                        
-                      </div>
-                    </div>
-                  </div>
-                </div>
               
           </div>
         </div>
@@ -1378,19 +1090,15 @@ class __TwigTemplate_7be0ef944b02898c4806916427288d9ca5b8a3206566f8aeadddd2ec3c2
               });
           }
 
-          graph('pie',\"CellulesChart\",{{quartier_name|raw}},\"Cellules par quartier\",{{cellule_count|raw}},{{nb_quartier|raw}}); 
-          graph('pie',\"SecteursChart\",{{cellule_name|raw}},\"Secteurs par cellule\",{{secteur_count|raw}},{{nb_cellule|raw}}); 
-          graph('pie',\"MaisonsChart\",{{secteur_name|raw}},\"Maisons par Secteur\",{{maison_count|raw}},{{nb_secteur|raw}}); 
-          graph('pie',\"PopulationsSecteurChart\",{{secteur_name|raw}},\"Populations par Secteur\",{{populations|raw}},{{nb_secteur|raw}}); 
-          graph('pie',\"MaisonsCelluleChart\",{{cellule_name|raw}},\"Maisons par Cellule\",{{nb_maison|raw}},{{nb_cellule|raw}}); 
-          graph('pie',\"MaisonsQuartierChart\",{{quartier_name|raw}},\"Maisons par Quartier\",{{nb_maison|raw}},{{nb_quartier|raw}}); 
-          graph('pie',\"PopulationsQuartierChart\",{{quartier_name|raw}},\"Populations par Quartier\",{{populations|raw}},{{nb_quartier|raw}}); 
-          graph('pie',\"PopulationsCelluleChart\",{{cellule_name|raw}},\"Maisons par Cellule\",{{populations|raw}},{{nb_cellule|raw}}); 
-          graph('pie',\"GenderChart\",['Hommes', 'Femmes'],\"Sexe\",[{{hommes}}, {{femmes}}],2); 
-          graph('pie',\"MatrimonialeChart\",['Célibataire', 'Marié', 'Divorcé'],\"Sexe\",[{{celibataires}}, {{mariés}}, {{divorces}}],3); 
+          graph('pie',\"MaisonsSecteur\",{{name_secteur|raw}},\"Maisons par Secteur\",{{maison_count|raw}},{{secteurs|length}}); 
+          graph('pie',\"PopulationsSecteur\",{{secteur_name|raw}},\"Habitants par Secteur\",{{population_count|raw}},{{secteurs|length}}); 
+          graph('pie',\"MaisonsCellule\",{{name_cellule|raw}},\"Maisons par Cellule\",{{cellule_maison_count|raw}},{{cellule_elements}});  
+          graph('pie',\"PopulationsCellule\",{{cellule_name|raw}},\"Habitants par Secteur\",{{cellule_population_count|raw}},{{cellule_element}}); 
+          graph('pie',\"MaisonsQuartier\",{{name_quartier|raw}},\"Maisons par Cellule\",{{quartier_maison_count|raw}},{{quartiers|length}});  
+          graph('pie',\"PopulationsQuartier\",{{quartier_name|raw}},\"Habitants par Secteur\",{{quartier_population_count|raw}},{{quartiers|length}}); 
         </script>
   </body>
 </html>
-", "statistique/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\MbothDataBase\\templates\\statistique\\index.html.twig");
+", "statistique/index.html.twig", "C:\\Users\\Alou\\OneDrive\\Desktop\\Projets\\Mboth\\templates\\statistique\\index.html.twig");
     }
 }
